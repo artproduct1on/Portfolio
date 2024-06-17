@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.body.appendChild( renderer.domElement );
 	// light
-	const 	ambientLight = new THREE.AmbientLight("#ffffff", .7),
-			directionalLight = new THREE.DirectionalLight("gray", 10),
-			pointLight1 = new THREE.PointLight("blue", 1, 1000),
-			pointLight2 = new THREE.PointLight("yellow", 1, 1000);
+	const 	ambientLight = new THREE.AmbientLight("white", .5),
+			directionalLight = new THREE.DirectionalLight("gray", 1.2),
+			pointLight1 = new THREE.PointLight("blue", 1, 100),
+			pointLight2 = new THREE.PointLight("yellow", 1, 100);
 
 	directionalLight.position.set(5, 10, 7.5);
-	pointLight1.position.set(-3, 3, 3);
-	pointLight2.position.set(-3, 2, 3);
+	pointLight1.position.set(-2, 3, 5);
+	pointLight2.position.set(-2, 2, 5);
 	// light_add
 	scene.add(ambientLight, directionalLight, pointLight1, pointLight2);
 
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			endLoading();
 		},
 		(xhr) => {
-			load = Math.round(xhr.loaded / xhr.total * 100)
+			load = Math.round((xhr.loaded / xhr.total) * 100)
 			loadingTitle.textContent = `Loading ${load}` 
 		},
 		(error) => {
@@ -97,7 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	const scroll = () => {
 		let h = window.scrollY / docHeight;
 		navProgress.style.width = h*100+"%";
-		camera.position.set(pX, pY+h/4, pZ+h);
+		camera.position.set(pX, pY+h/4, pZ+h*1.8);
+		model.rotation.x = h/2
 	};
 	window.addEventListener("scroll", scroll);
 
