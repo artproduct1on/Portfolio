@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <div class="loading">
+        <h3 class="loading_title">Loading 0%</h3>
+        <svg class="loading_progress">
+            <use xlink:href="./assets/sprite.svg#wheel"></use>
+        </svg>
+    </div>
+
+    <nav class="nav">
+        <ul class="nav_ul">
+            <li class="nav_li">main</li>
+            <li class="nav_li">work</li>
+            <li class="nav_li">about</li>
+        </ul>
+        <div  class="nav_progress"></div>
+    </nav>
+    
+    <section class="main">
+        <div class="container main_container">
+            <h1 class="main_h1">Artem Zaikin</h1>
+            <h2 class="main_h2">Creative Web Software Developer</h2>
+        </div>
+    </section>
+    <section class="work">
+        <div class="container work_container">
+        </div>
+    </section>
+    <section class="about">
+        <img class="about_img" src="/assets/iam.png" alt="BIO">
+    </section>    
+    <!-- <section class="contacts">
+        <div class="container contacts_container">
+            <h2 class="contacts_h2">contacts me:</h3>
+            <address class="contacts_address">
+                
+                <a href="tel:+4915146315722">Phone: +49 1514 6315722</a>
+                <a href="mailto:0960469634kvstrt@gmail.com">E-mail: 0960469634kvstrt@gmail.com</a>
+            </address>
+            <p class="contacts_p">Thank you for your attention!</h2>
+        </div>
+    </section> -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/GLTFLoader.js"></script>
+    
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>
