@@ -38,7 +38,7 @@ canvas {
 
 
 .loading {
-    background-image: radial-gradient($color2,#000);
+    background-image: radial-gradient($color2,#222222);
     position: fixed;
     z-index: 100000;
     top: 50%;
@@ -151,36 +151,9 @@ canvas {
 }
 
 .about {
-    .about_img {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        height: 90vh;
-        transform: translate(20%, 20%) rotateX(90deg) ;
-        transition: .8s;
-    }
-    .about_img--activ {
-        transform: translate(-50%, -50%) rotateX(0deg) ;
-    }
+
 }
-.contacts {
-    align-items: center;
-    justify-content: center;
-    .contacts_container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .contacts_address {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .contacts_p {
-        font-size: 2rem;
-    }
-}
+
 
 
 
