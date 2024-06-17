@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	scene.add(pointLight2);
 	// var
 	const loader = new THREE.GLTFLoader();
-	const modelUrl = '../assets/model.glb';
+	const modelUrl = './assets/model.glb';
 
 	const endLoading = () => {
 		loading.remove();
