@@ -34,7 +34,7 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: brightness(1.1) contrast(1.1);
+    filter: contrast(1.2) brightness(1.1);
 }
 
 
@@ -64,30 +64,27 @@ canvas {
         width: 5rem;
         height: 5rem;
         fill: $color1;
-        animation: wheel 2s infinite linear;
+        transition: .5s;
     }
 }
-@keyframes wheel {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
+
 
 .container {
     width: 95%;
     display: flex;
+    border-left: red solid ;
+    min-height: 80vh;
+    margin: 10% 0;
 }
 
 .nav {
-    background-color: #0000008a;
-    position: fixed;
+    user-select: none;
     z-index: 1000;
+    position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    background-color: #0000008a;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

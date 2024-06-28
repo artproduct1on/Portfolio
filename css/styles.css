@@ -212,7 +212,7 @@ canvas {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  filter: brightness(1.1) contrast(1.1);
+  filter: contrast(1.2) brightness(1.1);
 }
 
 .loading {
@@ -241,29 +241,27 @@ canvas {
   width: 5rem;
   height: 5rem;
   fill: #eec861;
-  animation: wheel 2s infinite linear;
+  transition: 0.5s;
 }
 
-@keyframes wheel {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .container {
   width: 95%;
   display: flex;
+  border-left: red solid;
+  min-height: 80vh;
+  margin: 10% 0;
 }
 
 .nav {
-  background-color: rgba(0, 0, 0, 0.5411764706);
-  position: fixed;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   z-index: 1000;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5411764706);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

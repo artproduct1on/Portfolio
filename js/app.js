@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	// imports
 	const 	loading = document.querySelector(".loading"),
-			loadingTitle = document.querySelector(".loading_title"),
+			loadingProgress = document.querySelector(".loading_progress"),
 			navUl = document.querySelector(".nav_ul"),
 			navProgress = document.querySelector(".nav_progress");
 	// values
@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			endLoading();
 		},
 		(xhr) => {
-			load = Math.round((xhr.loaded / xhr.total) * 100)
-			loadingTitle.textContent = `Loading ${load}` 
+			load = Math.round((xhr.loaded / xhr.total) * 100) 
+			loadingProgress.style.transform = `rotate(${load * 5}deg)`
 		},
 		(error) => {
 			console.error(error);
@@ -104,11 +104,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// mouse 
 	const onMouseMove = (e) => {
-		mouseX = e.clientX - centerX;
-		mouseY = centerY - e.clientY; 
-		if (model) {
-			model.rotation.y = mouseX/8000
-			model.rotation.z = mouseY/8000
+		if (innerW > 1024 ) {
+			mouseX = e.clientX - centerX;
+			mouseY = centerY - e.clientY; 
+			if (model) {
+				model.rotation.y = mouseX/8000
+				model.rotation.z = mouseY/8000
+			}
 		}
 	};
 	window.addEventListener('mousemove', onMouseMove);
