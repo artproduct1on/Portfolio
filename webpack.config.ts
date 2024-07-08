@@ -16,16 +16,17 @@ export default (env: EnvVariabels) => {
 
     const config: webpack.Configuration = {
         mode: env.mode ?? "development",
+
         entry:  path.resolve(__dirname, "src", "index.ts"), 
         output: {
-            path: path.resolve(__dirname, "build"),
+            path:  path.resolve(__dirname, env.mode ? "build" : "dist" ), 
             filename: "[name].[contenthash].js",
             clean: true
         },
         plugins: [
-            new HtmlWebpackPlugin(
-                {template: path.resolve(__dirname, "public", "index.html")}
-            )
+            new HtmlWebpackPlugin({
+                template: path.resolve(__dirname, "src", "index.html")
+            })
         ],
         module: {
             rules: [
@@ -34,16 +35,21 @@ export default (env: EnvVariabels) => {
                     use: 'ts-loader',
                     exclude: /node_modules/,
                 },
+                {
+                    test: /\.css$/i,
+                    use: ["style-loader", "css-loader"],
+                }
             ],
         },
-            resolve: {
-            extensions: ['.tsx', '.ts', '.js'],
+        resolve: {
+            extensions: ['.ts', '.js'],
         },
         devtool: isDev && 'inline-source-map' ,
-        devServer: isDev ? {
+        devServer: {
+            static: path.join(__dirname, 'build'),
             port: env.port ?? 3000,
-            open: true
-        } : undefined 
+            open: true,
+        } 
     };
 
     return config;
