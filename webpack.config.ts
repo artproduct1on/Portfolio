@@ -11,8 +11,8 @@ interface EnvVariables {
 export default (env: EnvVariables) => {
     const paths = {
         entry: path.resolve(__dirname, "src", "index.ts"),
-        html: path.resolve(__dirname, "src", "index.html"),
-        output: path.resolve(__dirname, "build")
+        html: path.resolve(__dirname, "src", "pages"),
+        output: path.resolve(__dirname, "build"),
     
     }
     const config: webpack.Configuration = buildWebpack({

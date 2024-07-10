@@ -3,15 +3,6 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export function buildLoaders(): ModuleOptions["rules"] {
 
-    const assets = {
-        test: /\.(png|jpg|gif|svg|ico)$/i,
-        type: 'asset/resource',
-        generator: {
-            filename: 'assets/[name].[hash].[ext]'
-        },
-          
-    };
-
     const htmlLoader = {
         test: /\.html$/i,
         loader: 'html-loader',
@@ -32,10 +23,34 @@ export function buildLoaders(): ModuleOptions["rules"] {
         exclude: /node_modules/,
     };
 
+    const svgLoader = {
+        test: /\.svg$/,
+        use: [
+            {
+                loader: 'svg-sprite-loader',
+                options: {
+                    extract: true,
+                    spriteFilename: 'sprite.svg',
+                },
+            },
+            'svgo-loader',
+        ],
+    };
+
+    const assets = {
+        test: /\.(png|jpg|gif|ico)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: 'assets/[name].[hash].[ext]'
+        },
+          
+    };
+
     return [
-        assets,
+        svgLoader,
         htmlLoader,
         scssLoader, 
-        tsLoader
+        tsLoader,
+        assets,
     ]
 } 
