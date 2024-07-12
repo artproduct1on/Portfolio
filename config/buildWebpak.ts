@@ -4,7 +4,7 @@ import { buildDevServer } from "./buildDevSrver";
 import { buildLoaders } from "./buildLoader";
 import { buildPlugins } from "./buildPlugins";
 import { buildResolvers } from "./buildResolvers";
-import { BuildOptions } from "./types/types";
+import { BuildOptions } from "./types/buildTypes";
 
 
 export function buildWebpack(options: BuildOptions): webpack.Configuration {
@@ -18,7 +18,7 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
 
         entry:  paths.entry , 
         output: {
-            path: paths.output, 
+            path: isDev ? paths.outputDev : paths.outputProd, 
             filename: "[name].[contenthash].js",
             clean: true
         },
@@ -30,4 +30,4 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
         devtool: isDev && 'inline-source-map' ,
         devServer: buildDevServer(options)
     };
-}
+};

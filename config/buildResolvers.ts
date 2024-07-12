@@ -1,8 +1,8 @@
 import { Configuration } from "webpack";
-import { BuildOptions } from "./types/types";
+import { BuildOptions } from "./types/buildTypes";
 
 export function buildResolvers(options: BuildOptions): Configuration["resolve"] {
     return {
-        extensions: ['.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js'],
     }
 }

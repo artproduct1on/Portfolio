@@ -14,7 +14,7 @@ export function buildLoaders(): ModuleOptions["rules"] {
             MiniCssExtractPlugin.loader, 
             "css-loader", 
             "sass-loader"
-        ]
+        ],
     };   
 
     const tsLoader = {
@@ -23,22 +23,8 @@ export function buildLoaders(): ModuleOptions["rules"] {
         exclude: /node_modules/,
     };
 
-    const svgLoader = {
-        test: /\.svg$/,
-        use: [
-            {
-                loader: 'svg-sprite-loader',
-                options: {
-                    extract: true,
-                    spriteFilename: 'sprite.svg',
-                },
-            },
-            'svgo-loader',
-        ],
-    };
-
     const assets = {
-        test: /\.(png|jpg|gif|ico)$/i,
+        test: /\.(png|jpg|gif)$/i,
         type: 'asset/resource',
         generator: {
             filename: 'assets/[name].[hash].[ext]'
@@ -46,11 +32,41 @@ export function buildLoaders(): ModuleOptions["rules"] {
           
     };
 
+    const ico = {
+        test: /\.(ico)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: 'assets/[name].[ext]'
+        },
+          
+    };
+
+    const svgLoader = {
+        test: /\.svg$/,
+        use: [
+            {   
+                loader: 'svg-sprite-loader',  
+                options: {
+                    extract: true,
+                    spriteFilename: 'Sprite.svg',
+                    publicPath: 'assets/',
+                    runtimeCompat: true,
+                    symbolId: '[name]_[hash]',
+                    symbolConfig: {
+                        symbol: true,
+                    }
+                },
+            },
+        ],
+    };
+
+
     return [
-        svgLoader,
         htmlLoader,
         scssLoader, 
         tsLoader,
         assets,
+        ico,
+        svgLoader,
     ]
 } 
