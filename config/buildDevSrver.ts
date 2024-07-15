@@ -7,7 +7,12 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         port: options.port ?? 3000,
         open: true,
         watchFiles: [ 
-            path.resolve(__dirname, "../src")
+            path.resolve(__dirname, "../src/**/*"),
         ],
+        static: {
+            directory: path.resolve(__dirname, '../src/assets')
+        }
+    
+ 
     };
 };

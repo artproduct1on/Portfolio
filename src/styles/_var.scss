@@ -1,0 +1,29 @@
+$c1: rgb(25, 0, 255);
+$c2: rgb(255, 0, 0);
+$color: aliceblue;
+$transition: 0.2s;
+
+
+$bgItem: linear-gradient(45deg, $c1, $c2);
+
+
+@mixin link {
+    text-align: center;
+    color: $color;
+    padding: 1rem 0;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    &:active {
+        font-size: 1.25rem;
+    }
+    &:hover {
+        background: $bgItem;
+        background-clip: text;
+        color: transparent;
+    }
+}
+@mixin h {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}

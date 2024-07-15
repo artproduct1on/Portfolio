@@ -1,7 +1,9 @@
 import { ModuleOptions } from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { BuildOptions } from "./types/buildTypes";
 
-export function buildLoaders(): ModuleOptions["rules"] {
+export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
+    const isDevelopment: boolean = "development" === options.mode;
 
     const htmlLoader = {
         test: /\.html$/i,
@@ -11,7 +13,7 @@ export function buildLoaders(): ModuleOptions["rules"] {
     const scssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
-            MiniCssExtractPlugin.loader, 
+            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader, 
             "css-loader", 
             "sass-loader"
         ],
@@ -24,7 +26,7 @@ export function buildLoaders(): ModuleOptions["rules"] {
     };
 
     const assets = {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
         generator: {
             filename: 'assets/[name].[hash].[ext]'
@@ -62,11 +64,11 @@ export function buildLoaders(): ModuleOptions["rules"] {
 
 
     return [
-        htmlLoader,
-        scssLoader, 
         tsLoader,
+        scssLoader, 
         assets,
         ico,
         svgLoader,
+        htmlLoader,
     ]
 } 

@@ -5,7 +5,9 @@ import { BuildOptions } from "./types/buildTypes";
 import SpriteLoaderPlugin from 'svg-sprite-loader/plugin';
 import fs from "fs";
 
-export function buildPlugins({paths}: BuildOptions): Configuration["plugins"] {
+export function buildPlugins({mode, paths}: BuildOptions): Configuration["plugins"] {
+
+    const isDevelopment: boolean = mode === "development";
 
     const getFilesFromDirectory = (dirPath: string) => {
         return fs.readdirSync(dirPath).map(i => i.replace(".html", ""));
@@ -20,12 +22,14 @@ export function buildPlugins({paths}: BuildOptions): Configuration["plugins"] {
             });
         });
     };
-    const plugins: Configuration["plugins"] = [
-        ...htmlGeneration(filesList),  
+    const plugins: Configuration["plugins"] = [ 
+        ...htmlGeneration(filesList), 
         new MiniCssExtractPlugin({
-            filename: "[name].[contenthash].css"
+            filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
+            chunkFilename: isDevelopment ? '[id].css' : '[id].[contenthash].css',
         }),
         new SpriteLoaderPlugin() as any,
+        
     ];
 
     return plugins;

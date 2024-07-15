@@ -1,0 +1,13 @@
+.about {
+    background: linear-gradient(to bottom, black, rgb(2, 0, 15), rgb(15, 0, 14));
+}
+.about__container {
+    flex-direction: column;
+}
+.about__img {
+    width: 100%;
+    display: flex;
+    border-left: .1rem solid $color;
+    width: 100%;
+    max-width: 20rem;
+}
