@@ -2,12 +2,100 @@
     background: linear-gradient(to bottom, black, rgb(2, 0, 15), rgb(15, 0, 14));
 }
 .about__container {
+    z-index: 1;
+    padding: 5rem 0;
     flex-direction: column;
 }
-.about__img {
+
+.about__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+}
+
+
+.about__photo {
+    position: relative;
+    width: 98%;
+    border-radius: 0 25% 0 25%;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 3rem #000000;
+    animation: photo 3s infinite linear;
+}
+@keyframes photo {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(0, -1%); }
+    100% { transform: translate(0, 0); }
+}
+.about__photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__photo-p {
+    position: absolute;
+    margin: 0;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vmin;
+    font-weight: 900;
+    @include font;
+    opacity: .2;
+}
+.about__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 98%;
+}
+.about__list-li {
+    padding: 1rem 0;
     width: 100%;
     display: flex;
-    border-left: .1rem solid $color;
-    width: 100%;
-    max-width: 20rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: .1rem solid $color;
+    opacity: .7;
+    &:last-child {
+        border: none;
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+.about__list-span {
+    max-width: 47.5%;
+    font-size: 1.4rem;
+    color: $cSpan;
+    text-align: left;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+}
+.about__list-p {
+    margin: 0;
+    max-width: 47.5%;
+    text-align: right;
+    font-size: 1.6rem;
+    user-select: red;
+}
+
+@media (min-width: 480px) {
+    .about__photo {
+        max-width: 30rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    .about__list {
+        width: 50%;
+    }
 }

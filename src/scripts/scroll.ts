@@ -1,6 +1,6 @@
 export function scroll() {
     
-    console.log("header is scroll!")
+    console.log("header is added!")
     
     return;
 };

@@ -9,9 +9,11 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         watchFiles: [ 
             path.resolve(__dirname, "../src/**/*"),
         ],
-        static: {
-            directory: path.resolve(__dirname, '../src/assets')
-        }
+        static: [
+            path.resolve(__dirname, '../src'),
+            path.resolve(__dirname, '../dist')
+        ]
+        
     
  
     };
