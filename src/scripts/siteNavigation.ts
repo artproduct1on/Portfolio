@@ -1,11 +1,17 @@
-import { htmlType, htmlListType } from "./types";
+import { HtmlType, HtmlListType } from "./types";
 
 
 export function header() {
-    const hamburger: htmlType = document.querySelector(".header__hamburger");
-    const nav: htmlType = document.querySelector(".header__nav");
-    const list: htmlType = document.querySelector(".header__nav-list");
-    const sections: htmlListType = document.querySelectorAll("section");
+    const hamburger: HtmlType = document.querySelector(".header__hamburger"),
+          nav: HtmlType = document.querySelector(".header__nav"),
+          list: HtmlType = document.querySelector(".header__nav-list"),
+          sections: HtmlListType = document.querySelectorAll("section"),
+          nextBtn: HtmlType = document.querySelector(".home__next");
+
+
+    const scrollFunction = (item: HtmlType):void => {
+        item.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
 
     const menuToggle = (): void => {
         hamburger.classList.toggle("header__hamburger--active");
@@ -17,18 +23,19 @@ export function header() {
     });
 
     list && list.addEventListener("click", (event) => {
-        const target = event.target as htmlType;
+        const target = event.target as HtmlType;
 
         if (target.tagName === "A" && sections) { 
             event.preventDefault()
             const href = target.getAttribute("href");
             sections.forEach(element => {
-                "#"+element.id === href &&
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                "#"+element.id === href && scrollFunction(element);
             });
             menuToggle();
         }
     });
     
+    nextBtn && nextBtn.addEventListener("click",() => scrollFunction(sections[1]));
+
     return;
 };

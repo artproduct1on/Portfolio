@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[191],{191:(e,o,s)=>{s.r(o),s.d(o,{default:()=>t});const t={id:"facebook_ad064a839538df18851b7c330d075c3e-usage",viewBox:"0 0 32 32",url:"assets/Sprite.svg#facebook_ad064a839538df18851b7c330d075c3e-usage",toString:function(){return this.url}}}}]);
