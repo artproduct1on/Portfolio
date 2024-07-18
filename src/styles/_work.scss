@@ -1,14 +1,96 @@
-svg {
-    fill: $color;
-    color: aliceblue;
-    width: 4rem;
-    height: 4rem;
+.work {
+    overflow: hidden;
+    background: linear-gradient(to bottom, black, rgb(0, 12, 15), rgb(0, 0, 0) );
 }
+.work__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.work__h {
+    font-size: 3rem;
+    margin: 3rem 0 1rem;
+    font-weight: 300;
+    opacity: .4;
+}
+// ___________________
+.work__competence {
+    width: 100vw ;
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(27, 27, 27, 0.3);
+}
+.work__competence-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.work__competence-circle {
+    position: relative;
+    width: 7rem;
+    height: 7rem;
+    margin: .5rem;
+    border-radius: 50%;
+    background: conic-gradient($c1 0deg, $c2 var(--deg), $cSpan var(--deg), $cSpan 360deg);
+}
+.work__competence-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 85%;
+    background-color: rgb(20, 20, 20);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.work__competence-label {
+    text-align: center;
+    font-size: 1.4rem;
+    color: $color;
+}
+// ____________________
 .work__skills {
-    height: 15rem;
-    width: 15rem;
-    border: .1rem solid red;
+    min-height: 10rem;
+    width: 95%;
+    max-width: 60rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
 }
 .work__skills-link {
-    background-color: aquamarine;
+    background: rgba(33, 33, 33, 0.5);
+    width: 6rem;
+    height: 7rem;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: $color;
+    opacity: .7;
+    &:hover {
+        opacity: 1;
+    }
 }
+.work__skills-img {
+    height: 3.5rem;
+    max-width: 4rem;
+    border-radius: .5rem;
+}
+// ___________________
+
+

@@ -7,8 +7,12 @@
 @import "_about.scss";
 @import "_work.scss";
 
-
-
+svg {
+    fill: $color;
+    color: aliceblue;
+    width: 4rem;
+    height: 4rem;
+}
 html {
     font-family: Arial, sans-serif;
     font-size: 62.5%;
@@ -31,10 +35,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.work {
-    background: linear-gradient(to bottom, rgb(15, 0, 14), rgb(2, 0, 15), black,);
 }
 .container {
     display: flex;
