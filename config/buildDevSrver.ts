@@ -11,7 +11,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         ],
         static: [
             path.resolve(__dirname, '../src'),
-            path.resolve(__dirname, '../dist')
+            path.resolve(__dirname, '../build')
         ]
         
     

@@ -19,16 +19,18 @@ export function buildPlugins({mode, paths}: BuildOptions): Configuration["plugin
             return new HtmlWebpackPlugin({
                 template: paths.html + `/${i}.html`,
                 filename: i === "index" ? `${i}.html` : `${i}/index.html`,
+                inject: 'body',
+                minify: false,
             });
         });
     };
     const plugins: Configuration["plugins"] = [ 
+        new SpriteLoaderPlugin() as any,
         ...htmlGeneration(filesList), 
         new MiniCssExtractPlugin({
             filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
             chunkFilename: isDevelopment ? '[id].css' : '[id].[contenthash].css',
         }),
-        new SpriteLoaderPlugin() as any,
         
     ];
 

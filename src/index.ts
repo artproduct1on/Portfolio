@@ -4,8 +4,12 @@ import { header } from "./scripts/siteNavigation";
 import { scroll } from "./scripts/scroll";
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
     components();
     header();
     scroll();
+
+
+
 });

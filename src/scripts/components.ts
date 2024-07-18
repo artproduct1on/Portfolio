@@ -1,4 +1,30 @@
-import { SvgUseListType, HtmlType } from './types';
+import { SvgListType, HtmlType, SvgMapType } from './types';
+
+declare const require: {
+    context: (directory: string, useSubdirectories: boolean, regExp: RegExp) => {
+        keys: () => string[];
+        (id: string): { default: string };
+    };
+};
+
+const svgAdd = (): void => {
+    const svgContext = require.context('../assets/icons', false, /\.svg$/),
+          svgMap: SvgMapType = {},
+          svgList: SvgListType = document.querySelectorAll('.svg');
+    
+    svgContext.keys().forEach((key: string) => {
+        const fileName = key.match(/\.\/(.+)\.svg$/)[1];
+        svgMap[fileName] = svgContext(key).default;
+    });
+
+    svgList.forEach(i => {
+        const hrefId: string = i.getAttribute("data-id") || '';
+        if (svgMap[hrefId]) {
+            i.innerHTML = `<use xlink:href="${svgMap[hrefId]}"></use>`;
+        }
+    });
+};
+
 
 
 const clock = ():void => {
@@ -21,26 +47,9 @@ const clock = ():void => {
     };
 };
 
-const svgAdd = async (): Promise<void> => {
 
-  const svgUseList: SvgUseListType = document.querySelectorAll('use');
-
-  svgUseList.forEach(async (i) => {
-    const hrefId: string = i.getAttribute('href')?.replace("#", "") || "";
-    if (hrefId) {
-        try {
-            const icon = await import(`../assets/icons/${hrefId}.svg`);
-            icon && i.setAttribute('href', icon.default);
-        } catch (error) {
-            console.error(`Error importing ${hrefId}:`, error);
-        };
-    };
-  });
-};
 
 export function components() {
-    clock();
     svgAdd();
-  
-    return;
+    clock();
 };

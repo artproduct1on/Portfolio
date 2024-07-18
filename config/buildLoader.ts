@@ -1,9 +1,8 @@
 import { ModuleOptions } from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildOptions } from "./types/buildTypes";
+import path from "path";
 
-export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
-    const isDevelopment: boolean = "development" === options.mode;
+export function buildLoader(): ModuleOptions["rules"] {
 
     const htmlLoader = {
         test: /\.html$/i,
@@ -13,7 +12,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
     const scssLoader = {
         test: /\.s[ac]ss$/i,
         use: [
-            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader, 
+            MiniCssExtractPlugin.loader,
             "css-loader", 
             "sass-loader"
         ],
@@ -50,8 +49,7 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
                 loader: 'svg-sprite-loader',  
                 options: {
                     extract: true,
-                    spriteFilename: 'Sprite.svg',
-                    publicPath: 'assets/',
+                    spriteFilename: 'assets/sprite.svg',
                     runtimeCompat: true,
                     symbolId: '[name]_[hash]',
                     symbolConfig: {
@@ -66,9 +64,9 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
     return [
         tsLoader,
         scssLoader, 
+        svgLoader,
         assets,
         ico,
-        svgLoader,
         htmlLoader,
     ]
 } 
