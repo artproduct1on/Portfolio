@@ -6,3 +6,8 @@ export type SvgListType = NodeListOf<SVGSVGElement> | null ;
 export interface SvgMapType {
     [key: string]: string;
 };
+export interface SkillsType {
+    name: string;
+    img: string;
+    link: string;
+}

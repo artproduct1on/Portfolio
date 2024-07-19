@@ -1,15 +1,20 @@
 .work {
-    overflow: hidden;
-    background: linear-gradient(to bottom, black, rgb(0, 12, 15), rgb(0, 0, 0) );
+    background: linear-gradient(
+        to bottom, 
+        black, 
+        rgb(0, 20, 26), 
+        rgb(0, 0, 0) 
+    );
 }
 .work__container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 3vh;
 }
 .work__h {
-    font-size: 3rem;
-    margin: 3rem 0 1rem;
+    font-size: 2.5rem;
+    margin: 3rem 0 0;
     font-weight: 300;
     opacity: .4;
 }
@@ -38,22 +43,38 @@
     width: 7rem;
     height: 7rem;
     margin: .5rem;
+    background: conic-gradient(
+        $c1 0deg, 
+        $c2 var(--perc), 
+        rgba(204, 204, 204, 0.1) var(--perc), 
+        rgba(204, 204, 204, 0.1) 360deg
+    );
     border-radius: 50%;
-    background: conic-gradient($c1 0deg, $c2 var(--deg), $cSpan var(--deg), $cSpan 360deg);
+    animation: conic var(--s) infinite linear;
+    &::before {
+        content: var(--percT);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 85%;
+        height: 85%;
+        background-color: rgb(20, 20, 20);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.8rem;
+    }
 }
-.work__competence-inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 85%;
-    height: 85%;
-    background-color: rgb(20, 20, 20);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.8rem;
+@keyframes conic {
+    0% {
+        --perc: var(--perc);
+    }
+    100% {
+        --perc: var(--percPlus); 
+
+    }
 }
 .work__competence-label {
     text-align: center;
@@ -92,5 +113,85 @@
     border-radius: .5rem;
 }
 // ___________________
+.work__process {
+    width: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    list-style-type: none;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -1.6rem;
+        width: .2rem;
+        height: 100%;
+        background-color: $c2;
+    }
+}
+.work__process-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    width: 100%;    
+    &::before {
+        content: var(--num);
+        color: $c3;
+        font-size: .8rem;
+        font-weight: 900;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: .3rem;
+        right: -2.25rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: $c2;
 
-
+    }
+}
+.work__process-name {
+    @include font;
+    @include textGradient;
+    width: min-content;
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+.work__process-p {
+    font-size: 1.4rem;
+    color: $cSpan;
+}
+@media (min-width: 480px) {
+    .work__process {
+        align-items: flex-start;
+        &::before {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .work__process-item {
+        position: relative;
+        width: calc(50% - 1.5rem);
+        text-align: end;    
+        &:nth-child(2n) {
+            text-align: start;
+            align-self: flex-end;
+            align-items: flex-start;
+            &::before {
+                left: -2.25rem;
+            }
+        }
+    }
+}

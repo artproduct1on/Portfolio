@@ -1,5 +1,10 @@
 .about {
-    background: linear-gradient(to bottom, black, rgb(15, 0, 14), rgb(0, 0, 0) );
+    background: linear-gradient(
+        to bottom, 
+        black, 
+        rgb(0, 15, 6), 
+        rgb(0, 0, 0) 
+    );
 }
 .about__container {
     z-index: 1;

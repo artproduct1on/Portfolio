@@ -51,11 +51,21 @@
     }
 }
 .home__h-marker {
+    @include textGradient;
     text-shadow: .5rem .7rem 1rem rgba(0, 0, 0, 0.3);
-    background: $bgItem;
-    background-clip: text;
-    color: transparent;
     margin: 0 10%;
+    animation: marker var(--s) infinite linear;
+}
+@keyframes marker {
+    0% {
+        filter: brightness(110%);
+    }
+    50% {
+        filter: brightness(170%) saturate(800%);
+    }
+    100% {
+        filter: brightness(110%);
+    }
 }
 .home__next {
     position: relative;
