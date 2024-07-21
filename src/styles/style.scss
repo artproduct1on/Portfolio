@@ -6,13 +6,9 @@
 @import "_home.scss";
 @import "_about.scss";
 @import "_work.scss";
+@import "_contact.scss";
 
-svg {
-    fill: $color;
-    color: aliceblue;
-    width: 4rem;
-    height: 4rem;
-}
+
 html {
     font-family: Arial, sans-serif;
     font-size: 62.5%;
@@ -27,16 +23,23 @@ body {
 }
 section {
     position: relative;
-    padding: 1rem 0;
+    padding: 5rem 0;
     width: 100%;
     max-width: 100%;
-    min-height: 70vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    opacity: 0.1;
+    transition: .4s;
 }
+.section--active {
+    opacity: 1;
+}
+
+
 .container {
     display: flex;
     width: 98%;
@@ -51,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
 }
 h2 {
+    z-index: 100;
     font-size: 10vmin;
     text-transform: uppercase;
     color: $color;

@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <div class="container header__container">
-            <a href="./" class="header__logo">
+            <a href="#home" class="header__logo">
                 <img class="header__logo-img" src="../assets/logo.png" alt="logo">
                 <p class="header__logo-p">Datair</p>
             </a>
@@ -41,7 +41,7 @@
         </div>
     </header>
 
-    <section class="home" id="home">
+    <section class="home"  id="home">
         <div class="container home__container">
             <h1 class="home__h">
                 <span class="home__h-part">
@@ -244,11 +244,81 @@
     <section class="contact" id="contact">
         <h2>- Contact</h2>
         <div class="container contact__container">
-            <svg class="svg" data-id="facebook"></svg>
-            <svg class="svg" data-id="github"></svg>
+
+            <form class="contact__form">
+                <input 
+                    class="contact__form-subject" 
+                    type="text" 
+                    name="topic" 
+                    id="subject"
+                    placeholder="* Subject:"
+                    required
+                >
+                <textarea 
+                    class="contact__form-message" 
+                    name="message" 
+                    id="message"
+                    placeholder="* Write your message..."
+                    required
+                ></textarea>
+                <button class="contact__form-button">Send</button>
+            </form>
+
+            <ul class="contact__list">
+                <li class="contact__list-item">
+                    <a class="contact__list-link" href="mailto:0960469634kvstrt@gmail.com" title="E-Mail">
+                        <svg class="svg" data-id="mail"></svg>                         
+                        E-Mail
+                    </a>
+                </li>
+                <li class="contact__list-item">
+                    <a class="contact__list-link" href="https://github.com/ArtBclak" target="_blank" title="GitHub">
+                        <svg class="svg" data-id="github"></svg>
+                        GitHub
+                    </a>
+                </li>
+                <li class="contact__list-item">
+                    <a class="contact__list-link" href="https://wa.me/+4915146315722" target="_blank" title="WhatsApp">
+                        <svg class="svg" data-id="whatsapp"></svg>    
+                        WhatsApp
+                    </a>
+                </li>
+                <li class="contact__list-item">
+                    <a class="contact__list-link" href="https://www.linkedin.com/in/zaikin-artem/" target="_blank" title="LinkedIn">
+                        <svg class="svg" data-id="linkedin"></svg>
+                        LinkedIn
+                    </a>
+                </li>
+                <li class="contact__list-item">
+                    <a class="contact__list-link" href="https://t.me/@zaikin_artem" target="_blank" title="Telegram">
+                        <svg class="svg" data-id="telegram"></svg>    
+                        Telegram
+                    </a>
+                </li>
+                <li class="contact__list-item">
+                    <a class="contact__list-link" href="https://www.facebook.com/artproduct1on" target="_blank" title="Facebook">
+                        <svg class="svg" data-id="facebook"></svg>
+                        Facebook
+                    </a>
+                </li>
+                <li class="contact__list-item">
+                    <a class="contact__list-link" href="https://www.instagram.com/artproduct1on/" target="_blank" title="Instagram">
+                        <svg class="svg" data-id="instagram"></svg>                           
+                        Instagram
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </section>
-
+    <footer class="footer">
+        <div class="container footer__container">
+                <a class="footer__link" href="#home">Home</a> /
+                <a class="footer__link" href="#about">About Me</a> /
+                <a class="footer__link" href="#work">Work</a> /
+                <a class="footer__link" href="#contact">Contact</a>
+        </div>
+    </footer>
 
 </body>
 </html>

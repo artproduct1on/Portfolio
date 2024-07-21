@@ -2,7 +2,7 @@
     background: linear-gradient(
         to bottom, 
         black, 
-        rgb(0, 20, 26), 
+        rgb(1, 4, 19), 
         rgb(0, 0, 0) 
     );
 }
@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3vh;
+    gap: 1rem;
 }
 .work__h {
     font-size: 2.5rem;
@@ -81,37 +81,6 @@
     font-size: 1.4rem;
     color: $color;
 }
-// ____________________
-.work__skills {
-    min-height: 10rem;
-    width: 95%;
-    max-width: 60rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-    justify-content: center;
-    align-items: center;
-}
-.work__skills-link {
-    background: rgba(33, 33, 33, 0.5);
-    width: 6rem;
-    height: 7rem;
-    display: flex;
-    gap: .5rem;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: $color;
-    opacity: .7;
-    &:hover {
-        opacity: 1;
-    }
-}
-.work__skills-img {
-    height: 3.5rem;
-    max-width: 4rem;
-    border-radius: .5rem;
-}
 // ___________________
 .work__process {
     width: 80%;
@@ -120,7 +89,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0;
+    margin: 0;
+    padding: 3rem 0;
     list-style-type: none;
     &::before {
         content: "";
@@ -172,6 +142,38 @@
     font-size: 1.4rem;
     color: $cSpan;
 }
+// ____________________
+.work__skills {
+    min-height: 10rem;
+    width: 95%;
+    max-width: 60rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+.work__skills-link {
+    background: rgba(33, 33, 33, 0.5);
+    width: 6rem;
+    height: 7rem;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: $color;
+    opacity: .7;
+    &:hover {
+        opacity: 1;
+    }
+}
+.work__skills-img {
+    height: 3.5rem;
+    max-width: 4rem;
+    border-radius: .5rem;
+}
+
 @media (min-width: 480px) {
     .work__process {
         align-items: flex-start;

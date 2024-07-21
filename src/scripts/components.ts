@@ -1,4 +1,4 @@
-import { SvgListType, HtmlType, SvgMapType, SkillsType } from './types';
+import { InputType, SvgListType, HtmlType, SvgMapType, SkillsType, TextAreaType } from './types';
 
 declare const require: {
     context: (directory: string, useSubdirectories: boolean, regExp: RegExp) => {
@@ -25,7 +25,7 @@ const svgAdd = (): void => {
     });
 };
 
-const clock = ():void => {
+const clock = (): void => {
     const yearsElement: HtmlType = document.getElementById("years"),
           daysElement: HtmlType = document.getElementById("days"),
           hoursElement: HtmlType = document.getElementById("hours");
@@ -45,7 +45,7 @@ const clock = ():void => {
     };
 };
 
-const skillsAdd = ():void => {
+const skillsAdd = (): void => {
     const skills: SkillsType[] = [
         {
             name: "Html",
@@ -152,8 +152,30 @@ const skillsAdd = ():void => {
 
 };
 
+const messageSend = (): void => {
+    const form: HtmlType = document.querySelector(".contact__form"),
+          subject: InputType = document.querySelector(".contact__form-subject"),
+          message: TextAreaType = document.querySelector(".contact__form-message");
+
+    form && form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const subjectText: string = subject.value,
+              messageText: string = message.value;
+
+        if (subjectText.trim() === '' || messageText.trim() === '') {
+            alert('Please enter a form.');
+            return;
+        };
+        const recipientEmail = "0960469634kvstrt@gmail.com";
+        const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(messageText)}`;
+        window.location.href = mailtoLink;
+    });
+};
+
 export function components() {
     svgAdd();
     clock();
     skillsAdd();
+    messageSend();
 };

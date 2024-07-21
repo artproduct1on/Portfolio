@@ -2,7 +2,7 @@
     background: linear-gradient(
         to bottom, 
         black, 
-        rgb(0, 15, 6), 
+        rgb(0, 2, 15), 
         rgb(0, 0, 0) 
     );
 }
@@ -61,6 +61,8 @@
     width: 98%;
 }
 .about__list-li {
+    @include font;
+    font-weight: 200;
     padding: 1rem;
     width: calc(100% - 2rem);
     display: flex;
@@ -76,6 +78,7 @@
 .about__list-span {
     max-width: 47.5%;
     font-size: 1.4rem;
+    font-weight: 300;
     color: $cSpan;
     text-align: left;
     white-space: nowrap;
