@@ -1,3 +1,5 @@
 node_modules/
 .github/
 CNAME
+*.yml
+*.log
