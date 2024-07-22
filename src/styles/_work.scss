@@ -12,12 +12,6 @@
     align-items: center;
     gap: 1rem;
 }
-.work__h {
-    font-size: 2.5rem;
-    margin: 3rem 0 0;
-    font-weight: 300;
-    opacity: .4;
-}
 // ___________________
 .work__competence {
     width: 100vw ;
@@ -53,6 +47,7 @@
     animation: conic var(--s) infinite linear;
     &::before {
         content: var(--percT);
+        color: $color;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -69,11 +64,20 @@
 }
 @keyframes conic {
     0% {
-        --perc: var(--perc);
+        background: conic-gradient(
+            $c1 0deg, 
+            $c2 var(--perc), 
+            rgba(204, 204, 204, 0.1) var(--perc), 
+            rgba(204, 204, 204, 0.1) 360deg
+        )
     }
     100% {
-        --perc: var(--percPlus); 
-
+        background: conic-gradient(
+            $c1 0deg, 
+            $c2 var(--percPlus), 
+            rgba(204, 204, 204, 0.1) var(--percPlus), 
+            rgba(204, 204, 204, 0.1) 360deg
+        )
     }
 }
 .work__competence-label {

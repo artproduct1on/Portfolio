@@ -86,21 +86,17 @@
     max-width: 100%;
     overflow-x: auto;
     width: 100%;
-    padding: 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style-type: none;
     background-color: rgba(0, 0, 0, .3);
     backdrop-filter: blur(.3rem);
-    border: .1rem solid $cSpan;
-    border-left: none;
-    border-right: none;
 }
 .contact__list-item {
     min-width: 6rem;
     width: 6rem;
-    height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,15 +104,18 @@
 .contact__list-link {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: .5rem;
     cursor: pointer;
     color: $color;
     opacity: .5;
+    width: 100%;
     svg {
+        border: .1rem solid $color;
+        border-radius: 0 1rem 0 1rem;
+        padding: 1rem;
         fill: $color;
-        color: aliceblue;
         width: 3rem;
         height: 3rem;
     }
@@ -124,9 +123,37 @@
         opacity: 1;
     }
 }
+// _______________
+.contact__activity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+    max-width: 50rem;
+}
+.contact__activity-day {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-align: center;
+    color: $color;
+    span {
+        @include font;
+        color: $cSpan;
+    }
+}
 @media (min-width: 480px) {
     .contact__list {
         max-width: 50rem;
+        justify-content: center;
     }
 }
 

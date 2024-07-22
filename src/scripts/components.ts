@@ -42,7 +42,7 @@ const clock = (): void => {
         yearsElement.textContent = years.toString();
         daysElement.textContent = days.toString();
         hoursElement.textContent = hours.toString();
-    };
+    }; 
 };
 
 const skillsAdd = (): void => {

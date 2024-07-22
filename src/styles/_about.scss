@@ -8,8 +8,10 @@
 }
 .about__container {
     z-index: 1;
-    padding: 5rem 0;
+    padding: 2rem 0;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .about__block {
@@ -23,7 +25,7 @@
 
 .about__photo {
     position: relative;
-    width: 98%;
+    width: 95%;
     border-radius: 0 25% 0 25%;
     overflow: hidden;
     box-shadow: 1rem 1rem 3rem #000000;
@@ -31,7 +33,7 @@
 }
 @keyframes photo {
     0% { transform: translate(0, 0); }
-    50% { transform: translate(0, -1%); }
+    50% { transform: translate(-1%, -1%); }
     100% { transform: translate(0, 0); }
 }
 .about__photo-img {
@@ -49,7 +51,8 @@
     font-size: 15vmin;
     font-weight: 900;
     @include font;
-    opacity: .2;
+    color: $c2;
+    opacity: .1;
 }
 .about__list {
     padding: 0;
@@ -89,24 +92,18 @@
     margin: 0;
     max-width: 47.5%;
     text-align: right;
+    color: $color;
+    font-weight: 100;
     font-size: 1.6rem;
-    user-select: red;
 }
-
+// ____________
 .about_experience {
-    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-.about_experience-h {
-    font-size: 8vmin;
-    margin: 0;
-    opacity: .4;
-}
-
 .clock {
     padding: 0;
     list-style-type: none;
@@ -118,9 +115,9 @@
     width: 100%;
 }
 .clock__item {
+    @include font;
     width: 100%;
-    max-width: 20rem;
-    padding: .5rem 1rem;
+    padding: 1rem;
     background: rgba(46, 46, 46, 0.2);
     display: flex;
     align-items: center;
@@ -129,10 +126,12 @@
     box-shadow: .3rem .3rem 1rem rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     font-size: 3rem;
-    @include font;
+    color: rgba(85, 85, 85, 0.445);
 }
 .clock__item-span {
-    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    font-weight: 100;
     font-size: 5rem;
     color: $cSpan;
 }
@@ -145,6 +144,8 @@
     .about__photo {
         max-width: 35rem;
     }
+    
+
 }
 
 @media (min-width: 768px) { 
@@ -153,5 +154,8 @@
     }
     .about__list {
         width: 50%;
+    }
+    .clock { 
+        flex-wrap: nowrap;
     }
 }

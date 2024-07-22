@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1rem);
     user-select: none;
 }
 .header__container {
@@ -41,7 +41,7 @@
     height: 0;
     width: 100%;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,6 +82,7 @@
     justify-content: center;
     padding: 0 1rem;
     font-size: 1.3rem;
+    color: $color;
 }
 .header__lang-link {
     min-width: 3rem;
@@ -194,7 +195,7 @@
         position: static;
         height: 100%;
         width: max-content;
-        background: none;
+        backdrop-filter: none;
     }
     .header__nav--active {
         height: 100%;

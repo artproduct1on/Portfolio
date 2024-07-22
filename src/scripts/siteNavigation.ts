@@ -39,60 +39,36 @@ export function header() {
 };
 
 export function scroll() {
-
-    let distance: DistanceType[],
-        documentHeight: number;   
-
-
-    const distanceFunktion = (): void => {
-        const array = Array.from(sections),
-              viewportHeight: number =  window.innerHeight || document.documentElement.clientHeight;
-    
-        distance = array.map(i => {
-            return {id: i.id, y: i.offsetTop - viewportHeight/2}
-        });
-        documentHeight = Math.max(
-            document.body.scrollHeight, 
-            document.documentElement.scrollHeight,
-            document.body.offsetHeight, 
-            document.documentElement.offsetHeight,
-            document.body.clientHeight, 
-            document.documentElement.clientHeight
-        );
+    const options: IntersectionObserverInit = {
+        root: null, 
+        rootMargin: '-50%'
     };
-    
-    const sectionActiveFunktion = (id: string): void => {
-        links.forEach((link, index) => {
-            if (link.getAttribute("href") === "#" + id) {
-                link.classList.add("header__nav-link--active");
-                sections[index].classList.add("section--active");
-            } else {
-                link.classList.remove("header__nav-link--active");
-                sections[index].classList.remove("section--active");
+
+
+    const callback: IntersectionObserverCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                links.forEach((link, index) => {
+                    if (link.getAttribute("href") === "#" + entry.target.id) {
+                        link.classList.add("header__nav-link--active");
+                        sections[index].classList.add("section--active");
+                    } else {
+                        link.classList.remove("header__nav-link--active");
+                        sections[index].classList.remove("section--active");
+                    }
+                });
+
+                observer.observe(entry.target); 
+
             }
         });
     };
-    const windowScrollFunktion = (): void => {
-        const scroll = window.scrollY;
-        distance.forEach((i, index) => {
-            const controlLastSection = distance.length > index+1 ? scroll < distance[index+1].y : scroll < documentHeight;
-            if (i.y < scroll && controlLastSection) {
-                sectionActiveFunktion(i.id)
-            };
-        });        
-    };
+    const observer: IntersectionObserver = new IntersectionObserver(callback, options);
 
-
-    distanceFunktion();
-    windowScrollFunktion();
-
-    window.addEventListener("scroll", () => {
-        windowScrollFunktion();
-    });
-
-    window.addEventListener("resize", () => {
-        distanceFunktion();
-        windowScrollFunktion();
+    const sections: NodeListOf<HTMLElement> = document.querySelectorAll('section');
+    sections.forEach(section => {
+        observer.observe(section);
     });
 };
+
 
