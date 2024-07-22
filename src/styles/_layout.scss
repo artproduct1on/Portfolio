@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(1rem);
+    background-color: rgba(0, 0, 0, 0.7);
     user-select: none;
 }
 .header__container {
@@ -36,17 +37,19 @@
 //header__nav
 .header__nav {
     position: fixed;
+    z-index: 1000;
     top: 5rem;
     left: 0;
     height: 0;
     width: 100%;
     overflow: hidden;
-    backdrop-filter: blur(1rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: $transition;
+    background-color: rgba(0, 0, 0, 0.7);
+
 }
 .header__nav--active {
     height: 20rem;
@@ -195,7 +198,7 @@
         position: static;
         height: 100%;
         width: max-content;
-        backdrop-filter: none;
+        background-color: rgba(0, 0, 0, 0);
     }
     .header__nav--active {
         height: 100%;

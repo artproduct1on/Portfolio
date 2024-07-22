@@ -49,12 +49,14 @@ export function scroll() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 links.forEach((link, index) => {
+                    const sectionId = sections[index].id;
+                    
                     if (link.getAttribute("href") === "#" + entry.target.id) {
                         link.classList.add("header__nav-link--active");
-                        sections[index].classList.add("section--active");
+                        sections[index].classList.add(sectionId + "--active");
                     } else {
                         link.classList.remove("header__nav-link--active");
-                        sections[index].classList.remove("section--active");
+                        sections[index].classList.remove(sectionId + "--active");
                     }
                 });
 

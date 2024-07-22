@@ -3,6 +3,7 @@
     height: 100vh;
     max-height: 100vh;
 }
+
 .home::before {
     content: "";
     position: absolute;
@@ -41,14 +42,21 @@
     font-size: 9vmin;
     line-height: 9vmin;
     text-align: center;
+    transition: $tObserver;
+    &:nth-child(1) {
+        transform: translateX(-50%);
+    }
     &:nth-child(2) {
+        transform: translateX(50%);
         @include textGradient;
     }
     &:nth-child(3) {
+        transform: translateX(-50%);
         line-height: 12vmin;
         font-size: 12vmin;
     }
 }
+
 
 // ________________
 .home__link {
@@ -58,13 +66,17 @@
     align-items: center;
     gap: 1.5rem;
     list-style-type: none;
+    opacity: 0;
+    transition: $tObserver;
 }
 .home__list-item  {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 .home__list-link {
+    backdrop-filter: blur(5rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,8 +85,8 @@
     height: 1.8rem;
     border-radius: 50%;
     border: .1rem solid $color;
-    opacity: .5;
     cursor: pointer;
+    opacity: .5;
     svg {
         width: 100%;
         height: 100%;
@@ -97,6 +109,8 @@
     padding: 0; 
     overflow: hidden;
     cursor: pointer;
+    opacity: 0;
+    transition: $tObserver;
     &:hover {
         .home__next-element {
             transform: translateY(0%);
@@ -104,15 +118,15 @@
         }
     }
 }
-.home__next-wort {
+.home__next-word {
     position: absolute;
     left: 50%;
     top: 30%;
-    transform: translate(-60%, -50%) rotate(-90deg);
+    transform: translate(-62.5%, -50%) rotate(-90deg);
     color: $cSpan;
     font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 1rem;
+    letter-spacing: 1.2rem;
 }
 .home__next-shell {
     width: .3rem;
@@ -146,22 +160,31 @@
         transform: translateY(0%);
     }
 }
-
-// @media (min-width: 480px) {
-//     .home__h-part {
-//         font-size: 6vmin;
-//         line-height: 5vmin;
-//         &:nth-child(3){
-//             line-height: 10vmin;
-//             font-size: 10vmin;
-//         }
-//     }
-
-// }
  
 @media (min-width: 1367px) {
     .home::before {
         background-size: contain;
     }
 
+}
+
+.home--active {
+    opacity: 1;
+    .home__h-part { 
+        &:nth-child(1) {
+            transform: translateX(0%);
+        }
+        &:nth-child(2) {
+            transform: translateX(0%);
+        }
+        &:nth-child(3) {
+            transform: translateX(0%);
+        }
+    }
+    .home__link {
+        opacity: 1;
+    }
+    .home__next { 
+        opacity: 1;
+    }
 }

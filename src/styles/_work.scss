@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin-top: 5rem;
 }
 // ___________________
 .work__competence {
@@ -44,7 +45,6 @@
         rgba(204, 204, 204, 0.1) 360deg
     );
     border-radius: 50%;
-    animation: conic var(--s) infinite linear;
     &::before {
         content: var(--percT);
         color: $color;
@@ -61,25 +61,11 @@
         align-items: center;
         font-size: 1.8rem;
     }
+    opacity: 0;
+    transform: rotate(800deg);
+    transition: $tObserver;
 }
-@keyframes conic {
-    0% {
-        background: conic-gradient(
-            $c1 0deg, 
-            $c2 var(--perc), 
-            rgba(204, 204, 204, 0.1) var(--perc), 
-            rgba(204, 204, 204, 0.1) 360deg
-        )
-    }
-    100% {
-        background: conic-gradient(
-            $c1 0deg, 
-            $c2 var(--percPlus), 
-            rgba(204, 204, 204, 0.1) var(--percPlus), 
-            rgba(204, 204, 204, 0.1) 360deg
-        )
-    }
-}
+
 .work__competence-label {
     text-align: center;
     font-size: 1.4rem;
@@ -102,8 +88,9 @@
         top: 0;
         right: -1.6rem;
         width: .2rem;
-        height: 100%;
+        height: 0%;
         background-color: $c2;
+        transition: 5s;
     }
 }
 .work__process-item {
@@ -112,7 +99,7 @@
     align-items: flex-end;
     justify-content: center;
     position: relative;
-    width: 100%;    
+    width: 100%;
     &::before {
         content: var(--num);
         color: $c3;
@@ -131,7 +118,6 @@
         height: 1.5rem;
         border-radius: 50%;
         background-color: $c2;
-
     }
 }
 .work__process-name {
@@ -182,9 +168,8 @@
     .work__process {
         align-items: flex-start;
         &::before {
-            top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translateX(-50%);
         }
     }
     .work__process-item {
@@ -198,6 +183,20 @@
             &::before {
                 left: -2.25rem;
             }
+        }
+    }
+}
+
+.work--active {
+    opacity: 1;
+    .work__competence-circle {
+        opacity: 1;
+        transform: rotate(0deg); 
+        
+    }
+    .work__process {
+        &::before {
+            height: 100%;
         }
     }
 }
