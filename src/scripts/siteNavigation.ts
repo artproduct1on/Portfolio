@@ -67,7 +67,6 @@ export function scroll() {
     };
     const observer: IntersectionObserver = new IntersectionObserver(callback, options);
 
-    const sections: NodeListOf<HTMLElement> = document.querySelectorAll('section');
     sections.forEach(section => {
         observer.observe(section);
     });

@@ -130,7 +130,9 @@
 }
 .work__process-p {
     font-size: 1.4rem;
-    color: $cSpan;
+    opacity: 0;
+    color: $c1;
+    transition: 5s;
 }
 // ____________________
 .work__skills {
@@ -198,5 +200,9 @@
         &::before {
             height: 100%;
         }
+    }
+    .work__process-p {
+        opacity: .8;
+        color: $color;
     }
 }
