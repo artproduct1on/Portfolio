@@ -44,7 +44,6 @@ export function scroll() {
         rootMargin: '-50%'
     };
 
-
     const callback: IntersectionObserverCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -57,12 +56,12 @@ export function scroll() {
                     } else {
                         link.classList.remove("header__nav-link--active");
                         sections[index].classList.remove(sectionId + "--active");
-                    }
+                    };
                 });
 
                 observer.observe(entry.target); 
 
-            }
+            };
         });
     };
     const observer: IntersectionObserver = new IntersectionObserver(callback, options);
