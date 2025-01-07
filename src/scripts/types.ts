@@ -1,19 +1,18 @@
 export type HtmlType = HTMLElement | null;
-export type HtmlListType = NodeListOf<HTMLElement> | null ;
-export type InputType = HTMLInputElement | null ;
-export type TextAreaType = HTMLTextAreaElement | null ;
-export type SvgListType = NodeListOf<SVGSVGElement> | null ;
-
+export type HtmlListType = NodeListOf<HTMLElement> | null;
+export type InputType = HTMLInputElement | null;
+export type TextAreaType = HTMLTextAreaElement | null;
+export type SvgListType = NodeListOf<SVGSVGElement> | null;
 
 export interface SvgMapType {
-    [key: string]: string;
+	[key: string]: string;
 };
 export interface SkillsType {
-    name: string;
-    img: string;
-    link: string;
+	name: string;
+	img: string;
+	link: string;
 };
 export interface DistanceType {
-    id: string;
-    y: number;
+	id: string;
+	y: number;
 };

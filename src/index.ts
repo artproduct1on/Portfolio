@@ -4,7 +4,7 @@ import { header, scroll } from "./scripts/siteNavigation";
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    components();
-    header();
-    scroll();
+	components();
+	header();
+	scroll();
 });
