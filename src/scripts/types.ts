@@ -12,7 +12,3 @@ export interface SkillsType {
 	img: string;
 	link: string;
 };
-export interface DistanceType {
-	id: string;
-	y: number;
-};

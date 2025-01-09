@@ -1,4 +1,4 @@
-import { HtmlType, HtmlListType, DistanceType } from "./types";
+import { HtmlType, HtmlListType } from "./types";
 const hamburger: HtmlType = document.querySelector(".header__hamburger"),
 	nav: HtmlType = document.querySelector(".header__nav"),
 	links: HtmlListType = document.querySelectorAll(".header__nav-link"),
