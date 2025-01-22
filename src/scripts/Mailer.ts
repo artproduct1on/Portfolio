@@ -1,5 +1,4 @@
 import emailjs from 'emailjs-com';
-import { resolve } from 'path';
 
 export default class Mailer {
   private _userID: string = "uB5oOUhgFpCdMOZ6E";

@@ -44,19 +44,19 @@
   font-size: 9vmin;
   line-height: 9vmin;
   text-align: center;
-  transition: $tObserver transform;
+  transition: $tObserver translate;
 
   &:nth-child(1) {
-    transform: translateX(-50%);
+    translate: -50%;
   }
 
   &:nth-child(2) {
-    transform: translateX(50%);
+    translate: 50%;
     @include textGradient;
   }
 
   &:nth-child(3) {
-    transform: translateX(-50%);
+    translate: -50%;
     line-height: 12vmin;
     font-size: 12vmin;
   }
@@ -121,9 +121,16 @@
   transition: $tObserver;
 
   &:hover {
-    .home__next-element {
-      transform: translateY(0%);
-      animation: nextHover 1s;
+    .home__next-word {
+      color: $c2;
+    }
+
+    .home__next-shell {
+      &::after {
+        content: "";
+        translate: 0 0;
+        animation: nextHover 1s;
+      }
     }
   }
 }
@@ -132,11 +139,13 @@
   position: absolute;
   left: 50%;
   top: 30%;
-  transform: translate(-63%, -60%) rotate(-90deg);
+  translate: -60% -60%;
+  rotate: -90deg;
   color: $cSpan;
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1.2rem;
+  transition: .2s color;
 }
 
 .home__next-shell {
@@ -152,30 +161,28 @@
     width: 100%;
     height: 100%;
     background: $bgItem ;
-    transform: translateY(-100%);
+    translate: 0 -100%;
     animation: next 1s infinite;
   }
 }
 
-
-
 @keyframes next {
   from {
-    transform: translateY(-100%);
+    translate: 0 -100%;
   }
 
   to {
-    transform: translateY(100%);
+    translate: 0 100%;
   }
 }
 
 @keyframes nextHover {
   from {
-    transform: translateY(-100%);
+    translate: 0 -100%;
   }
 
   to {
-    transform: translateY(0%);
+    translate: 0 0;
   }
 }
 
@@ -183,7 +190,6 @@
   .home::before {
     background-size: contain;
   }
-
 }
 
 .home--active {
@@ -191,15 +197,15 @@
 
   .home__h-part {
     &:nth-child(1) {
-      transform: translateX(0%);
+      translate: 0%;
     }
 
     &:nth-child(2) {
-      transform: translateX(0%);
+      translate: 0%;
     }
 
     &:nth-child(3) {
-      transform: translateX(0%);
+      translate: 0%;
     }
   }
 
