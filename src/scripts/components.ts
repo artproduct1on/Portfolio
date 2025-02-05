@@ -48,11 +48,17 @@ const clock = () => {
 };
 
 const skillsAdd = () => {
-  const skillsContainer: HtmlType = document.querySelector(".work__skills");
-  let filling = "";
+  const frontContainer: HtmlType = document.querySelector(".work__skills-front");
+  const backContainer: HtmlType = document.querySelector(".work__skills-back");
+  const toolContainer: HtmlType = document.querySelector(".work__skills-tool");
+  const filling: { [key: string]: string } = { front: "", back: "", tool: "" };
 
-  skillsContainer && skillsInfo && skillsInfo.forEach(i => {
-    filling += `
+  if (!frontContainer || !backContainer || !toolContainer) {
+    return console.log("Missing contsiner!");
+  };
+
+  skillsInfo && skillsInfo.forEach(i => {
+    filling[i.title] += `
       <a class="work__skills-link" href="${i.link}" target="_blank" title="${i.name}">                    
           <img class="work__skills-img" src="${i.img}" loading="lazy" alt="${i.img}" >
           ${i.name}
@@ -60,7 +66,9 @@ const skillsAdd = () => {
     `
   });
 
-  skillsContainer.innerHTML += filling;
+  frontContainer.innerHTML += filling.front;
+  backContainer.innerHTML += filling.back;
+  toolContainer.innerHTML += filling.tool;
 };
 
 const messageSend = () => {

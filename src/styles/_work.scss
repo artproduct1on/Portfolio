@@ -189,7 +189,7 @@
 	.work__process-item {
 		position: relative;
 		width: calc(50% - 1.5rem);
-		text-align: end;
+		text-align: right;
 
 		&:nth-child(2n) {
 			text-align: start;

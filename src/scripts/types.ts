@@ -10,5 +10,6 @@ export interface SvgMapType {
 export interface SkillsType {
 	name: string;
 	img: string;
+	title: string;
 	link: string;
 };

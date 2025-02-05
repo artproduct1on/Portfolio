@@ -4,92 +4,102 @@ const skills: SkillsType[] = [
 	{
 		name: "Html",
 		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png",
-		link: "https://en.wikipedia.org/wiki/HTML"
+		title: "front", link: "https://en.wikipedia.org/wiki/HTML"
 	},
 	{
 		name: "Css",
 		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/120px-CSS3_logo_and_wordmark.svg.png",
-		link: "https://en.wikipedia.org/wiki/CSS"
+		title: "front", link: "https://en.wikipedia.org/wiki/CSS"
 	},
 	{
 		name: "JavaScript",
 		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/70px-Unofficial_JavaScript_logo_2.svg.png",
-		link: "https://en.wikipedia.org/wiki/JavaScript"
+		title: "front", link: "https://en.wikipedia.org/wiki/JavaScript"
 	},
 	{
 		name: "TypeScript",
 		img: "https://www.typescriptlang.org/favicon.ico",
-		link: "https://www.typescriptlang.org/"
+		title: "front", link: "https://www.typescriptlang.org/"
 	},
 	{
 		name: "React.js",
 		img: "https://react.dev/favicon.ico",
-		link: "https://react.dev/"
+		title: "front", link: "https://react.dev/"
 	},
 	{
 		name: "Redux",
 		img: "https://redux.js.org/img/favicon/favicon.ico",
-		link: "https://redux.js.org/"
-	},
-	{
-		name: "Webpack",
-		img: "https://webpack.js.org/icon_180x180.png",
-		link: "https://webpack.js.org/"
+		title: "front", link: "https://redux.js.org/"
 	},
 	{
 		name: "Sass",
 		img: "https://sass-lang.com/favicon.ico",
-		link: "https://sass-lang.com/"
+		title: "front", link: "https://sass-lang.com/"
 	},
 	{
 		name: "MUI",
 		img: "https://mui.com/favicon.ico",
-		link: "https://mui.com/"
+		title: "front", link: "https://mui.com/"
 	},
 	{
 		name: "Three.js",
 		img: "https://threejs.org/favicon.ico",
-		link: "https://threejs.org/"
+		title: "front", link: "https://threejs.org/"
 	},
 	{
 		name: "Next.js",
 		img: "https://nextjs.org/favicon.ico",
-		link: "https://nextjs.org/"
-	},
-	{
-		name: "Node.js",
-		img: "https://nodejs.org/favicon.ico",
-		link: "https://nodejs.org/"
-	},
-	{
-		name: "Express.js",
-		img: "https://expressjs.com/images/favicon.png",
-		link: "https://expressjs.com/"
-	},
-	{
-		name: "MongoDB",
-		img: "https://www.mongodb.com/favicon.ico",
-		link: "https://www.mongodb.com/"
+		title: "back", link: "https://nextjs.org/"
 	},
 	{
 		name: "Socket",
 		img: "https://socket.io/images/favicon.png",
-		link: "https://socket.io/"
+		title: "back", link: "https://socket.io/"
+	},
+	{
+		name: "Node.js",
+		img: "https://nodejs.org/favicon.ico",
+		title: "back", link: "https://nodejs.org/"
+	},
+	{
+		name: "Express.js",
+		img: "https://expressjs.com/images/favicon.png",
+		title: "back", link: "https://expressjs.com/"
+	},
+	{
+		name: "MongoDB",
+		img: "https://www.mongodb.com/favicon.ico",
+		title: "back", link: "https://www.mongodb.com/"
+	},
+	{
+		name: "MySQL",
+		img: "https://labs.mysql.com/common/themes/sakila/favicon.ico",
+		title: "back", link: "https://www.mysql.com/"
+	},
+	{
+		name: "Ubuntu",
+		img: "https://ubuntu.com/static/favicons/COF-favicon-48x48.png?v=fa3c63f",
+		title: "tool", link: "https://ubuntu.com/"
 	},
 	{
 		name: "Jest",
 		img: "https://jestjs.io/img/jest.png",
-		link: "https://jestjs.io/"
+		title: "tool", link: "https://jestjs.io/"
+	},
+	{
+		name: "Webpack",
+		img: "https://webpack.js.org/icon_180x180.png",
+		title: "tool", link: "https://webpack.js.org/"
 	},
 	{
 		name: "Git",
 		img: "https://git-scm.com/favicon.png",
-		link: "https://git-scm.com/"
+		title: "tool", link: "https://git-scm.com/"
 	},
 	{
 		name: "Figma",
 		img: "https://static.figma.com/app/icon/1/favicon.svg",
-		link: "https://www.figma.com/"
+		title: "tool", link: "https://www.figma.com/"
 	},
 ];
 
