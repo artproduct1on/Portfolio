@@ -49,7 +49,7 @@ const skills: SkillsType[] = [
 	{
 		name: "Next.js",
 		img: "https://nextjs.org/favicon.ico",
-		title: "back", link: "https://nextjs.org/"
+		title: "front", link: "https://nextjs.org/"
 	},
 	{
 		name: "Socket",
