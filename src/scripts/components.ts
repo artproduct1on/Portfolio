@@ -2,6 +2,7 @@ import { InputType, SvgListType, HtmlType, SvgMapType, TextAreaType } from './ty
 import Mailer from './Mailer';
 import skillsInfo from './skillsInfo';
 
+
 declare const require: {
   context: (directory: string, useSubdirectories: boolean, regExp: RegExp) => {
     keys: () => string[];
@@ -74,7 +75,7 @@ const skillsAdd = () => {
 const messageSend = () => {
   const form: HtmlType = document.querySelector(".contact__form"),
     subjectInput: InputType = document.querySelector(".contact__form-subject"),
-    messageTA: TextAreaType = document.querySelector(".contact__form-message")
+    messageTA: TextAreaType = document.querySelector(".contact__form-message");
 
   if (!form || !subjectInput || !messageTA) {
     console.error("One or more form elements are missing.");
