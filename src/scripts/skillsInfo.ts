@@ -22,9 +22,19 @@ const skills: SkillsType[] = [
 		title: "front", link: "https://www.typescriptlang.org/"
 	},
 	{
-		name: "React.js",
+		name: "React",
 		img: "https://react.dev/favicon.ico",
 		title: "front", link: "https://react.dev/"
+	},
+	{
+		name: "Next",
+		img: "https://nextjs.org/favicon.ico",
+		title: "front", link: "https://nextjs.org/"
+	},
+	{
+		name: "Expo",
+		img: "https://static.expo.dev/static/brand/app-icon-512x512.png",
+		title: "front", link: "https://expo.dev/"
 	},
 	{
 		name: "Redux",
@@ -47,11 +57,6 @@ const skills: SkillsType[] = [
 		title: "front", link: "https://threejs.org/"
 	},
 	{
-		name: "Next.js",
-		img: "https://nextjs.org/favicon.ico",
-		title: "front", link: "https://nextjs.org/"
-	},
-	{
 		name: "Socket",
 		img: "https://socket.io/images/favicon.png",
 		title: "back", link: "https://socket.io/"
@@ -67,6 +72,11 @@ const skills: SkillsType[] = [
 		title: "back", link: "https://expressjs.com/"
 	},
 	{
+		name: "Ubuntu",
+		img: "https://ubuntu.com/static/favicons/COF-favicon-48x48.png?v=fa3c63f",
+		title: "back", link: "https://ubuntu.com/"
+	},
+	{
 		name: "MongoDB",
 		img: "https://www.mongodb.com/favicon.ico",
 		title: "back", link: "https://www.mongodb.com/"
@@ -75,11 +85,6 @@ const skills: SkillsType[] = [
 		name: "MySQL",
 		img: "https://labs.mysql.com/common/themes/sakila/favicon.ico",
 		title: "back", link: "https://www.mysql.com/"
-	},
-	{
-		name: "Ubuntu",
-		img: "https://ubuntu.com/static/favicons/COF-favicon-48x48.png?v=fa3c63f",
-		title: "tool", link: "https://ubuntu.com/"
 	},
 	{
 		name: "Jest",
@@ -95,6 +100,11 @@ const skills: SkillsType[] = [
 		name: "Git",
 		img: "https://git-scm.com/favicon.png",
 		title: "tool", link: "https://git-scm.com/"
+	},
+	{
+		name: "phpMyAdmin",
+		img: "https://www.phpmyadmin.net/static/favicon.ico",
+		title: "tool", link: "https://www.phpmyadmin.net/"
 	},
 	{
 		name: "Figma",
