@@ -1,3 +1,5 @@
+@use "var" as v;
+
 .work {
 	background: linear-gradient(to bottom,
 			black,
@@ -18,19 +20,13 @@
 	width: 100vw;
 	padding: 1rem;
 	margin: 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
+	@include v.flex(center, center, row, wrap);
 	gap: 1rem;
 	background: rgba(27, 27, 27, 0.3);
 }
 
 .work__competence-item {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	@include v.flex(center, center, column);
 	padding: .5rem;
 	border-radius: .5rem;
 }
@@ -40,15 +36,15 @@
 	width: 7rem;
 	height: 7rem;
 	margin: .5rem;
-	background: conic-gradient($c1 0deg,
-			$c2 var(--perc),
+	background: conic-gradient(v.$c1 0deg,
+			v.$c2 var(--perc),
 			rgba(204, 204, 204, 0.1) var(--perc),
 			rgba(204, 204, 204, 0.1) 360deg);
 	border-radius: 50%;
 
 	&::before {
 		content: var(--percT);
-		color: $color;
+		color: v.$color;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -57,30 +53,25 @@
 		height: 85%;
 		background-color: rgb(20, 20, 20);
 		border-radius: 50%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include v.flex;
 		font-size: 1.8rem;
 	}
 
 	opacity: 0;
 	rotate: 800deg;
-	transition: $tObserver;
+	transition: v.$tObserver;
 }
 
 .work__competence-label {
 	text-align: center;
 	font-size: 1.4rem;
-	color: $color;
+	color: v.$color;
 }
 
 .work__process {
 	width: 80%;
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	@include v.flex(center, center, column);
 	margin: 0;
 	padding: 3rem 0;
 	list-style-type: none;
@@ -92,16 +83,13 @@
 		right: -1.6rem;
 		width: .2rem;
 		height: 0%;
-		background-color: $c2;
+		background-color: v.$c2;
 		transition: 5s;
 	}
 }
 
 .work__process-item {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: center;
+	@include v.flex(flex-end, center, column);
 	position: relative;
 	width: 100%;
 
@@ -110,11 +98,9 @@
 		position: absolute;
 		top: .3rem;
 		right: -2.25rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include v.flex(center, center, column);
 		text-align: center;
-		color: $c3;
+		color: v.$c3;
 		font-size: .8rem;
 		font-weight: 900;
 		margin: 0;
@@ -122,13 +108,13 @@
 		width: 1.5rem;
 		height: 1.5rem;
 		border-radius: 50%;
-		background-color: $c2;
+		background-color: v.$c2;
 	}
 }
 
 .work__process-name {
-	@include font;
-	@include textGradient;
+	@include v.font;
+	@include v.textGradient;
 	width: min-content;
 	font-weight: 900;
 	font-size: 1.8rem;
@@ -138,7 +124,7 @@
 .work__process-p {
 	font-size: 1.4rem;
 	opacity: 0;
-	color: $c1;
+	color: v.$c1;
 	transition: 5s;
 }
 
@@ -146,23 +132,17 @@
 	min-height: 10rem;
 	width: 95%;
 	max-width: 60rem;
-	display: flex;
-	flex-wrap: wrap;
+	@include v.flex(center, center, row, wrap);
 	gap: .5rem;
-	justify-content: center;
-	align-items: center;
 }
 
 .work__skills-link {
+	@include v.flex(center, center, column);
 	background: rgba(33, 33, 33, 0.5);
 	width: 6rem;
 	height: 7rem;
-	display: flex;
 	gap: .5rem;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	color: $color;
+	color: v.$color;
 	opacity: .7;
 
 	&:hover {
@@ -219,6 +199,6 @@
 
 	.work__process-p {
 		opacity: .8;
-		color: $color;
+		color: v.$color;
 	}
 }

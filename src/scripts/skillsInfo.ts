@@ -42,6 +42,11 @@ const skills: SkillsType[] = [
 		title: "front", link: "https://redux.js.org/"
 	},
 	{
+		name: "Zustand",
+		img: "https://github.com/pmndrs/zustand/raw/main/docs/favicon.ico",
+		title: "front", link: "https://zustand.docs.pmnd.rs/"
+	},
+	{
 		name: "Sass",
 		img: "https://sass-lang.com/favicon.ico",
 		title: "front", link: "https://sass-lang.com/"
@@ -85,6 +90,16 @@ const skills: SkillsType[] = [
 		name: "MySQL",
 		img: "https://labs.mysql.com/common/themes/sakila/favicon.ico",
 		title: "back", link: "https://www.mysql.com/"
+	},
+	{
+		name: "PostgreSQL",
+		img: "https://www.postgresql.org/favicon.ico",
+		title: "back", link: "https://www.postgresql.org/"
+	},
+	{
+		name: "Sequelize",
+		img: "https://sequelize.org/img/logo.svg",
+		title: "back", link: "https://sequelize.org/"
 	},
 	{
 		name: "Jest",

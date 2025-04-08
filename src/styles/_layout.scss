@@ -1,3 +1,5 @@
+@use "var" as v;
+
 .spinner {
 	&::before {
 		content: "";
@@ -7,7 +9,7 @@
 		height: 100%;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		translate: -50% -50%;
 		background-color: rgba(0, 0, 0, .5);
 	}
 
@@ -20,35 +22,33 @@
 		width: 3rem;
 		height: 3rem;
 		border-radius: 50%;
-		border: .1rem solid $c2;
-		border-bottom: .3rem solid $c2;
+		border: .1rem solid v.$c2;
+		border-bottom: .3rem solid v.$c2;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		translate: -50% -50%;
 		animation: spinner 1s infinite linear;
 	}
 }
 
 @keyframes spinner {
 	from {
-		transform: translate(-50%, -50%) rotate(0deg);
+		rotate: 0deg;
 	}
 
 	to {
-		transform: translate(-50%, -50%) rotate(360deg);
+		rotate: 360deg;
 	}
 }
 
 .header {
+	@include v.flex;
 	position: fixed;
 	z-index: 999;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	backdrop-filter: blur(1rem);
 	background-color: rgba(0, 0, 0, 0.7);
 	user-select: none;
@@ -71,15 +71,16 @@
 }
 
 .header__logo-p {
-	@include font;
+	@include v.font;
 	font-weight: 100;
 	align-self: self-end;
 	margin: 0;
 	font-size: 2.5rem;
-	color: $color;
+	color: v.$color;
 }
 
 .header__nav {
+	@include v.flex(center, center, column);
 	position: fixed;
 	z-index: 1000;
 	top: 5rem;
@@ -87,11 +88,7 @@
 	height: 0;
 	width: 100%;
 	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: $transition;
+	transition: v.$transition;
 	background-color: rgba(0, 0, 0, 0.7);
 
 }
@@ -101,56 +98,46 @@
 }
 
 .header__nav-list {
+	@include v.flex(center, center, column);
 	padding: 0;
 	width: 100%;
 	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 
 .header__nav-item {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include v.flex;
 	width: 100%;
 }
 
 .header__nav-link {
+	@include v.link;
 	width: 100%;
 	min-width: 8rem;
-	@include link;
 }
 
 .header__nav-link--active {
-	color: $c2;
+	color: v.$c2;
 }
 
 
 .header__lang {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	@include v.flex;
 	padding: 0 1rem;
 	font-size: 1.3rem;
-	color: $color;
+	color: v.$color;
 }
 
 .header__lang-link {
+	@include v.link;
 	min-width: 3rem;
-	@include link;
 }
 
 .header__hamburger {
+	@include v.flex(flex-end, center, column);
 	width: 4rem;
 	height: 4rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-end;
 	gap: .4rem;
-	transition: $transition;
+	transition: v.$transition;
 	cursor: pointer;
 }
 
@@ -158,7 +145,7 @@
 	height: .2rem;
 	border-radius: .5rem;
 	background-color: aliceblue;
-	transition: $transition;
+	transition: v.$transition;
 
 	&:nth-child(1) {
 		width: 2.5rem;
@@ -180,7 +167,8 @@
 		width: 3rem;
 
 		&:nth-child(1) {
-			transform: translateY(.6rem) rotate(45deg);
+			translate: 0 0.6rem;
+			rotate: 45deg;
 		}
 
 		&:nth-child(2) {
@@ -188,12 +176,14 @@
 		}
 
 		&:nth-child(3) {
-			transform: translateY(-.6rem) rotate(-45deg);
+			translate: 0 -0.6rem;
+			rotate: -45deg;
 		}
 	}
 }
 
 .footer {
+	@include v.flex;
 	background: radial-gradient(circle at center,
 			black,
 			rgb(0, 4, 15),
@@ -204,24 +194,19 @@
 	width: 100%;
 	border-radius: 30% 30% 0 0;
 	min-height: 10rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .footer__container {
+	@include v.flex;
 	margin-top: 1rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	font-size: 1.4rem;
-	color: $color;
+	color: v.$color;
 }
 
 .footer__link {
 	font-size: 1.4rem;
 	padding: 1rem;
-	color: $color;
+	color: v.$color;
 	opacity: .5;
 
 	&:hover {

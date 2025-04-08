@@ -1,21 +1,32 @@
+@use "var" as v;
+
 .home {
   position: relative;
   height: 100vh;
   max-height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../assets/bg.main.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    filter: contrast(200%) brightness(50%);
+  }
 }
 
-.home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../assets/bg.main.gif");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  filter: contrast(200%) brightness(50%);
+.home__h {
+  margin: 0;
+  width: 100%;
+  @include v.flex(center, center, column);
+  gap: 1rem;
+  font-weight: 500;
+  color: v.$color;
 }
 
 .home__container {
@@ -28,23 +39,11 @@
   align-items: center;
 }
 
-.home__h {
-  margin: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  align-items: center;
-  font-weight: 500;
-  color: $color;
-}
-
 .home__h-part {
   font-size: 9vmin;
   line-height: 9vmin;
   text-align: center;
-  transition: $tObserver translate;
+  transition: v.$tObserver translate;
 
   &:nth-child(1) {
     translate: -50%;
@@ -52,7 +51,7 @@
 
   &:nth-child(2) {
     translate: 50%;
-    @include textGradient;
+    @include v.textGradient;
   }
 
   &:nth-child(3) {
@@ -65,39 +64,32 @@
 
 .home__link {
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include v.flex;
   gap: 1.5rem;
   list-style-type: none;
   opacity: 0;
-  transition: $tObserver;
+  transition: v.$tObserver;
 }
 
 .home__list-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  @include v.flex;
 }
 
 .home__list-link {
   backdrop-filter: blur(5rem);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include v.flex;
   padding: 1rem;
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  border: .1rem solid $color;
+  border: .1rem solid v.$color;
   cursor: pointer;
   opacity: .5;
 
   svg {
     width: 100%;
     height: 100%;
-    fill: $color;
+    fill: v.$color;
   }
 
   &:hover {
@@ -107,9 +99,7 @@
 
 .home__next {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include v.flex;
   background: none;
   border: none;
   height: 8rem;
@@ -118,11 +108,11 @@
   overflow: hidden;
   cursor: pointer;
   opacity: 0;
-  transition: $tObserver;
+  transition: v.$tObserver;
 
   &:hover {
     .home__next-word {
-      color: $c2;
+      color: v.$c2;
     }
 
     .home__next-shell {
@@ -141,7 +131,7 @@
   top: 30%;
   translate: -60% -60%;
   rotate: -90deg;
-  color: $cSpan;
+  color: v.$cSpan;
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1.2rem;
@@ -151,16 +141,15 @@
 .home__next-shell {
   width: .3rem;
   height: 100%;
-  background-color: $color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: v.$color;
+  @include v.flex;
+
 
   &::after {
     content: "";
     width: 100%;
     height: 100%;
-    background: $bgItem ;
+    background: v.$bgItem ;
     translate: 0 -100%;
     animation: next 1s infinite;
   }

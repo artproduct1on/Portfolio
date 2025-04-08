@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-@import "_var.scss";
-@import "_normalize.scss";
-@import "_layout.scss";
-@import "_home.scss";
-@import "_about.scss";
-@import "_work.scss";
-@import "_contact.scss";
-
+@use "var" as v;
+@use "normalize";
+@use "layout";
+@use "home";
+@use "about";
+@use "work";
+@use "contact";
 
 html {
   font-family: Arial, sans-serif;
@@ -29,10 +26,7 @@ section {
   width: 100%;
   max-width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include v.flex(center, center, column);
   overflow: hidden;
   opacity: 0.1;
   transition: .4s;
@@ -53,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include font;
+  @include v.font;
   user-select: none;
 }
 
@@ -62,7 +56,7 @@ h2 {
   font-weight: 100;
   font-size: 4rem;
   text-transform: uppercase;
-  color: $color;
+  color: v.$color;
   opacity: .1;
   width: 100%;
   margin: .5rem 0;
@@ -75,7 +69,7 @@ h3 {
   margin: 2.5rem 0 1rem;
   font-weight: 300;
   opacity: .4;
-  color: $color;
+  color: v.$color;
 }
 
 h4 {
@@ -84,7 +78,7 @@ h4 {
   margin: 2rem 0 1rem;
   font-weight: 300;
   opacity: .4;
-  color: $color;
+  color: v.$color;
 }
 
 
@@ -119,7 +113,7 @@ h4 {
   }
 
   ::selection {
-    background-color: $c1;
+    background-color: v.$c1;
     color: white;
   }
 
@@ -128,7 +122,8 @@ h4 {
     top: 50%;
     left: 0%;
     width: max-content;
-    transform: translate(-50%, -50%) rotate(90deg);
+    translate: -50% -50%;
+    rotate: 90deg;
     padding-bottom: 6%;
     font-size: 6rem;
   }

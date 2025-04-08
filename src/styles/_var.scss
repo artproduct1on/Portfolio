@@ -8,7 +8,6 @@ $tObserver: 2s;
 $circle: 1132px;
 $bgItem: linear-gradient(45deg, $c1, $c2);
 
-
 @mixin link {
   text-align: center;
   color: $color;
@@ -37,4 +36,12 @@ $bgItem: linear-gradient(45deg, $c1, $c2);
   background: $bgItem;
   background-clip: text;
   color: transparent;
+}
+
+@mixin flex($ai: center, $jc: center, $fd: row, $fw: nowrap) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $fw;
 }
