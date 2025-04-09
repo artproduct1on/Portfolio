@@ -112,6 +112,11 @@ const skills: SkillsType[] = [
 		title: "tool", link: "https://webpack.js.org/"
 	},
 	{
+		name: "Vite",
+		img: "https://vite.dev/logo.svg",
+		title: "tool", link: "https://vite.dev/"
+	},
+	{
 		name: "Git",
 		img: "https://git-scm.com/favicon.png",
 		title: "tool", link: "https://git-scm.com/"
