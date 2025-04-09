@@ -9,24 +9,31 @@ export function buildPlugins({ mode, paths }: BuildOptions): Configuration["plug
 
   const isDevelopment: boolean = mode === "development";
 
-  const getFilesFromDirectory = (dirPath: string) => {
-    return fs.readdirSync(dirPath).map(i => i.replace(".html", ""));
-  };
-  const filesList: string[] = getFilesFromDirectory(paths.html);
+  const languages = ['en', 'uk', 'de'];
 
-  const htmlGeneration = (templates: string[]) => {
-    return templates.map(i => {
+  const createHtmlPlugins = () => {
+
+    return languages.map(lang => {
+      const translations = JSON.parse(
+        fs.readFileSync(`./src/locales/${lang}.json`, 'utf-8')
+      );
+
       return new HtmlWebpackPlugin({
-        template: paths.html + `/${i}.html`,
-        filename: i === "index" ? `${i}.html` : `${i}/index.html`,
+        filename: lang === 'en' ? `index.html` : `${lang}/index.html`,
+        template: './src/template.ejs',
         inject: 'body',
-        minify: false,
+        templateParameters: {
+          t: translations,
+          lang
+        }
       });
     });
   };
+
+
   const plugins: Configuration["plugins"] = [
     new SpriteLoaderPlugin() as any,
-    ...htmlGeneration(filesList),
+    ...createHtmlPlugins(),
     new MiniCssExtractPlugin({
       filename: isDevelopment ? '[name].css' : '[name].[contenthash].css',
       chunkFilename: isDevelopment ? '[id].css' : '[id].[contenthash].css',

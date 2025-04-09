@@ -15,10 +15,6 @@ $bgItem: linear-gradient(45deg, $c1, $c2);
   font-size: 1.2rem;
   text-transform: uppercase;
 
-  &:active {
-    font-size: 1.25rem;
-  }
-
   &:hover {
     background: $bgItem;
     background-clip: text;

@@ -245,4 +245,9 @@
 	.header__nav--active {
 		height: 100%;
 	}
+
+	.header__nav-link {
+		min-width: max-content;
+		padding: 0 1rem;
+	}
 }

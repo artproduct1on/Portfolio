@@ -3,10 +3,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export function buildLoader(): ModuleOptions["rules"] {
 
-  const htmlLoader = {
-    test: /\.html$/i,
-    loader: 'html-loader',
-  };
+
 
   const scssLoader = {
     test: /\.s[ac]ss$/i,
@@ -59,6 +56,15 @@ export function buildLoader(): ModuleOptions["rules"] {
     ],
   };
 
+  const ejsLoader =
+  {
+    test: /\.ejs$/,
+    loader: 'ejs-loader',
+    options: {
+      esModule: false
+    }
+  };
+
 
   return [
     tsLoader,
@@ -66,6 +72,6 @@ export function buildLoader(): ModuleOptions["rules"] {
     svgLoader,
     assets,
     ico,
-    htmlLoader,
+    ejsLoader,
   ]
 } 
