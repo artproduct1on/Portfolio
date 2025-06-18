@@ -196,23 +196,44 @@
 	min-height: 10rem;
 }
 
-.footer__container {
-	@include v.flex;
-	margin-top: 1rem;
-	font-size: 1.4rem;
-	color: v.$color;
+.contact__list {
+	max-width: 95%;
+	overflow-x: auto;
+	width: 100%;
+	padding: 1rem 0;
+	@include v.flex(center, center);
+	gap: 1rem;
+	list-style-type: none;
 }
 
-.footer__link {
-	font-size: 1.4rem;
+.contact__list-item {
+	@include v.flex;
+	font-size: 1.3rem;
+}
+
+.contact__list-link {
+	width: 8rem;
+	border: .1rem solid v.$color;
+	border-radius: 50%;
 	padding: 1rem;
+	@include v.flex(center, center, column);
+	gap: .5rem;
+	cursor: pointer;
 	color: v.$color;
 	opacity: .5;
+	width: 100%;
+
+	svg {
+		fill: v.$color;
+		width: 2rem;
+		height: 2rem;
+	}
 
 	&:hover {
 		opacity: 1;
 	}
 }
+
 
 @media (min-width: 768px) {
 	.header__nav {

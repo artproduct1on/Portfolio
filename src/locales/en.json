@@ -13,11 +13,11 @@
   "langs": [
     {
       "code": "de",
-      "href": "/de/"
+      "href": "/de.html"
     },
     {
       "code": "uk",
-      "href": "/uk/"
+      "href": "/uk.html"
     }
   ],
   "home": {
@@ -112,12 +112,5 @@
       "Back-end",
       "Additional tools"
     ]
-  },
-  "contact": {
-    "h2": "- Contact",
-    "h3": "Write a Message",
-    "input": "* Subject:",
-    "textarea": "* Write your message:",
-    "button": "Send"
   }
 }

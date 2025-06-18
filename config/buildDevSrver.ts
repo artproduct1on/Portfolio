@@ -10,8 +10,7 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
 			path.resolve(__dirname, "../src/**/*"),
 		],
 		static: [
-			path.resolve(__dirname, '../src'),
-			path.resolve(__dirname, '../build')
+			path.resolve(__dirname, '../'),
 		]
 	};
 };

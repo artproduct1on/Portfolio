@@ -1,5 +1,4 @@
-import { InputType, SvgListType, HtmlType, SvgMapType, TextAreaType } from './types';
-import Mailer from './Mailer';
+import { SvgListType, HtmlType, SvgMapType } from './types';
 import skillsInfo from './skillsInfo';
 
 
@@ -72,33 +71,8 @@ const skillsAdd = () => {
   toolContainer.innerHTML += filling.tool;
 };
 
-const messageSend = () => {
-  const form: HtmlType = document.querySelector(".contact__form"),
-    subjectInput: InputType = document.querySelector(".contact__form-subject"),
-    messageTA: TextAreaType = document.querySelector(".contact__form-message");
-
-  if (!form || !subjectInput || !messageTA) {
-    console.error("One or more form elements are missing.");
-    return;
-  };
-  const { submitFunction } = new Mailer();
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    form.classList.add("spinner");
-    const tamplateInfo = {
-      subject: subjectInput.value.trim(),
-      message: messageTA.value.trim()
-    };
-    submitFunction(tamplateInfo);
-    subjectInput.value = "";
-    messageTA.value = "";
-  });
-};
-
 export function components() {
   svgAdd();
   clock();
   skillsAdd();
-  messageSend();
 };

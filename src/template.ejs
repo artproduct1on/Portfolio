@@ -20,9 +20,8 @@
   <link rel="alternate" href="https://datair.pp.ua/" hreflang="x-default">
   <!-- Open Graph Meta Tags (для Facebook, LinkedIn та інших) -->
   <meta property="og:title" content="<%= t.head.title %>">
-  <meta property="og:description"
-    content="Datair: Artem Zaikin - Software Engineer, Creative Web Developer. Kompetenzen in Front-end, Back-end, Design UX/UI, SEO und Testing.">
-  <meta property="og:image" content="../assets/favicon.ico">
+  <meta property="og:description" content="<%= t.head.description %>">
+  <meta property="og:image" content="../public/favicon.ico">
   <meta property="og:url" content="https://datair.pp.ua/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
@@ -30,30 +29,30 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= t.head.title %>">
   <meta name="twitter:description" content="<%= t.head.description %>">
-  <meta name="twitter:image" content="../assets/favicon.ico">
+  <meta name="twitter:image" content="../public/favicon.ico">
   <meta name="twitter:site" content="@zaikin_artem">
   <meta name="twitter:creator" content="@zaikin_artem">
   <!-- LinkedIn Meta Tags -->
   <meta property="og:title" content="<%= t.head.title %>">
   <meta property="og:description" content="<%= t.head.description %>">
-  <meta property="og:image" content="../assets/favicon.ico">
+  <meta property="og:image" content="../public/favicon.ico">
   <meta property="og:url" content="https://datair.pp.ua/">
   <meta property="og:type" content="website">
   <!-- Schema.org Markup for Google+ -->
   <meta itemprop="name" content="<%= t.head.title %>">
   <meta itemprop="description" content="<%= t.head.description %>">
-  <meta itemprop="image" content="../assets/favicon.ico">
+  <meta itemprop="image" content="../public/favicon.ico">
   <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" href="../assets/logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="../public/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../public/favicon-32x32.png">
   <meta name="apple-mobile-web-app-title" content="Datair: Artem Zaikin">
   <meta name="application-name" content="Datair">
   <meta name="theme-color" content="#000000">
   <!-- Meta Tags for Pinterest -->
   <meta name="pinterest-rich-pin" content="true">
   <!-- Favicons -->
-  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +66,7 @@
   <header class="header">
     <div class="container header__container">
       <a href="#home" class="header__logo">
-        <img class="header__logo-img" src="../assets/logo.png" alt="logo">
+        <img class="header__logo-img" src="../public/logo.png" alt="logo">
         <p class="header__logo-p">Datair</p>
       </a>
       <nav class="header__nav">
@@ -85,11 +84,6 @@
           <li class="header__nav-item">
             <a class="header__nav-link" href="#work">
               <%= t.nav[2] %>
-            </a>
-          </li>
-          <li class="header__nav-item">
-            <a class="header__nav-link" href="#contact">
-              <%= t.nav[3] %>
             </a>
           </li>
         </ul>
@@ -125,8 +119,8 @@
       </h1>
       <ul class="home__link">
         <li class="home__list-item">
-          <a class="home__list-link" href="https://www.youtube.com/@DatairDiary" target="_blank" title="YouTube">
-            <svg class="svg" data-id="youtube"></svg>
+          <a class="home__list-link" href="mailto:artem.99.zaikin@gamil.com" target="_blank" title="E-Mail">
+            <svg class="svg" data-id="mail" alt="E-Mail icon"></svg>
           </a>
         </li>
         <li class="home__list-item">
@@ -164,7 +158,7 @@
       </h3>
       <div class="about__block">
         <div class="about__photo">
-          <img class="about__photo-img" src="../assets/me.png" alt="Me" loading="lazy">
+          <img class="about__photo-img" src="../public/me.png" alt="Me" loading="lazy">
           <p class="about__photo-p">
             <%= t.about.photo %>
           </p>
@@ -362,112 +356,34 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>
-      <%= t.contact.h2 %>
-    </h2>
-    <div class="container contact__container">
-      <h3>
-        <%= t.contact.h3 %>
-      </h3>
-      <form class="contact__form">
-        <input class="contact__form-subject" type="text" name="topic" id="subject"
-          placeholder="* <%= t.contact.input %>" required>
-        <textarea class="contact__form-message" name="message" id="message" placeholder="* <%= t.contact.textarea %>"
-          required></textarea>
-        <button class="contact__form-button">
-          <%= t.contact.button %>
-        </button>
-      </form>
-
-      <ul class="contact__list">
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="mailto:artem.99.zaikin@gamil.com" title="E-Mail">
-            <svg class="svg" data-id="mail" alt="E-Mail icon"></svg>
-          </a>
-        </li>
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="https://github.com/ArtBclak" target="_blank" title="GitHub">
-            <svg class="svg" data-id="github" alt="GitHub icon"></svg>
-          </a>
-        </li>
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="https://wa.me/+4915146315722" target="_blank" title="WhatsApp">
-            <svg class="svg" data-id="whatsapp" alt="WhatsApp icon"></svg>
-          </a>
-        </li>
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="https://www.linkedin.com/in/zaikin-artem/" target="_blank"
-            title="LinkedIn">
-            <svg class="svg" data-id="linkedin" alt="LinkedIn icon"></svg>
-          </a>
-        </li>
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="https://t.me/@zaikin_artem" target="_blank" title="Telegram">
-            <svg class="svg" data-id="telegram" alt="Telegram icon"></svg>
-          </a>
-        </li>
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="https://www.facebook.com/artproduct1on" target="_blank" title="Facebook">
-            <svg class="svg" data-id="facebook" alt="Facebook icon"></svg>
-          </a>
-        </li>
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="https://www.instagram.com/artproduct1on/" target="_blank"
-            title="Instagram">
-            <svg class="svg" data-id="instagram" alt="Instagram icon"></svg>
-          </a>
-        </li>
-        <li class="contact__list-item">
-          <a class="contact__list-link" href="https://www.youtube.com/@DatairDiary" target="_blank" title="YouTube">
-            <svg class="svg" data-id="youtube" alt="YouTube"></svg>
-          </a>
-        </li>
-      </ul>
-      <h3>
-        Activity Time (CET)
-      </h3>
-      <ul class="contact__activity">
-        <li class="contact__activity-day">
-          <span>Monday:</span> 08:30 - 18:00 <br>
-        </li>
-        <li class="contact__activity-day">
-          <span>Tuesday:</span> 08:30 - 18:00 <br>
-        </li>
-        <li class="contact__activity-day">
-          <span>Wednesday:</span> 08:30 - 18:00 <br>
-        </li>
-        <li class="contact__activity-day">
-          <span>Thursday:</span> 08:30 - 18:00 <br>
-        </li>
-        <li class="contact__activity-day">
-          <span>Friday:</span> 08:30 - 18:00 <br>
-        </li>
-        <li class="contact__activity-day">
-          <span>Saturday:</span> 09:00 - 16:00 <br>
-        </li>
-        <li class="contact__activity-day">
-          <span>Sunday:</span> Day off
-        </li class="contact__activity-day">
-        </p>
-    </div>
-  </section>
-
   <footer class="footer">
-    <div class="container footer__container">
-      <a class="footer__link" href="#home">
-        <%= t.nav[0] %>
-      </a> /
-      <a class="footer__link" href="#about">
-        <%= t.nav[1] %>
-      </a> /
-      <a class="footer__link" href="#work">
-        <%= t.nav[2] %>
-      </a> /
-      <a class="footer__link" href="#contact">
-        <%= t.nav[3] %>
-      </a>
-    </div>
+    <ul class="contact__list">
+      <li class="contact__list-item">
+        <a class="contact__list-link" href="mailto:artem.99.zaikin@gamil.com" title="E-Mail">
+          <svg class="svg" data-id="mail" alt="E-Mail icon"></svg>
+        </a>
+      </li>
+      <li class="contact__list-item">
+        <a class="contact__list-link" href="https://github.com/ArtBclak" target="_blank" title="GitHub">
+          <svg class="svg" data-id="github" alt="GitHub icon"></svg>
+        </a>
+      </li>
+      <li class="contact__list-item">
+        <a class="contact__list-link" href="https://www.linkedin.com/in/zaikin-artem/" target="_blank" title="LinkedIn">
+          <svg class="svg" data-id="linkedin" alt="LinkedIn icon"></svg>
+        </a>
+      </li>
+      <li class="contact__list-item">
+        <a class="contact__list-link" href="https://www.facebook.com/artproduct1on" target="_blank" title="Facebook">
+          <svg class="svg" data-id="facebook" alt="Facebook icon"></svg>
+        </a>
+      </li>
+      <li class="contact__list-item">
+        <a class="contact__list-link" href="https://www.instagram.com/artproduct1on/" target="_blank" title="Instagram">
+          <svg class="svg" data-id="instagram" alt="Instagram icon"></svg>
+        </a>
+      </li>
+    </ul>
   </footer>
 
 </body>

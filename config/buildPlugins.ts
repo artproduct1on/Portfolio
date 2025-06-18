@@ -5,10 +5,9 @@ import { BuildOptions } from "./types/buildTypes";
 import SpriteLoaderPlugin from 'svg-sprite-loader/plugin';
 import fs from "fs";
 
-export function buildPlugins({ mode, paths }: BuildOptions): Configuration["plugins"] {
+export function buildPlugins({ mode }: BuildOptions): Configuration["plugins"] {
 
   const isDevelopment: boolean = mode === "development";
-
   const languages = ['en', 'uk', 'de'];
 
   const createHtmlPlugins = () => {
@@ -19,17 +18,17 @@ export function buildPlugins({ mode, paths }: BuildOptions): Configuration["plug
       );
 
       return new HtmlWebpackPlugin({
-        filename: lang === 'en' ? `index.html` : `${lang}/index.html`,
+        filename: lang === 'en' ? `index.html` : `${lang}.html`,
         template: './src/template.ejs',
         inject: 'body',
         templateParameters: {
           t: translations,
-          lang
+          baseAssetsPath: lang === 'en' ? './assets' : `../assets`,
+          lang,
         }
       });
     });
   };
-
 
   const plugins: Configuration["plugins"] = [
     new SpriteLoaderPlugin() as any,

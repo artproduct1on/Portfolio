@@ -17,7 +17,7 @@
     },
     {
       "code": "uk",
-      "href": "/uk/"
+      "href": "/uk.html"
     }
   ],
   "home": {
@@ -26,7 +26,7 @@
       "Kreativer Entwickler",
       "Artem Zaikin"
     ],
-    "next": "Weiter"
+    "next": "next"
   },
   "about": {
     "h2": "- Über mich",
@@ -112,12 +112,5 @@
       "Backend",
       "Zusätzliche Tools"
     ]
-  },
-  "contact": {
-    "h2": "- Kontakt",
-    "h3": "Nachricht schreiben",
-    "input": "Betreff:",
-    "textarea": "Ihre Nachricht:",
-    "button": "Senden"
   }
 }

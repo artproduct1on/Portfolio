@@ -1,8 +1,8 @@
 import { HtmlType, HtmlListType } from "./types";
-const hamburger: HtmlType = document.querySelector(".header__hamburger"),
-	nav: HtmlType = document.querySelector(".header__nav"),
-	links: HtmlListType = document.querySelectorAll(".header__nav-link"),
-	sections: HtmlListType = document.querySelectorAll("section");
+const hamburger: HtmlType = document.querySelector(".header__hamburger");
+const nav: HtmlType = document.querySelector(".header__nav");
+const links: HtmlListType = document.querySelectorAll(".header__nav-link");
+const sections: HtmlListType = document.querySelectorAll("section");
 
 
 export function header() {
