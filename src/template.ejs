@@ -21,7 +21,7 @@
   <!-- Open Graph Meta Tags (для Facebook, LinkedIn та інших) -->
   <meta property="og:title" content="<%= t.head.title %>">
   <meta property="og:description" content="<%= t.head.description %>">
-  <meta property="og:image" content="../public/favicon.ico">
+  <meta property="og:image" content="<%= baseAssetsPath %>/favicon.ico">
   <meta property="og:url" content="https://datair.pp.ua/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
@@ -29,30 +29,30 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= t.head.title %>">
   <meta name="twitter:description" content="<%= t.head.description %>">
-  <meta name="twitter:image" content="../public/favicon.ico">
+  <meta name="twitter:image" content="<%= baseAssetsPath %>/favicon.ico">
   <meta name="twitter:site" content="@zaikin_artem">
   <meta name="twitter:creator" content="@zaikin_artem">
   <!-- LinkedIn Meta Tags -->
   <meta property="og:title" content="<%= t.head.title %>">
   <meta property="og:description" content="<%= t.head.description %>">
-  <meta property="og:image" content="../public/favicon.ico">
+  <meta property="og:image" content="<%= baseAssetsPath %>/favicon.ico">
   <meta property="og:url" content="https://datair.pp.ua/">
   <meta property="og:type" content="website">
   <!-- Schema.org Markup for Google+ -->
   <meta itemprop="name" content="<%= t.head.title %>">
   <meta itemprop="description" content="<%= t.head.description %>">
-  <meta itemprop="image" content="../public/favicon.ico">
+  <meta itemprop="image" content="<%= baseAssetsPath %>/favicon.ico">
   <!-- Apple Touch Icons -->
-  <link rel="apple-touch-icon" href="../public/logo.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../public/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="<%= baseAssetsPath %>/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<%= baseAssetsPath %>/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<%= baseAssetsPath %>/favicon-32x32.png">
   <meta name="apple-mobile-web-app-title" content="Datair: Artem Zaikin">
   <meta name="application-name" content="Datair">
   <meta name="theme-color" content="#000000">
   <!-- Meta Tags for Pinterest -->
   <meta name="pinterest-rich-pin" content="true">
   <!-- Favicons -->
-  <link rel="shortcut icon" href="../public/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="<%= baseAssetsPath %>/favicon.ico" type="image/x-icon">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +66,7 @@
   <header class="header">
     <div class="container header__container">
       <a href="#home" class="header__logo">
-        <img class="header__logo-img" src="../public/logo.png" alt="logo">
+        <img class="header__logo-img" src="<%= baseAssetsPath %>/logo.png" alt="logo">
         <p class="header__logo-p">Datair</p>
       </a>
       <nav class="header__nav">
@@ -158,7 +158,7 @@
       </h3>
       <div class="about__block">
         <div class="about__photo">
-          <img class="about__photo-img" src="../public/me.png" alt="Me" loading="lazy">
+          <img class="about__photo-img" src="<%= baseAssetsPath %>/me.png" alt="Me" loading="lazy">
           <p class="about__photo-p">
             <%= t.about.photo %>
           </p>

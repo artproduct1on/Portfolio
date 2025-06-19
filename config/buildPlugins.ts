@@ -18,7 +18,7 @@ export function buildPlugins({ mode }: BuildOptions): Configuration["plugins"] {
       );
 
       return new HtmlWebpackPlugin({
-        filename: lang === 'en' ? `index.html` : `${lang}.html`,
+        filename: lang === 'en' ? `index.html` : `${lang}/index.html`,
         template: './src/template.ejs',
         inject: 'body',
         templateParameters: {

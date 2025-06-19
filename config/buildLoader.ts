@@ -3,8 +3,6 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export function buildLoader(): ModuleOptions["rules"] {
 
-
-
   const scssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -24,18 +22,16 @@ export function buildLoader(): ModuleOptions["rules"] {
     test: /\.(png|jpg|jpeg|gif)$/i,
     type: 'asset/resource',
     generator: {
-      filename: 'assets/[name].[hash].[ext]'
+      filename: 'assets/[name][ext]'
     },
-
   };
 
   const ico = {
     test: /\.(ico)$/i,
     type: 'asset/resource',
     generator: {
-      filename: 'assets/[name].[ext]'
+      filename: 'assets/[name][ext]'
     },
-
   };
 
   const svgLoader = {
@@ -56,15 +52,6 @@ export function buildLoader(): ModuleOptions["rules"] {
     ],
   };
 
-  const ejsLoader =
-  {
-    test: /\.ejs$/,
-    loader: 'ejs-loader',
-    options: {
-      esModule: false
-    }
-  };
-
 
   return [
     tsLoader,
@@ -72,6 +59,5 @@ export function buildLoader(): ModuleOptions["rules"] {
     svgLoader,
     assets,
     ico,
-    ejsLoader,
   ]
 } 
