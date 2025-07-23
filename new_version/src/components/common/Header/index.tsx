@@ -1,17 +1,36 @@
-import Hamburger from "@/components/ui/Hamburger";
+"use client";
+import { useState } from "react";
+import s from "./s.module.scss";
 import { useTranslations } from "next-intl";
-import s from "./s.module.scss"
+import Image from "next/image";
+import Hamburger from "@/components/ui/Hamburger";
+import LangSwitcher from "@/components/ui/LangSwitcher";
 
-function Header({ locale }: any) {
-
+function Header() {
   const t = useTranslations();
+  const [isActive, setIsActive] = useState(false);
+  const openMenu = (): void => setIsActive(prev => !prev);
 
   return (
     <header className={s.header}>
+
       <a className={s.logo} href="#home">
+        <div className={s.logoImg}>
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            fill
+          />
+        </div>
         <p className={s.logoText}>Datair</p>
       </a>
-      <nav className={s.nav}>
+
+      <Hamburger action={openMenu} />
+
+      <nav
+        className={s.nav}
+        data-active={isActive}
+      >
         <ul className={s.navList}>
           <li className={s.navListItem}>
             <a className={s.navListLink} href="#home">
@@ -29,10 +48,12 @@ function Header({ locale }: any) {
             </a>
           </li>
         </ul>
+        <LangSwitcher />
       </nav>
-      <Hamburger />
+
     </header>
-  )
+
+  );
 };
 
 export default Header;

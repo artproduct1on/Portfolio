@@ -7,11 +7,14 @@
   gap: .4rem;
   transition: v.$transition;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .hamburgerLine {
   height: .2rem;
   border-radius: .5rem;
+  border: none;
   background-color: aliceblue;
   transition: v.$transition;
 
@@ -47,5 +50,11 @@
       translate: 0 -0.6rem;
       rotate: -45deg;
     }
+  }
+}
+
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none;
   }
 }

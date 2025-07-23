@@ -1,0 +1,13 @@
+@use "../../../styles/var" as v;
+
+.langs {
+  @include v.flex;
+  padding: 0 1rem;
+  font-size: 1.3rem;
+  color: v.$color;
+}
+
+.langsLink {
+  @include v.link;
+  min-width: 3rem;
+}
