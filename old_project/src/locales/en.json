@@ -1,0 +1,116 @@
+{
+  "head": {
+    "description": "Datair: Artem Zaikin - Software Engineer, Creative Web Developer. Kompetenzen in Front-end, Back-end, Design UX/UI, SEO und Testing.",
+    "keywords": "Datair, Artem Zaikin, Software Engineer, Web Developer, Front-end, Back-end, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
+    "title": "Datair: Artem Zaikin - Software Engineer, Creative Developer"
+  },
+  "nav": [
+    "Home",
+    "About Me",
+    "Work",
+    "Contact"
+  ],
+  "langs": [
+    {
+      "code": "de",
+      "href": "/de/"
+    },
+    {
+      "code": "uk",
+      "href": "/uk/"
+    }
+  ],
+  "home": {
+    "h1": [
+      "Software Engineer",
+      "Creative Developer",
+      "Artem Zaikin"
+    ],
+    "next": "Next"
+  },
+  "about": {
+    "h2": "- About Me",
+    "h3": "Personal Data",
+    "photo": "me",
+    "list": [
+      [
+        "Name:",
+        "Artem"
+      ],
+      [
+        "Last name:",
+        "Zaikin"
+      ],
+      [
+        "Date of birth:",
+        "August 17, 1999"
+      ],
+      [
+        "Nationality:",
+        "Ukrainian"
+      ],
+      [
+        "Location:",
+        "Germany, Mecklenburg-Vorpommern"
+      ],
+      [
+        "Distinctive traits:",
+        "I am characterized by honesty in my endeavors, a strong sense of determination, and a high level of responsibility in all aspects of my work"
+      ]
+    ],
+    "h3_2": "I'm a Developer",
+    "clock": [
+      "Years:",
+      "Days:",
+      "Hours:"
+    ]
+  },
+  "work": {
+    "h2": "- Work",
+    "h3": "My Competence",
+    "list": [
+      "Front-end",
+      "Back-end",
+      "UX/UI Design",
+      "SEO",
+      "Testing"
+    ],
+    "h3_2": "Development Process",
+    "list_2": [
+      [
+        "Planning and Research",
+        "Define Objectives: Determine the purpose of the site (informational, commercial, portfolio, etc.).\n Target Audience Analysis: Understand the needs and expectations of users.\n Competitor Analysis: Review competitors and their sites.\n Create a Brief: A document outlining all requirements and wishes for the site."
+      ],
+      [
+        "Design",
+        "Site Architecture: Plan the structure, navigation, and content (site map).\n Wireframing: Create basic page layouts to visualize the structure.\n Design: Develop the graphic design, including color schemes, fonts, images, and overall style."
+      ],
+      [
+        "Development",
+        "Front-end Development: Code the design using HTML, CSS, JavaScript. Create the sit's interface.\n Back-end Development: Set up the server-side of the site, program logic, and integrate the database.\n Integration: Combine front-end and back-end parts, and integrate with external services."
+      ],
+      [
+        "Testing",
+        "Functional Testing: Check all site features against requirements.\n Cross-device Testing: Ensure proper display and functionality on different screen sizes and browsers.\n Bug Fixing: Address any bugs and issues found."
+      ],
+      [
+        "Launch",
+        "Deployment: Upload the site to the hosting server.\n Domain Setup: Link the domain to the hosting.\n Final Check: Perform a final review of all functions before the official launch."
+      ],
+      [
+        "Promotion and SEO",
+        "Search Engine Optimization (SEO): Set up meta tags, keywords, URL structure, etc.\n Marketing: Launch advertising campaigns, promote on social media, content marketing."
+      ],
+      [
+        "Maintenance and Updates",
+        "Monitoring: Track site performance, user feedback, and errors.\n Updates: Add new content, fix issues, and update security."
+      ]
+    ],
+    "h3_3": "Development Skills",
+    "list_3": [
+      "Front-end",
+      "Back-end",
+      "Additional tools"
+    ]
+  }
+}

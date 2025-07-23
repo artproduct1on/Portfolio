@@ -1,0 +1,51 @@
+@use "../../../styles/var" as v;
+
+.hamburger {
+  @include v.flex(flex-end, center, column);
+  width: 4rem;
+  height: 4rem;
+  gap: .4rem;
+  transition: v.$transition;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  height: .2rem;
+  border-radius: .5rem;
+  background-color: aliceblue;
+  transition: v.$transition;
+
+  &:nth-child(1) {
+    width: 2.5rem;
+  }
+
+  &:nth-child(2) {
+    width: 2rem;
+  }
+
+  &:nth-child(3) {
+    width: 3rem;
+  }
+}
+
+.hamburger[data-active="true"] {
+  align-items: center;
+
+  .hamburgerLine {
+    width: 3rem;
+
+    &:nth-child(1) {
+      translate: 0 0.6rem;
+      rotate: 45deg;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      translate: 0 -0.6rem;
+      rotate: -45deg;
+    }
+  }
+}

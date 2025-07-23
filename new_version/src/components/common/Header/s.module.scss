@@ -1,0 +1,113 @@
+@use "../../../styles/var" as v;
+
+
+.header {
+  @include v.flex(center, space-between);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  backdrop-filter: blur(1rem);
+  background-color: rgba(0, 0, 0, 0.7);
+  user-select: none;
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.logoText {
+  @include v.font;
+  font-weight: 100;
+  align-self: self-end;
+  margin: 0;
+  font-size: 2.5rem;
+  color: v.$color;
+}
+
+.nav {
+  @include v.flex(center, center, column);
+  position: fixed;
+  z-index: 1000;
+  top: 5rem;
+  left: 0;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: v.$transition;
+  background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.nav[data-active="true"] {
+  height: 20rem;
+}
+
+.navList {
+  @include v.flex(center, center, column);
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.navListItem {
+  @include v.flex;
+  width: 100%;
+}
+
+.navListLink {
+  @include v.link;
+  width: 100%;
+  min-width: 8rem;
+}
+
+.navListLink[data-active="true"] {
+  color: v.$c2;
+}
+
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+  }
+
+  .nav[data-active="true"] {
+    height: 5rem;
+  }
+
+  .navList {
+    height: 100%;
+    flex-direction: row;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+
+  .nav {
+    position: static;
+    height: 100%;
+    width: max-content;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .nav[data-active="true"] {
+    height: 100%;
+  }
+
+  .navListLink {
+    min-width: max-content;
+    padding: 0 1rem;
+  }
+}

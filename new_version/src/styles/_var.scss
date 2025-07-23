@@ -1,0 +1,43 @@
+$c1: #060a4b;
+$c2: #00d4ff;
+$c3: rgb(20, 20, 20);
+$cSpan: gray;
+$color: aliceblue;
+$transition: 0.2s;
+$tObserver: 2s;
+$circle: 1132px;
+$bgItem: linear-gradient(45deg, $c1, $c2);
+
+@mixin link {
+  text-align: center;
+  color: $color;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $bgItem;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@mixin font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@mixin textGradient {
+  background: $bgItem;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin flex($ai: center, $jc: center, $fd: row, $fw: nowrap) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
