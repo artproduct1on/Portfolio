@@ -1,4 +1,4 @@
-@use "../../../styles/var" as v;
+@use "../../../assets/styles/var" as v;
 
 .hamburger {
   @include v.flex(flex-end, center, column);

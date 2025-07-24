@@ -1,13 +1,13 @@
 import React from "react";
-import "../../styles/globals.scss";
+import "@/assets/styles/globals.scss";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessages } from "next-intl/server";
 import { Metadata } from "next";
 
-import Header from "../../components/common/Header";
-import Footer from "../../components/common/Footer";
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 type Props = {
   children: React.ReactNode

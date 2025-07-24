@@ -13,8 +13,8 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
+      "@next/next/no-img-element": "off",
       "@typescript-eslint/no-explicit-any": "off",
-      // "react-refresh/only-export-components": ["warn", { allowConstantExport: true },],
       "react/prop-types": "off",
       "no-unused-vars": "off",
       "no-undef": "error",

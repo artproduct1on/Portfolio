@@ -4,9 +4,5 @@ export default function AboutPage() {
 
   const t = useTranslations();
 
-  return (
-    <main>
-      {/* <h1>{t('')}</h1> */}
-    </main>
-  );
+  return <div>About</div>;
 }
