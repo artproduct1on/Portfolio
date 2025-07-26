@@ -1,24 +1,27 @@
-import IconSvg from "@/components/ui/Icon";
-import { socials } from "@/utils/constants";
-import { useTranslations, useMessages } from "next-intl";
-import s from "./s.module.scss";
 import Image from "next/image";
-import Clock from "@/components/common/Clock";
+import { useTranslations, useMessages } from "next-intl";
+
 import { workList } from "./helpers";
+import { socials } from "@/utils/constants";
+import s from "./s.module.scss";
+import IconSvg from "@/components/ui/Icon";
 import { front, back, tool } from "@/utils/skillsInfo";
+import Clock from "@/components/common/Clock";
 import WorkSkills from "@/components/common/WorkSkills";
+import AnimatedSection from "@/components/common/AnimatedSection";
 
 export default function HomePage() {
-  const messages = useMessages();
+
   const home = useTranslations("home");
   const about = useTranslations("about");
   const work = useTranslations("work");
 
+  const messages = useMessages();
   const aboutList = messages.about.list;
   const workProcessList = messages.work.list_2;
 
   return <>
-    <section className={s.home} id="home">
+    <AnimatedSection className={s.home} id="home">
       <h1 className={s.homeTitle}>
         <span className={s.homeTitlePart}>
           {home("h1.0")}
@@ -53,9 +56,9 @@ export default function HomePage() {
         <div className={s.homeNextShell} />
       </a>
 
-    </section>
+    </AnimatedSection>
 
-    <section className={s.about} id="about">
+    <AnimatedSection className={s.about} id="about">
       <h2>
         {about("h2")}
       </h2>
@@ -96,9 +99,9 @@ export default function HomePage() {
         {about("h3_2")}
       </h3>
       <Clock start="April 1, 2020" />
-    </section>
+    </AnimatedSection>
 
-    <section className={s.work} id="work">
+    <AnimatedSection className={s.work} id="work">
       <h2>
         {work("h2")}
       </h2>
@@ -158,6 +161,6 @@ export default function HomePage() {
 
       <WorkSkills skills={tool} />
 
-    </section>
+    </AnimatedSection>
   </>;
 }

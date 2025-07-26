@@ -1,0 +1,10 @@
+@use "../../../assets/styles/var" as v;
+
+.section {
+  opacity: 0.1;
+  transition: v.$tObserver opacity;
+}
+
+.section[data-active="true"] {
+  opacity: 1;
+}

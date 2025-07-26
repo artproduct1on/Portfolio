@@ -1,3 +1,6 @@
+// import { RefObject } from "react";
+// export type IRefCollection = RefObject<HTMLElement | null>[];
+
 export interface SkillsType {
 	[x: string]: any;
 	name: string;
@@ -5,3 +8,4 @@ export interface SkillsType {
 	title: string;
 	link: string;
 };
+
