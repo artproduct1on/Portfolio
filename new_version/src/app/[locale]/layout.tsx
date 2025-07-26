@@ -9,12 +9,11 @@ import { Metadata } from "next";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 
-type Props = {
-  children: React.ReactNode
-  params: { locale: string }
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
   const { locale } = await params;
   const messages = await getMessages({ locale });
 
@@ -28,7 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Layout({
   children,
   params
-}: Props) {
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
 
   const { locale } = await params;
 
