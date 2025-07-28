@@ -22,8 +22,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include v.flex(center, space-between, column);
   min-height: 100vh;
-
   background: rgb(0, 0, 0);
 }
 

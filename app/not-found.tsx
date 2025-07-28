@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
-import '@/assets/styles/globals.scss';
 import s from '@/assets/styles/notFound.module.scss';
 
 export default async function notFound() {

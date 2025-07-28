@@ -1,16 +1,18 @@
 {
+  "header": {
+    "nav": [
+      "Startseite",
+      "Über mich",
+      "Arbeit",
+      "Fähigkeiten"
+    ]
+  },
   "main": {
     "head": {
       "description": "Datair: Artem Zaikin – Software Engineer, kreativer Webentwickler. Kompetenzen im Frontend, Backend, UX/UI Design, SEO und Testing.",
       "keywords": "Datair, Artem Zaikin, Software Engineer, Webentwickler, Frontend, Backend, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
       "title": "Datair: Artem Zaikin – Software Engineer, kreativer Entwickler"
     },
-    "nav": [
-      "Startseite",
-      "Über mich",
-      "Arbeit",
-      "Kontakt"
-    ],
     "home": {
       "h1": [
         "Software Engineer",
@@ -96,9 +98,11 @@
           "Wartung und Updates",
           "Überwachung: Performance, Nutzerfeedback und Fehler beobachten.\nUpdates: Neue Inhalte hinzufügen, Fehler beheben, Sicherheit aktualisieren."
         ]
-      ],
-      "h3_3": "Entwicklungskompetenzen",
-      "list_3": [
+      ]
+    },
+    "skills": {
+      "title": "- Fähigkeiten",
+      "list": [
         "Frontend",
         "Backend",
         "Zusätzliche Tools"

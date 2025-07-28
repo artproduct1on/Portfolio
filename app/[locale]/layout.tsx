@@ -1,5 +1,4 @@
 import React from "react";
-import "@/assets/styles/globals.scss";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Metadata } from "next";

@@ -15,6 +15,7 @@ export default async function HomePage() {
   const home = await getTranslations("main.home");
   const about = await getTranslations("main.about");
   const work = await getTranslations("main.work");
+  const skills = await getTranslations("main.skills");
 
   const aboutList = about.raw("list");
   const workProcessList = work.raw("list_2");
@@ -138,25 +139,28 @@ export default async function HomePage() {
         ))}
 
       </ul>
-      <h3 className={s.workTitle}>
-        {work("h3_3")}
-      </h3>
 
-      <h4 className={s.workTitle}>
-        {work("list_3.0")}
-      </h4>
+    </AnimatedSection>
+    <AnimatedSection className={s.skills} id="skills">
+      <h2 className={s.workTitle}>
+        {skills("title")}
+      </h2>
+
+      <h3 className={s.workTitle}>
+        {skills("list.0")}
+      </h3>
 
       <WorkSkills skills={front} />
 
-      <h4 className={s.workTitle}>
-        {work("list_3.1")}
-      </h4>
+      <h3 className={s.workTitle}>
+        {skills("list.1")}
+      </h3>
 
       <WorkSkills skills={back} />
 
-      <h4 className={s.workTitle}>
-        {work("list_3.2")}
-      </h4>
+      <h3 className={s.workTitle}>
+        {skills("list.2")}
+      </h3>
 
       <WorkSkills skills={tool} />
 

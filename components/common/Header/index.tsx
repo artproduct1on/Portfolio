@@ -7,7 +7,7 @@ import Hamburger from "@/components/ui/Hamburger";
 import LangSwitcher from "@/components/ui/LangSwitcher";
 
 function Header() {
-  const t = useTranslations("main");
+  const t = useTranslations("header");
   const [isActive, setIsActive] = useState(false);
   const openMenu = (): void => setIsActive(prev => !prev);
 
@@ -46,6 +46,11 @@ function Header() {
           <li className={s.navListItem}>
             <a className={s.navListLink} href="#work">
               {t("nav.2")}
+            </a>
+          </li>
+          <li className={s.navListItem}>
+            <a className={s.navListLink} href="#skills">
+              {t("nav.3")}
             </a>
           </li>
         </ul>
