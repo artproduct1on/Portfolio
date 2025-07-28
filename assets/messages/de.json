@@ -1,0 +1,113 @@
+{
+  "main": {
+    "head": {
+      "description": "Datair: Artem Zaikin – Software Engineer, kreativer Webentwickler. Kompetenzen im Frontend, Backend, UX/UI Design, SEO und Testing.",
+      "keywords": "Datair, Artem Zaikin, Software Engineer, Webentwickler, Frontend, Backend, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
+      "title": "Datair: Artem Zaikin – Software Engineer, kreativer Entwickler"
+    },
+    "nav": [
+      "Startseite",
+      "Über mich",
+      "Arbeit",
+      "Kontakt"
+    ],
+    "home": {
+      "h1": [
+        "Software Engineer",
+        "Kreativer Entwickler",
+        "Artem Zaikin"
+      ],
+      "next": "next"
+    },
+    "about": {
+      "h2": "- Über mich",
+      "h3": "Persönliche Daten",
+      "photo": "ich",
+      "list": [
+        [
+          "Vorname:",
+          "Artem"
+        ],
+        [
+          "Nachname:",
+          "Zaikin"
+        ],
+        [
+          "Geburtsdatum:",
+          "17. August 1999"
+        ],
+        [
+          "Staatsangehörigkeit:",
+          "Ukrainisch"
+        ],
+        [
+          "Standort:",
+          "Deutschland, Mecklenburg-Vorpommern"
+        ],
+        [
+          "Besondere Merkmale:",
+          "Ich zeichne mich durch Ehrlichkeit in meinem Handeln, Entschlossenheit und ein hohes Maß an Verantwortungsbewusstsein in allen Arbeitsbereichen aus"
+        ]
+      ],
+      "h3_2": "Ich bin ein Entwickler",
+      "clock": [
+        "Jahre:",
+        "Tage:",
+        "Stunden:"
+      ]
+    },
+    "work": {
+      "h2": "- Arbeit",
+      "h3": "Meine Kompetenzen",
+      "list": [
+        "Frontend",
+        "Backend",
+        "UX/UI Design",
+        "SEO",
+        "Testing"
+      ],
+      "h3_2": "Entwicklungsprozess",
+      "list_2": [
+        [
+          "Planung und Recherche",
+          "Zieldefinition: Zweck der Website bestimmen (Information, Kommerz, Portfolio usw.).\nZielgruppenanalyse: Bedürfnisse und Erwartungen der Nutzer verstehen.\nWettbewerbsanalyse: Konkurrenz und deren Websites analysieren.\nBriefing erstellen: Ein Dokument mit allen Anforderungen und Wünschen zur Website."
+        ],
+        [
+          "Design",
+          "Seitenarchitektur: Struktur, Navigation und Inhalte planen (Sitemap).\nWireframes: Grundlegende Layouts zur Veranschaulichung erstellen.\nDesign: Grafisches Design ausarbeiten – Farbschema, Schriftarten, Bilder, Stil."
+        ],
+        [
+          "Entwicklung",
+          "Frontend-Entwicklung: Umsetzung des Designs mit HTML, CSS, JavaScript.\nBackend-Entwicklung: Serverseitige Logik und Datenbankintegration umsetzen.\nIntegration: Frontend und Backend verbinden und externe Dienste einbinden."
+        ],
+        [
+          "Testing",
+          "Funktionstest: Überprüfung aller Funktionen gemäß den Anforderungen.\nGeräteübergreifendes Testing: Darstellung und Funktion auf verschiedenen Geräten und Browsern sicherstellen.\nFehlerbehebung: Behebung entdeckter Fehler und Bugs."
+        ],
+        [
+          "Veröffentlichung",
+          "Bereitstellung: Upload der Website auf den Hosting-Server.\nDomain-Verknüpfung: Domain mit Hosting verbinden.\nAbschließende Prüfung: Endkontrolle aller Funktionen vor dem offiziellen Start."
+        ],
+        [
+          "Marketing und SEO",
+          "Suchmaschinenoptimierung (SEO): Meta-Tags, Keywords, URL-Struktur usw. einrichten.\nMarketing: Werbekampagnen starten, Social Media nutzen, Content-Marketing durchführen."
+        ],
+        [
+          "Wartung und Updates",
+          "Überwachung: Performance, Nutzerfeedback und Fehler beobachten.\nUpdates: Neue Inhalte hinzufügen, Fehler beheben, Sicherheit aktualisieren."
+        ]
+      ],
+      "h3_3": "Entwicklungskompetenzen",
+      "list_3": [
+        "Frontend",
+        "Backend",
+        "Zusätzliche Tools"
+      ]
+    }
+  },
+  "notFound": {
+    "h1": "Seite nicht gefunden",
+    "p": "Die Seite, die Sie suchen, existiert nicht.",
+    "link": "Zur Startseite"
+  }
+}
