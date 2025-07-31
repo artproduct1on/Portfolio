@@ -50,10 +50,7 @@ export default async function HomePage() {
       </ul>
 
       <a className={s.homeNext} href="#about">
-        <p className={s.homeNextText}>
-          {home("next")}
-        </p>
-        <div className={s.homeNextShell} />
+        <span className={s.homeNextText}>{home("next")}</span>
       </a>
 
     </AnimatedSection>
@@ -141,24 +138,25 @@ export default async function HomePage() {
       </ul>
 
     </AnimatedSection>
-    <AnimatedSection className={s.skills} id="skills">
-      <h2 className={s.workTitle}>
+
+    <AnimatedSection id="skills">
+      <h2>
         {skills("title")}
       </h2>
 
-      <h3 className={s.workTitle}>
+      <h3>
         {skills("list.0")}
       </h3>
 
       <WorkSkills skills={front} />
 
-      <h3 className={s.workTitle}>
+      <h3>
         {skills("list.1")}
       </h3>
 
       <WorkSkills skills={back} />
 
-      <h3 className={s.workTitle}>
+      <h3 >
         {skills("list.2")}
       </h3>
 
