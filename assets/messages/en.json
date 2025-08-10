@@ -1,10 +1,18 @@
 {
   "header": {
     "nav": [
-      "Home",
-      "About Me",
-      "Work",
-      "Skills"
+      {
+        "title": "Home",
+        "ref": "/"
+      },
+      {
+        "title": "About",
+        "ref": "/about"
+      },
+      {
+        "title": "Work",
+        "ref": "/work"
+      }
     ]
   },
   "main": {

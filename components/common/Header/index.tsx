@@ -1,15 +1,12 @@
-"use client";
-import { useState } from "react";
 import s from "./s.module.scss";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Hamburger from "@/components/ui/Hamburger";
-import LangSwitcher from "@/components/ui/LangSwitcher";
+import { Link } from "@/i18n/navigation";
+import Navigation from "./Navigation";
+import { getTranslations } from "next-intl/server";
 
-function Header() {
-  const t = useTranslations("header");
-  const [isActive, setIsActive] = useState(false);
-  const openMenu = (): void => setIsActive(prev => !prev);
+async function Header() {
+  const t = await getTranslations("header");
+  const list = t.raw("nav")
 
   return (
     <header className={s.header}>
@@ -26,36 +23,20 @@ function Header() {
         <p className={s.logoText}>Datair</p>
       </a>
 
-      <Hamburger action={openMenu} />
 
-      <nav
+      <Navigation
         className={s.nav}
-        data-active={isActive}
       >
         <ul className={s.navList}>
-          <li className={s.navListItem}>
-            <a className={s.navListLink} href="#home">
-              {t("nav.0")}
-            </a>
-          </li>
-          <li className={s.navListItem}>
-            <a className={s.navListLink} href="#about">
-              {t("nav.1")}
-            </a>
-          </li>
-          <li className={s.navListItem}>
-            <a className={s.navListLink} href="#work">
-              {t("nav.2")}
-            </a>
-          </li>
-          <li className={s.navListItem}>
-            <a className={s.navListLink} href="#skills">
-              {t("nav.3")}
-            </a>
-          </li>
+          {list.map((i: { title: string, ref: string }) => (
+            <li className={s.navListItem} key={i.title}>
+              <Link className={s.navListLink} href={i.ref}>
+                {i.title}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <LangSwitcher />
-      </nav>
+      </Navigation>
 
     </header>
 

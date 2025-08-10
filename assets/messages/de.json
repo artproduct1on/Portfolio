@@ -1,10 +1,18 @@
 {
   "header": {
     "nav": [
-      "Startseite",
-      "Über mich",
-      "Arbeit",
-      "Fähigkeiten"
+      {
+        "title": "Startseite",
+        "ref": "/"
+      },
+      {
+        "title": "Über mich",
+        "ref": "/about"
+      },
+      {
+        "title": "Arbeit",
+        "ref": "/work"
+      }
     ]
   },
   "main": {
