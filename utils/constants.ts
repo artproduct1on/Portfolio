@@ -5,7 +5,6 @@ export const socials = [
   { id: 2, title: "GitHub", ref: "https://github.com/artproduct1on", icon: "github" },
   { id: 3, title: "LinkedIn", ref: "https://www.linkedin.com/in/zaikin-artem/", icon: "linkedin" },
   { id: 4, title: "Instagram", ref: "https://www.instagram.com/artproduct1on/", icon: "instagram" },
-  { id: 5, title: "Facebook", ref: "https://www.facebook.com/artproduct1on", icon: "facebook" },
 ];
 
 export const workList = [

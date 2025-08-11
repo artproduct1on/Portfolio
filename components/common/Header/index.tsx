@@ -1,12 +1,18 @@
+"use client";
+import { useState } from "react";
 import s from "./s.module.scss";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
-import Navigation from "./Navigation";
-import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
+import LangSwitcher from "@/components/ui/LangSwitcher";
+import Hamburger from "@/components/ui/Hamburger";
 
-async function Header() {
-  const t = await getTranslations("header");
+function Header() {
+  const t = useTranslations("components.header");
   const list = t.raw("nav")
+  const [isActive, setIsActive] = useState(false);
+  const openMenu = (): void => setIsActive((prev: boolean) => !prev);
+  const pathname = usePathname();
 
   return (
     <header className={s.header}>
@@ -24,19 +30,29 @@ async function Header() {
       </a>
 
 
-      <Navigation
+      <Hamburger action={openMenu} />
+      <nav
         className={s.nav}
+        data-active={isActive}
+        data-children={1}
       >
         <ul className={s.navList}>
           {list.map((i: { title: string, ref: string }) => (
             <li className={s.navListItem} key={i.title}>
-              <Link className={s.navListLink} href={i.ref}>
+              <Link
+                className={s.navListLink}
+                data-active={pathname === i.ref}
+                href={i.ref}
+              >
                 {i.title}
               </Link>
             </li>
           ))}
         </ul>
-      </Navigation>
+        <LangSwitcher />
+      </nav>
+
+
 
     </header>
 

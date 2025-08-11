@@ -1,0 +1,151 @@
+@use "../../assets/styles/var" as v;
+
+.about {
+  background: linear-gradient(to bottom,
+      black,
+      rgb(0, 2, 15),
+      rgb(0, 0, 0));
+  padding: 2rem var(--container);
+
+  @include v.flex(center, flex-start, column);
+  gap: 1rem;
+
+  .aboutBlock {
+    @include v.flex(center, center, row, wrap);
+    z-index: 10;
+    gap: 2rem;
+  }
+
+  .aboutPhoto {
+    position: relative;
+    width: 95%;
+    min-height: 20rem;
+    height: 45rem;
+    border-radius: 0 25% 0 25%;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 3rem #000000;
+    animation: photo 3s infinite backwards;
+    transition: v.$tObserver;
+  }
+
+  @keyframes photo {
+    0% {
+      translate: 0;
+    }
+
+    50% {
+      translate: 0 -1%;
+    }
+
+    100% {
+      translate: 0;
+    }
+  }
+
+  .aboutPhotoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .aboutPhotoText {
+    position: absolute;
+    margin: 0;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 10rem;
+    font-weight: 100;
+    @include v.font;
+    color: v.$c2;
+    opacity: .1;
+  }
+
+  .aboutList {
+    @include v.flex(center, center, column);
+    position: relative;
+    padding: 0;
+    gap: 1rem;
+    width: 98%;
+  }
+
+  .aboutListLi {
+    @include v.font;
+    @include v.flex(flex-start, space-between, row, wrap);
+    width: calc(100% - 2rem);
+    font-weight: 200;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.01);
+    transition: v.$tObserver translate;
+    translate: 100vw -100%;
+
+    &:nth-child(2n) {
+      translate: 200vw 100%;
+    }
+  }
+
+  .aboutListSpan {
+    max-width: 40%;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: v.$cSpan;
+    text-align: left;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .aboutListText {
+    margin: 0;
+    max-width: 47.5%;
+    text-align: right;
+    color: v.$color;
+    font-weight: 100;
+    font-size: 1.6rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .aboutExperience {
+    @include v.flex(center, center, column);
+    gap: 2rem;
+  }
+
+}
+
+.about[data-active="true"] {
+  .aboutListLi {
+    translate: 0;
+  }
+}
+
+
+
+@media (min-width: 480px) {
+  .about .aboutPhoto {
+    max-width: 35rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    .aboutPhoto {
+      max-width: 30rem;
+    }
+
+    .aboutList {
+      width: 50%;
+    }
+  }
+}
+
+
+@media (min-width: 1367px) {
+  .home::before {
+    background-size: contain;
+  }
+}

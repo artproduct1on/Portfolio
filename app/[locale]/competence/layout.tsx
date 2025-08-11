@@ -12,9 +12,9 @@ export async function generateMetadata({
   const messages = await getMessages({ locale });
 
   return {
-    title: messages.about.head.title,
-    description: messages.about.head.description,
-    keywords: messages.about.head.keywords,
+    title: messages.competence.head.title,
+    description: messages.competence.head.description,
+    keywords: messages.competence.head.keywords,
   };
 };
 
