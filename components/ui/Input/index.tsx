@@ -1,6 +1,7 @@
 "use client";
 import { UseFormRegisterReturn } from "react-hook-form";
 import s from "./s.module.scss";
+import { useState } from "react";
 
 interface Props {
   type: string;
@@ -18,32 +19,40 @@ function Input({
   register,
 }: Props) {
 
+  const [isFill, setIsFill] = useState<string>("");
 
-  const lableItem = error ? <p className={s.error}>{error}</p> : <label className={s.lable}>{placeholder}</label>;
+  const lableItem = (
+    <label
+      className={s.lable}
+      data-fill={isFill.length > 0}
+      data-error={!!error}
+    >
+      {error || placeholder}
+    </label>
+  );
 
   if (type === "textarea") return (
-    <>
-      {error && <p className={s.error}>{error}</p>}
+    <div className={s.wrapper}>
+      {lableItem}
       <textarea
         className={`${s.textarea} ${className}`}
-        placeholder={placeholder}
+        onInput={(e) => setIsFill(e.currentTarget.value)}
         {...register}
       />
-
-    </>
+    </div>
   )
 
   return (
-    <>
-      {error && <p className={s.error}>{error}</p>}
+    <div className={s.wrapper}>
+      {lableItem}
       <input
         className={`${s.input} ${className}`}
         type={type}
-        placeholder={placeholder}
+        onInput={(e) => setIsFill(e.currentTarget.value)}
         {...register}
       />
 
-    </>
+    </div>
   );
 }
 

@@ -4,6 +4,7 @@ import s from "@/assets/styles/about.module.scss";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import Image from "next/image";
 import Clock from "@/components/common/Clock";
+import { startCareer } from "@/utils/constants";
 
 export default async function HomePage() {
 
@@ -53,7 +54,7 @@ export default async function HomePage() {
       <h3>
         {t("h3_2")}
       </h3>
-      <Clock start="April 1, 2020" />
+      <Clock start={startCareer} />
     </AnimatedSection>
   </>;
 }

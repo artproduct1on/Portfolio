@@ -26,7 +26,6 @@ function Form() {
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     setLoading(true);
-
     try {
       const res = await fetch(API_CONTACT, {
         method: "POST",
@@ -42,7 +41,6 @@ function Form() {
         const lastSentTime = new Date(errorData.lastSent);
         const nextAttemptTime = new Date(lastSentTime.getTime() + 24 * 60 * 60 * 1000);
         const timeLeftInMs = nextAttemptTime.getTime() - Date.now();
-
         const hoursLeft = Math.floor(timeLeftInMs / (1000 * 60 * 60));
         const minutesLeft = Math.floor((timeLeftInMs % (1000 * 60 * 60)) / (1000 * 60));
 
@@ -63,7 +61,7 @@ function Form() {
       noValidate
       onSubmit={handleSubmit(onSubmit)}
     >
-      {status && <p className={s.status}>{status}</p>}
+      <p className={s.status}>{status}</p>
       <Input
         type="text"
         placeholder="Name"

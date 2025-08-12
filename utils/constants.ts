@@ -1,6 +1,8 @@
-export const API_CONTACT = "/api/contact";
-
 export const languages = ["en", "de", "uk"];
+
+export const startCareer = "April 1, 2020";
+
+export const API_CONTACT = "/api/contact";
 
 export const socials = [
   { id: 1, title: "E-Mail", ref: "mailto:artem.99.zaikin@gamil.com", icon: "mail" },
