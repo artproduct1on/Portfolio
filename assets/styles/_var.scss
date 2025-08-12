@@ -4,9 +4,12 @@ $c3: rgb(20, 20, 20);
 $cSpan: gray;
 $color: rgb(216, 237, 255);
 $transition: 0.2s;
-$tObserver: 1.5s;
+$tObserver: 1.2s;
 $circle: 113.2rem;
 $bgItem: linear-gradient(45deg, $c1, $c2);
+$borderColor: #ffffff7c;
+$borderRadius: 1rem;
+
 
 @mixin link($td: none) {
   text-align: center;

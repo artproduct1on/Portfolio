@@ -1,0 +1,13 @@
+@use "../../../assets/styles/var" as v;
+
+
+.form {
+  width: 100%;
+  max-width: 50rem;
+  @include v.flex(center, center, column);
+  gap: 1rem;
+}
+
+.button {
+  max-width: 20rem;
+}

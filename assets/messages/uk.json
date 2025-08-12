@@ -11,8 +11,16 @@
           "ref": "/about"
         },
         {
-          "title": "Компетенція",
+          "title": "Компетентність",
           "ref": "/competence"
+        },
+        {
+          "title": "Блог",
+          "ref": "/blog"
+        },
+        {
+          "title": "Контакти",
+          "ref": "/#contact"
         }
       ]
     },

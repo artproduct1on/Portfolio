@@ -1,0 +1,12 @@
+@use "../../../assets/styles/var" as v;
+
+.button {
+  @include v.font;
+  width: 100%;
+  padding: 1rem;
+  border-radius: v.$borderRadius;
+  border: 0.1rem solid v.$borderColor;
+  background: none;
+  color: v.$color;
+  cursor: pointer;
+}

@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^6.13.0",
     "next": "15.4.3",
     "next-intl": "^4.3.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.62.0",
+    "resend": "^6.0.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -21,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.4.3",
+    "prisma": "^6.13.0",
     "sass": "^1.89.2",
     "typescript": "^5"
   }

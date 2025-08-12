@@ -13,6 +13,14 @@
         {
           "title": "Kompetenzen",
           "ref": "/competence"
+        },
+        {
+          "title": "Blog",
+          "ref": "/blog"
+        },
+        {
+          "title": "Kontakt",
+          "ref": "/#contact"
         }
       ]
     },

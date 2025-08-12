@@ -1,0 +1,27 @@
+@use "../../../assets/styles/var" as v;
+
+.textarea,
+.input {
+  @include v.font;
+  width: 100%;
+  color: v.$color;
+  border: none;
+  border-bottom: 0.1rem solid v.$borderColor;
+  background: none;
+  padding: 1rem;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+.textarea {
+  resize: none;
+  height: 10rem;
+}
+
+.error {
+  @include v.font;
+  color: rgb(196, 69, 69);
+  font-size: 1.2rem;
+  text-align: start;
+  width: 100%;
+}

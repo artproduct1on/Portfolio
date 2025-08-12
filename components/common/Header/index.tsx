@@ -26,7 +26,7 @@ function Header() {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <p className={s.logoText}>Datair</p>
+        <p className={s.logoText}>datair</p>
       </a>
 
 

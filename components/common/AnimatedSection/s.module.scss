@@ -2,9 +2,11 @@
 
 .section {
   opacity: 0.1;
-  transition: v.$tObserver opacity;
+  scale: 0.9;
+  transition: v.$tObserver opacity, v.$tObserver scale;
 }
 
 .section[data-active="true"] {
   opacity: 1;
+  scale: 1;
 }

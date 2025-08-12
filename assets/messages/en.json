@@ -13,6 +13,14 @@
         {
           "title": "Competence",
           "ref": "/competence"
+        },
+        {
+          "title": "Blog",
+          "ref": "/blog"
+        },
+        {
+          "title": "Contact",
+          "ref": "/#contact"
         }
       ]
     },
@@ -35,7 +43,10 @@
         "Artem Zaikin"
       ],
       "next": "Next"
-    }
+    },
+    "services": {},
+    "useful": {},
+    "contact": {}
   },
   "about": {
     "head": {

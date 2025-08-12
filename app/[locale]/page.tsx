@@ -1,16 +1,13 @@
-
 import { getTranslations } from "next-intl/server";
-
-
 import { socials } from "@/utils/constants";
 import s from "@/assets/styles/main.module.scss";
 import IconSvg from "@/components/ui/Icon";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import Form from "@/components/common/Form";
 
 export default async function HomePage() {
 
   const home = await getTranslations("main.home");
-
 
   return <>
     <AnimatedSection className={s.home} id="home">
@@ -45,6 +42,19 @@ export default async function HomePage() {
         <span className={s.homeNextText}>{home("next")}</span>
       </a>
 
+    </AnimatedSection>
+
+    <AnimatedSection className={s.services} id="services">
+      <h2>services</h2>
+    </AnimatedSection>
+
+    <AnimatedSection className={s.useful} id="useful">
+      <h2>useful</h2>
+    </AnimatedSection>
+
+    <AnimatedSection className={s.contact} id="contact">
+      <h2>contact</h2>
+      <Form />
     </AnimatedSection>
 
   </>;
