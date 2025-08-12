@@ -8,6 +8,13 @@
   gap: 1rem;
 }
 
+.status {
+  @include v.font;
+  color: v.$color;
+  font-size: 1.7rem;
+}
+
 .button {
+  margin-top: 1rem;
   max-width: 20rem;
 }

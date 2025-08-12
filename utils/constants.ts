@@ -1,3 +1,5 @@
+export const API_CONTACT = "/api/contact";
+
 export const languages = ["en", "de", "uk"];
 
 export const socials = [

@@ -1,13 +1,41 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { PrismaClient } from "@prisma/client";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+const prisma = new PrismaClient();
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-
     const { email, name, message } = body;
+
+    const lastMessage = await prisma.message.findFirst({
+      where: { email },
+      orderBy: { createdAt: "desc" },
+    });
+
+    if (lastMessage) {
+      const oneDayInMs = 24 * 60 * 60 * 1000;
+      const now = new Date();
+      if (now.getTime() - lastMessage.createdAt.getTime() < oneDayInMs) {
+        return NextResponse.json(
+          {
+            error: "Please wait 24 hours before sending another message.",
+            lastSent: lastMessage.createdAt,
+          },
+          { status: 429 }
+        );
+      };
+    };
+
+    await prisma.message.create({
+      data: {
+        email,
+        name,
+        message,
+      },
+    });
 
     const { data, error } = await resend.emails.send({
       from: "Acme <onboarding@resend.dev>",

@@ -3,26 +3,27 @@ import { UseFormRegisterReturn } from "react-hook-form";
 import s from "./s.module.scss";
 
 interface Props {
-  type: string
-  placeholder: string
-  className?: string
-  register?: UseFormRegisterReturn
-  error?: string
+  type: string;
+  placeholder: string;
+  error: string | undefined;
+  className?: string;
+  register?: UseFormRegisterReturn;
 };
 
 function Input({
   type = "text",
   placeholder = "",
   className,
-  register,
   error,
+  register,
 }: Props) {
 
-  const errorItem = error && <p className={s.error}>{error}</p>;
+
+  const lableItem = error ? <p className={s.error}>{error}</p> : <label className={s.lable}>{placeholder}</label>;
 
   if (type === "textarea") return (
     <>
-      {errorItem}
+      {error && <p className={s.error}>{error}</p>}
       <textarea
         className={`${s.textarea} ${className}`}
         placeholder={placeholder}
@@ -34,7 +35,7 @@ function Input({
 
   return (
     <>
-      {errorItem}
+      {error && <p className={s.error}>{error}</p>}
       <input
         className={`${s.input} ${className}`}
         type={type}

@@ -11,6 +11,10 @@
   padding: 1rem;
   font-size: 1.6rem;
   outline: none;
+
+  &::placeholder {
+    color: v.$color;
+  }
 }
 
 .textarea {
@@ -18,10 +22,19 @@
   height: 10rem;
 }
 
+
+.lable,
 .error {
   @include v.font;
-  color: rgb(196, 69, 69);
   font-size: 1.2rem;
   text-align: start;
   width: 100%;
+}
+
+.lable {
+  color: rgb(255, 217, 0);
+}
+
+.error {
+  color: rgb(255, 102, 0);
 }
