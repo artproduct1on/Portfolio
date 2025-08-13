@@ -28,7 +28,17 @@
       "Jahre:",
       "Monate:",
       "Tage:"
-    ]
+    ],
+    "form": {
+      "0": "Bitte geben Sie die Formularfelder aus.",
+      "200": "Nachricht gesendet!",
+      "429": "Nachricht bereits gesendet. Bitte versuche es in {hours} Stunden und {minutes} Minuten erneut.",
+      "500": "Fehler beim Versenden der Nachricht!",
+      "name": "Name",
+      "email": "E-mail",
+      "message": "Nachricht",
+      "button": "Senden"
+    }
   },
   "main": {
     "head": {

@@ -6,7 +6,7 @@ import Image from "next/image";
 import Clock from "@/components/common/Clock";
 import { startCareer } from "@/utils/constants";
 
-export default async function HomePage() {
+export default async function AboutPage() {
 
   const t = await getTranslations("about");
 

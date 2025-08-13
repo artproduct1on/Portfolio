@@ -28,7 +28,17 @@
       "Years:",
       "Months:",
       "Days:"
-    ]
+    ],
+    "form": {
+      "0": "Fill out the form and I will contact you as soon as possible.",
+      "200": "Message sent!",
+      "429": "Message already sent. Please try again in {hours} hours and {minutes} minutes.",
+      "500": "Error sending message!",
+      "name": "Name",
+      "email": "E-mail",
+      "message": "Message",
+      "button": "Send"
+    }
   },
   "main": {
     "head": {

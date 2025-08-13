@@ -1,47 +1,47 @@
-import s from "@/assets/styles/main.module.scss";
+import s from "@/assets/styles/competence.module.scss";
 import { getTranslations } from "next-intl/server";
 import { workList } from "@/utils/constants";
 import { front, back, tool } from "@/utils/skillsInfo";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import WorkSkills from "@/components/common/WorkSkills";
 
-export default async function Page() {
+export default async function CompetencePage() {
   const t = await getTranslations("competence");
   const workProcessList = t.raw("list_2");
 
   return <>
-    <AnimatedSection className={s.work}>
+    <AnimatedSection className={s.section}>
       <h1>
         {t("h2")}
       </h1>
-      <h3 className={s.workSubtitle}>
+      <h3 className={s.subtitle}>
         {t("h3")}
       </h3>
-      <ul className={s.workCompetence}>
+      <ul className={s.competence}>
         {workList.map(i => (
-          <li className={s.workCompetenceItem} key={i.id}>
-            <div className={s.workCompetenceCircle} data-perc={i.perc} />
-            <label className={s.workCompetenceLabel}>
+          <li className={s.competenceItem} key={i.id}>
+            <div className={s.competenceCircle} data-perc={i.perc} />
+            <label className={s.competenceLabel}>
               {t("list." + i.id)}
             </label>
           </li>
         ))}
       </ul>
 
-      <h3 className={s.workTitle}>
+      <h3 className={s.pitle}>
         {t("h3_2")}
       </h3>
-      <ul className={s.workProcess}>
+      <ul className={s.process}>
         {workProcessList.map(([title, desc]: [string, string], i: number) => (
           <li
-            className={s.workProcessItem}
+            className={s.processItem}
             key={i}
             data-num={i + 1}
           >
-            <p className={s.workProcessName}>
+            <p className={s.processName}>
               {title}
             </p>
-            <p className={s.workProcessText}>
+            <p className={s.processText}>
               {desc}
             </p>
           </li>

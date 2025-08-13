@@ -5,7 +5,8 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import Input from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
 import { API_CONTACT } from "@/utils/constants";
-
+import { timeRemainingHelper } from "@/utils/helpers";
+import { useTranslations } from "next-intl";
 
 interface IFormInput {
   name: string;
@@ -13,8 +14,20 @@ interface IFormInput {
   message: string;
 };
 
+interface IStatusForm {
+  title: string;
+  code: number;
+}
+
 function Form() {
-  const [status, setStatus] = useState<string | null>("Someone will get in touch with you soon!");
+
+  const t = useTranslations("components.form");
+
+
+  const [status, setStatus] = useState<IStatusForm>({
+    title: t('0'),
+    code: 0,
+  });
   const [loading, setLoading] = useState<boolean>(false);
 
   const {
@@ -34,22 +47,26 @@ function Form() {
       });
 
       if (res.ok) {
-        setStatus("Message sent!");
+        setStatus({ title: "Message sent!", code: res.status });
         reset();
       } else if (res.status === 429) {
         const errorData = await res.json();
-        const lastSentTime = new Date(errorData.lastSent);
-        const nextAttemptTime = new Date(lastSentTime.getTime() + 24 * 60 * 60 * 1000);
-        const timeLeftInMs = nextAttemptTime.getTime() - Date.now();
-        const hoursLeft = Math.floor(timeLeftInMs / (1000 * 60 * 60));
-        const minutesLeft = Math.floor((timeLeftInMs % (1000 * 60 * 60)) / (1000 * 60));
-
-        setStatus(`Message already sent. Please try again in ${hoursLeft} hours and ${minutesLeft} minutes.`);
+        const { hours, minutes } = timeRemainingHelper(errorData.lastSent);
+        setStatus({
+          title: t('429', { hours, minutes }),
+          code: res.status
+        });
       } else {
-        setStatus("Error sending message");
+        setStatus({
+          title: t('500'),
+          code: 500
+        });
       }
     } catch (error) {
-      setStatus("Error sending message");
+      setStatus({
+        title: t('500'),
+        code: 500
+      });
     } finally {
       setLoading(false);
     }
@@ -61,10 +78,16 @@ function Form() {
       noValidate
       onSubmit={handleSubmit(onSubmit)}
     >
-      <p className={s.status}>{status}</p>
+      <p
+        className={s.status}
+        data-code={status.code}
+      >
+        {status.title}
+      </p>
       <Input
         type="text"
-        placeholder="Name"
+        placeholder={t('name')}
+        disabled={loading}
         error={errors.name?.message}
         register={
           register("name", { required: "Name is required", minLength: { value: 2, message: "Name must be more than 2 characters" } })
@@ -72,7 +95,8 @@ function Form() {
       />
       <Input
         type="email"
-        placeholder="E-mail: example@domain.com"
+        placeholder={t('email')}
+        disabled={loading}
         error={errors.email?.message}
         register={register("email", {
           required: "Email is required",
@@ -86,16 +110,17 @@ function Form() {
 
       <Input
         type="textarea"
-        placeholder="Message: Hello, I would like to..."
+        placeholder={t('message')}
+        disabled={loading}
         error={errors.message?.message}
         register={register("message", { required: "Message is required" })}
       />
 
       <Button
         className={s.button}
-        type="submit"
-        title="Send"
         disabled={loading}
+        type="submit"
+        title={t('button')}
       />
 
     </form>

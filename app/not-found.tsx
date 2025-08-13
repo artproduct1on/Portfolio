@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import s from '@/assets/styles/notFound.module.scss';
 
-export default async function notFound() {
+export default async function NotFoundPage() {
   const t = await getTranslations('notFound');
 
   return (

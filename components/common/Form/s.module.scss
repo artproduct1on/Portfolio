@@ -1,6 +1,5 @@
 @use "../../../assets/styles/var" as v;
 
-
 .form {
   width: 100%;
   max-width: 50rem;
@@ -12,6 +11,16 @@
   @include v.font;
   color: v.$color;
   font-size: 2rem;
+}
+
+.status[data-code="200"] {
+  color: v.$c2;
+  text-shadow: -.1rem -.1rem 1rem v.$c2, .3rem .3rem 1rem v.$c1;
+}
+
+.status[data-code="429"],
+.status[data-code="500"] {
+  color: v.$c4;
 }
 
 .button {

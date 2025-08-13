@@ -5,6 +5,7 @@ import { useState } from "react";
 
 interface Props {
   type: string;
+  disabled?: boolean;
   placeholder: string;
   error: string | undefined;
   className?: string;
@@ -13,6 +14,7 @@ interface Props {
 
 function Input({
   type = "text",
+  disabled,
   placeholder = "",
   className,
   error,
@@ -36,6 +38,7 @@ function Input({
       {lableItem}
       <textarea
         className={`${s.textarea} ${className}`}
+        disabled={disabled}
         onInput={(e) => setIsFill(e.currentTarget.value)}
         {...register}
       />
@@ -48,6 +51,7 @@ function Input({
       <input
         className={`${s.input} ${className}`}
         type={type}
+        disabled={disabled}
         onInput={(e) => setIsFill(e.currentTarget.value)}
         {...register}
       />

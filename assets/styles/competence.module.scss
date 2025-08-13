@@ -1,0 +1,188 @@
+@use "../../assets/styles/var" as v;
+
+.section {
+  background: linear-gradient(to bottom,
+      black,
+      rgb(1, 4, 19),
+      rgb(0, 0, 0));
+  gap: 1rem;
+  padding: 0 var(--container);
+  @include v.flex(center, center, column);
+  margin-top: 5rem;
+
+
+}
+
+.competence {
+  width: 100vw;
+  padding: 1rem;
+  margin: 0;
+  @include v.flex(center, center, row, wrap);
+  gap: 1rem;
+  background: rgba(27, 27, 27, 0.3);
+}
+
+.competenceItem {
+  @include v.flex(center, center, column);
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.competenceCircle {
+  --turnCircle: calc(attr(data-perc turn) / 100);
+  position: relative;
+  width: 7rem;
+  height: 7rem;
+  margin: .5rem;
+  background: conic-gradient(v.$c1 0turn,
+      v.$c2 var(--turnCircle),
+      rgba(204, 204, 204, 0.1) var(--turnCircle),
+      rgba(204, 204, 204, 0.1) 1turn);
+  border-radius: 50%;
+  opacity: 0;
+  rotate: var(--turnCircle);
+
+  &::before {
+    content: attr(data-perc) "%";
+    color: v.$color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 85%;
+    height: 85%;
+    background-color: rgb(20, 20, 20);
+    border-radius: 50%;
+    @include v.flex;
+    font-size: 1.6rem;
+  }
+
+  transition: v.$tObserver;
+}
+
+.competenceLabel {
+  text-align: center;
+  font-size: 1.4rem;
+  color: v.$color;
+}
+
+.process {
+  width: 80%;
+  position: relative;
+  @include v.flex(center, center, column);
+  margin: 0;
+  padding: 3rem 0;
+  list-style-type: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1.6rem;
+    width: .2rem;
+    height: 0%;
+    background-color: v.$c2;
+    transition: 5s height;
+  }
+}
+
+.processItem {
+  @include v.flex(flex-end, center, column);
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: attr(data-num);
+    position: absolute;
+    top: .3rem;
+    right: -2.25rem;
+    @include v.flex(center, center, column);
+    text-align: center;
+    color: v.$c3;
+    font-size: .8rem;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: v.$c2;
+  }
+}
+
+.processName {
+  @include v.font;
+  @include v.textGradient;
+  width: min-content;
+  min-width: 16rem;
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.processText {
+  font-size: 1.4rem;
+  opacity: 0;
+  color: v.$color;
+  transition: 5s opacity;
+  text-align: justify;
+}
+
+.section[data-active="true"] {
+
+  .competenceCircle {
+    opacity: 1;
+    rotate: 0turn;
+  }
+
+  .process {
+    &::before {
+      height: 100%;
+    }
+  }
+
+  .processText {
+    opacity: .8;
+    color: v.$color;
+  }
+}
+
+
+
+
+@media (min-width: 480px) {
+
+
+  .process {
+    align-items: flex-start;
+
+    &::before {
+      left: 50%;
+      translate: -50%;
+    }
+  }
+
+  .processItem {
+    position: relative;
+    width: calc(50% - 1.5rem);
+
+    .processName {
+      text-align: right;
+    }
+
+    &:nth-child(2n) {
+      align-self: flex-end;
+      align-items: flex-start;
+
+      .processName {
+        text-align: left;
+      }
+
+      &::before {
+        left: -2.25rem;
+      }
+    }
+  }
+
+
+}

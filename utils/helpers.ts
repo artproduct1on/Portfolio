@@ -1,27 +1,19 @@
 export function timeCalculationHelper(date: string) {
   const start = new Date(date);
   const now = new Date();
+  const years = now.getFullYear() - start.getFullYear();
+  const months = now.getMonth() - start.getMonth();
+  const days = now.getDate() - start.getDate();
 
-  let years = now.getFullYear() - start.getFullYear();
-  let months = now.getMonth() - start.getMonth();
-  let days = now.getDate() - start.getDate();
-  let hours = now.getHours() - start.getHours();
+  return { years, months, days };
+}
 
-  if (hours < 0) {
-    hours += 24;
-    days--;
-  }
+export function timeRemainingHelper(date: string) {
+  const lastSentTime = new Date(date);
+  const nextAttemptTime = new Date(lastSentTime.getTime() + 24 * 60 * 60 * 1000);
+  const timeLeftInMs = nextAttemptTime.getTime() - Date.now();
+  const hours = Math.floor(timeLeftInMs / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeftInMs % (1000 * 60 * 60)) / (1000 * 60));
 
-  if (days < 0) {
-    const prevMonthLastDay = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
-    days += prevMonthLastDay;
-    months--;
-  }
-
-  if (months < 0) {
-    months += 12;
-    years--;
-  }
-
-  return { years, months, days, hours };
+  return { hours, minutes };
 }

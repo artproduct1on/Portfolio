@@ -19,6 +19,11 @@
   font-size: 1.6rem;
   outline: none;
 
+  &:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+
   &::placeholder {
     color: v.$color;
   }
