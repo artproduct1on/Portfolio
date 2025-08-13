@@ -1,22 +1,18 @@
 "use client";
-import { useState } from "react";
 import s from "./s.module.scss";
 
 interface Props {
   action: () => void;
+  isActive?: boolean;
+  className?: string;
 };
 
-function Hamburger({ action }: Props) {
-  const [isActive, setIsActive] = useState(false);
-  const handleClick = () => {
-    setIsActive(prev => !prev);
-    action();
-  };
+function Hamburger({ action, isActive, className }: Props) {
 
   return (
     <button
-      className={s.hamburger}
-      onClick={handleClick}
+      className={`${s.hamburger} ${className}`}
+      onClick={action}
       data-active={isActive}
     >
       <hr className={s.hamburgerLine} />

@@ -6,18 +6,28 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import LangSwitcher from "@/components/ui/LangSwitcher";
 import Hamburger from "@/components/ui/Hamburger";
+import Backdrop from "@/components/ui/Backdrop";
+import useScrollLock from "@/hooks/useScrollLock";
 
 function Header() {
+  const [isActive, setIsActive] = useState(false);
+  const pathname = usePathname();
+  useScrollLock(isActive);
+
   const t = useTranslations("components.header");
   const list = t.raw("nav")
-  const [isActive, setIsActive] = useState(false);
-  const openMenu = (): void => setIsActive((prev: boolean) => !prev);
-  const pathname = usePathname();
+
+  const toggleMenu = (): void => setIsActive((prev: boolean) => !prev);
+  const closeMenu = (): void => { if (isActive) setIsActive(false) };
 
   return (
     <header className={s.header}>
 
-      <a className={s.logo} href="#home">
+      <Link
+        className={s.logo}
+        href="/"
+        onClick={closeMenu}
+      >
         <div className={s.logoImg}>
           <Image
             src="/logo.png"
@@ -27,18 +37,32 @@ function Header() {
           />
         </div>
         <p className={s.logoText}>datair</p>
-      </a>
+      </Link>
 
 
-      <Hamburger action={openMenu} />
+      <Hamburger
+        className={s.hamburger}
+        action={toggleMenu}
+        isActive={isActive}
+      />
+      <Backdrop
+        action={closeMenu}
+        isActive={isActive}
+      />
       <nav
         className={s.nav}
         data-active={isActive}
         data-children={1}
       >
-        <ul className={s.navList}>
+        <ul
+          className={s.navList}
+          onClick={closeMenu}
+        >
           {list.map((i: { title: string, ref: string }) => (
-            <li className={s.navListItem} key={i.title}>
+            <li
+              className={s.navListItem}
+              key={i.title}
+            >
               <Link
                 className={s.navListLink}
                 data-active={pathname === i.ref}

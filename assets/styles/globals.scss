@@ -22,8 +22,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include v.flex(center, space-between, column);
+  background: black;
   min-height: 100vh;
-  background: rgb(0, 0, 0);
+}
+
+body[data-scroll-locked=true] {
+  overflow: hidden;
 }
 
 section {
@@ -32,8 +36,9 @@ section {
   padding: 0;
   width: 100%;
   max-width: 100%;
+  overflow-x: hidden;
   min-height: 50vh;
-  overflow: hidden;
+
 }
 
 h1,

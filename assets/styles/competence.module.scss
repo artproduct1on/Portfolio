@@ -19,7 +19,7 @@
   margin: 0;
   @include v.flex(center, center, row, wrap);
   gap: 1rem;
-  background: rgba(27, 27, 27, 0.3);
+  background: v.$c3;
 }
 
 .competenceItem {
@@ -36,8 +36,8 @@
   margin: .5rem;
   background: conic-gradient(v.$c1 0turn,
       v.$c2 var(--turnCircle),
-      rgba(204, 204, 204, 0.1) var(--turnCircle),
-      rgba(204, 204, 204, 0.1) 1turn);
+      rgba(0, 0, 0, 0.5) var(--turnCircle),
+      rgb(223, 223, 223) 1turn);
   border-radius: 50%;
   opacity: 0;
   rotate: var(--turnCircle);
@@ -51,7 +51,7 @@
     translate: -50% -50%;
     width: 85%;
     height: 85%;
-    background-color: rgb(20, 20, 20);
+    background-color: v.$c3;
     border-radius: 50%;
     @include v.flex;
     font-size: 1.6rem;
