@@ -11,7 +11,16 @@ $circle: 113.2rem;
 $bgItem: linear-gradient(45deg, $c1, $c2);
 $borderRadius: 1rem;
 
+
+
+@mixin font {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 @mixin link($td: none) {
+  @include font;
   text-align: center;
   color: $color;
   padding: 1rem 0;
@@ -24,12 +33,6 @@ $borderRadius: 1rem;
     background-clip: text;
     color: transparent;
   }
-}
-
-@mixin font {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
 }
 
 @mixin textGradient {

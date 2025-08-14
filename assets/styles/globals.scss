@@ -37,7 +37,7 @@ section {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
-  min-height: 50vh;
+  min-height: 70vh;
 
 }
 
@@ -59,14 +59,15 @@ h2 {
   color: v.$color;
   opacity: .1;
   width: 100%;
-  margin: .5rem 0;
   white-space: nowrap;
+  margin: 3.5rem 0 1rem;
 }
 
 h3 {
   z-index: 100;
-  font-size: 2.5rem;
-  margin: 2.5rem 0 1rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: .5rem 0;
   font-weight: 300;
   opacity: .4;
   color: v.$color;
@@ -127,6 +128,11 @@ h4 {
     rotate: 90deg;
     padding-bottom: 6%;
     font-size: 6rem;
+    margin: .5rem 0;
+  }
+
+  h3 {
+    margin: 3.5rem 0 1rem;
   }
 }
 

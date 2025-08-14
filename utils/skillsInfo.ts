@@ -2,16 +2,6 @@ import { SkillsType } from "@/types";
 
 export const front: SkillsType[] = [
 	{
-		name: "JavaScript",
-		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/70px-Unofficial_JavaScript_logo_2.svg.png",
-		link: "https://en.wikipedia.org/wiki/JavaScript"
-	},
-	{
-		name: "TypeScript",
-		img: "https://www.typescriptlang.org/favicon.ico",
-		link: "https://www.typescriptlang.org/"
-	},
-	{
 		name: "React",
 		img: "https://react.dev/favicon.ico",
 		link: "https://react.dev/"
@@ -35,6 +25,16 @@ export const front: SkillsType[] = [
 		name: "Expo",
 		img: "https://static.expo.dev/static/brand/app-icon-512x512.png",
 		link: "https://expo.dev/"
+	},
+	{
+		name: "JavaScript",
+		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/70px-Unofficial_JavaScript_logo_2.svg.png",
+		link: "https://en.wikipedia.org/wiki/JavaScript"
+	},
+	{
+		name: "TypeScript",
+		img: "https://www.typescriptlang.org/favicon.ico",
+		link: "https://www.typescriptlang.org/"
 	},
 	{
 		name: "jQuery",
@@ -95,20 +95,11 @@ export const front: SkillsType[] = [
 
 export const back: SkillsType[] = [
 
-	{
-		name: "Node.js",
-		img: "https://nodejs.org/favicon.ico",
-		link: "https://nodejs.org/"
-	},
+
 	{
 		name: "Express",
 		img: "https://expressjs.com/images/favicon.png",
 		link: "https://expressjs.com/"
-	},
-	{
-		name: "C#",
-		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/165px-C_Sharp_Logo_2023.svg.png",
-		link: "https://learn.microsoft.com/en-us/dotnet/csharp/"
 	},
 	{
 		name: ".NET",
@@ -116,19 +107,14 @@ export const back: SkillsType[] = [
 		link: "https://dotnet.microsoft.com/en-us/"
 	},
 	{
-		name: "Socket",
-		img: "https://socket.io/images/favicon.png",
-		link: "https://socket.io/"
-	},
-	{
-		name: "Ubuntu",
-		img: "https://ubuntu.com/static/favicons/COF-favicon-48x48.png?v=fa3c63f",
-		link: "https://ubuntu.com/"
-	},
-	{
 		name: "MongoDB",
 		img: "https://www.mongodb.com/favicon.ico",
 		link: "https://www.mongodb.com/"
+	},
+	{
+		name: "PostgreSQL",
+		img: "https://www.postgresql.org/favicon.ico",
+		link: "https://www.postgresql.org/"
 	},
 	{
 		name: "MySQL",
@@ -136,9 +122,19 @@ export const back: SkillsType[] = [
 		link: "https://www.mysql.com/"
 	},
 	{
-		name: "PostgreSQL",
-		img: "https://www.postgresql.org/favicon.ico",
-		link: "https://www.postgresql.org/"
+		name: "Socket",
+		img: "https://socket.io/images/favicon.png",
+		link: "https://socket.io/"
+	},
+	{
+		name: "Node.js",
+		img: "https://nodejs.org/favicon.ico",
+		link: "https://nodejs.org/"
+	},
+	{
+		name: "C#",
+		img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/165px-C_Sharp_Logo_2023.svg.png",
+		link: "https://learn.microsoft.com/en-us/dotnet/csharp/"
 	},
 	{
 		name: "Sequelize",
@@ -172,6 +168,11 @@ export const tool: SkillsType[] = [
 		name: "Git",
 		img: "https://git-scm.com/favicon.png",
 		link: "https://git-scm.com/"
+	},
+	{
+		name: "Ubuntu",
+		img: "https://ubuntu.com/static/favicons/COF-favicon-48x48.png?v=fa3c63f",
+		link: "https://ubuntu.com/"
 	},
 	{
 		name: "phpMyAdmin",

@@ -31,4 +31,33 @@
   <path fill-rule="evenodd" clip-rule="evenodd" d="M20 4C21.6569 4 23 5.34315 23 7V17C23 18.6569 21.6569 20 20 20H4C2.34315 20 1 18.6569 1 17V7C1 5.34315 2.34315 4 4 4H20ZM19.2529 6H4.74718L11.3804 11.2367C11.7437 11.5236 12.2563 11.5236 12.6197 11.2367L19.2529 6ZM3 7.1688V17C3 17.5523 3.44772 18 4 18H20C20.5523 18 21 17.5523 21 17V7.16882L13.8589 12.8065C12.769 13.667 11.231 13.667 10.1411 12.8065L3 7.1688Z"></path>
 </symbol>
 
+<symbol viewBox="0 0 16 16" id="link">
+  <path d="M15.9998 14.9998V0.999513V-0.000488281H14.9998H0.9998L0.999801 1.99951L12.5861 1.99951L0.292969 14.2927L1.70718 15.7069L13.9998 3.41425V14.9998H15.9998Z"></path>
+</symbol>
+
+
+
+<symbol viewBox="0 0 24 24" id="Logistics">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21l-8 -4.5v-9l8 -4.5l8 4.5v4.5" /><path d="M12 12l8 -4.5" /><path d="M12 12v9" /><path d="M12 12l-8 -4.5" /><path d="M15 18h7" /><path d="M19 15l3 3l-3 3" />
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="eCommerce">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="Healthcare">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-.468 .464m-6.077 6.019l-.955 .945l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /><path d="M16 22l5 -5" /><path d="M21 21.5v-4.5h-4.5" />
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="E-grocery">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" />
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="Education">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z" /><path d="M19 16h-12a2 2 0 0 0 -2 2" /><path d="M9 8h6" />
+</symbol>
+
+<symbol viewBox="0 0 24 24" id="Other">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" /><path d="M11 13l9 -9" /><path d="M15 4h5v5" />
+</symbol>
 </svg>

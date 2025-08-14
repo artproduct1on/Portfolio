@@ -2,8 +2,8 @@ import s from "@/assets/styles/competence.module.scss";
 import { getTranslations } from "next-intl/server";
 import { workList } from "@/utils/constants";
 import { front, back, tool } from "@/utils/skillsInfo";
-import AnimatedSection from "@/components/common/AnimatedSection";
 import WorkSkills from "@/components/common/WorkSkills";
+import AnimatedSection from "@/components/common/AnimatedSection";
 
 export default async function CompetencePage() {
   const t = await getTranslations("competence");

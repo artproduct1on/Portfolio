@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./s.module.scss";
-import IconSvg from "@/components/ui/Icon";
+import IconSvg from "@/components/ui/IconSvg";
 import { socials } from "@/utils/constants";
 
 function Footer() {

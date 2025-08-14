@@ -1,0 +1,27 @@
+@use "../../../assets/styles/var" as v;
+
+
+.link {
+  text-decoration: none;
+  text-wrap: nowrap;
+  @include v.flex(center, space-between);
+  @include v.font;
+  min-width: 18rem;
+  width: 100%;
+  font-size: 2rem;
+  padding: 2rem 0;
+  color: v.$color;
+  border-bottom: .1rem solid v.$borderColor;
+  opacity: 0.5;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  svg {
+    fill: v.$color;
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
