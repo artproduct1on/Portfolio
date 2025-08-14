@@ -1,10 +1,7 @@
 @use "../../assets/styles/var" as v;
 
 .about {
-  background: linear-gradient(to bottom,
-      black,
-      rgb(0, 2, 15),
-      rgb(0, 0, 0));
+  background: v.$bgSection;
   padding: 2rem var(--container);
 
   @include v.flex(center, flex-start, column);

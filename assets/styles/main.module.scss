@@ -216,6 +216,35 @@
     gap: 1rem;
     list-style-type: none;
     padding: 0;
+
+
+  }
+
+  .servicesIndustriesItem {
+    &:nth-child(1) svg {
+      background: blue;
+    }
+
+    &:nth-child(2) svg {
+      background: violet;
+    }
+
+    &:nth-child(3) svg {
+      background: red;
+    }
+
+    &:nth-child(4) svg {
+      background: green;
+    }
+
+    &:nth-child(5) svg {
+      background: purple;
+    }
+
+    &:nth-child(6) svg {
+      background: orangered;
+    }
+
   }
 
   .servicesIndustriesItemLink {
@@ -228,13 +257,12 @@
     opacity: 0.7;
 
     svg {
-      width: 7rem;
-      height: 7rem;
+      width: 10rem;
+      height: 5rem;
       padding: 1rem;
       border-radius: 1rem;
       stroke: v.$color;
       fill: rgba(0, 0, 0, 0);
-      background: v.$c1;
     }
 
     &:hover {
@@ -242,6 +270,11 @@
       opacity: 1;
     }
   }
+}
+
+.why {
+  padding: 4rem var(--container);
+  background: v.$bgSection;
 }
 
 

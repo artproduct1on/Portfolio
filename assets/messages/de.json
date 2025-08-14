@@ -53,7 +53,40 @@
         "Artem Zaikin"
       ],
       "next": "next"
-    }
+    },
+    "services": {
+      "h2": "Dienstleistungen",
+      "SubTitle": "Lösungen für Ihr Unternehmen",
+      "list": [
+        {
+          "title": "Individuelle Lösung",
+          "text": "Kombination mehrerer Lösungen für unterschiedliche Geschäftsanforderungen"
+        },
+        {
+          "title": "Webentwicklung",
+          "text": "Websites und Webanwendungen mit Marktanpassung"
+        },
+        {
+          "title": "Mobile Entwicklung",
+          "text": "Apps für den App Store und Google Play"
+        },
+        {
+          "title": "Systeme und Dienstleistungen",
+          "text": "WMS, CRM, ERP, POS, CMS und andere Systemtypen"
+        }
+      ],
+      "SubTitleSecond": "Branchen",
+      "industries": [
+        "Logistik",
+        "E-Commerce",
+        "Healthcare",
+        "e-Grocery",
+        "Bildung",
+        "Andere"
+      ]
+    },
+    "useful": {},
+    "contact": {}
   },
   "about": {
     "head": {
@@ -61,7 +94,7 @@
       "keywords": "Datair, Artem Zaikin, Software Engineer, Webentwickler, Frontend, Backend, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
       "title": "Über mich - Datair: Artem Zaikin"
     },
-    "h2": "- Über mich",
+    "h2": "Über mich",
     "h3": "Persönliche Daten",
     "photo": "ich",
     "list": [
@@ -98,7 +131,7 @@
       "keywords": "Datair, Artem Zaikin, Software Engineer, Webentwickler, Frontend, Backend, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
       "title": "Kompetenzen - Datair: Artem Zaikin"
     },
-    "h2": "- Arbeit",
+    "h2": "Arbeit",
     "h3": "Meine Kompetenzen",
     "list": [
       "Frontend",
@@ -139,7 +172,7 @@
       ]
     ],
     "skills": {
-      "title": "- Fähigkeiten",
+      "title": "Fähigkeiten",
       "list": [
         "Frontend",
         "Backend",

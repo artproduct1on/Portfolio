@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { socials } from "@/utils/constants";
+import { homeServices, homeIndustries, socials } from "@/utils/constants";
 import s from "@/assets/styles/main.module.scss";
 import IconSvg from "@/components/ui/IconSvg";
 import AnimatedSection from "@/components/common/AnimatedSection";
@@ -13,87 +13,27 @@ import WorkSkills from "@/components/common/WorkSkills";
 
 
 
-const services = [
-  {
-    id: 1,
-    title: "Personal Solution",
-    text: "Поєднання в собі декількох рішень, під різні завдання",
-    link: "/blog/services#personal-solution"
-  },
-  {
-    id: 2,
-    title: "Web Development",
-    text: "Веб сайти та веб застосунки з адаптацію під ринок",
-    link: "/blog/services#web-development"
-  },
-  {
-    id: 3,
-    title: "Mobile Development",
-    text: "Додатки для App Store та Google Play",
-    link: "/blog/services#app-development"
-  },
-  {
-    id: 4,
-    title: "Systems and Services",
-    text: "WMS, CRM, ERP, POS, CMS та інші види систем.",
-    link: "/blog/services#systems-and-services"
-  },
-];
 
-const industries = [
-  {
-    id: 1,
-    title: "Logistics",
-    icon: "Logistics",
-    link: "/blog/industries#logistics"
-  },
-  {
-    id: 2,
-    title: "eCommerce",
-    icon: "eCommerce",
-    link: "/blog/industries#eCommerce"
-  },
-  {
-    id: 3,
-    title: "Healthcare",
-    icon: "Healthcare",
-    link: "/blog/industries#healthcare"
-  },
-  {
-    id: 4,
-    title: "E-grocery",
-    icon: "E-grocery",
-    link: "/blog/industries#E-grocery"
-  },
-  {
-    id: 5,
-    title: "Education",
-    icon: "Education",
-    link: "/blog/industries#Education"
-  },
-  {
-    id: 6,
-    title: "Other",
-    icon: "Other",
-    link: "/blog/industries"
-  },
-]
+
+
 
 export default async function HomePage() {
 
-  const home = await getTranslations("main.home");
+  const t = await getTranslations("main");
+  const servicesList = homeServices(t.raw("services.list"));
+  const industries = homeIndustries(t.raw("services.industries"));
 
   return <>
     <AnimatedSection className={s.home} id="home">
       <h1 className={s.homeTitle}>
         <span className={s.homeTitlePart}>
-          {home("h1.0")}
+          {t("home.h1.0")}
         </span>
         <span className={s.homeTitlePart}>
-          {home("h1.1")}
+          {t("home.h1.1")}
         </span>
         <span className={s.homeTitlePart}>
-          {home("h1.2")}
+          {t("home.h1.2")}
         </span>
 
       </h1>
@@ -113,14 +53,14 @@ export default async function HomePage() {
       </ul>
 
       <a className={s.homeNext} href="#services">
-        <span className={s.homeNextText}>{home("next")}</span>
+        <span className={s.homeNextText}>{t("home.next")}</span>
       </a>
 
     </AnimatedSection>
 
     <AnimatedSection className={s.services} id="services">
-      <h2>services</h2>
-      <h3 className={s.servicesSubTitle}>Рішення для вашого бізнесу</h3>
+      <h2>{t("services.h2")}</h2>
+      <h3 className={s.servicesSubTitle}>{t("services.SubTitle")}</h3>
       <div className={s.servicesImg}>
         <Image
           src="/dev.jpg"
@@ -130,14 +70,18 @@ export default async function HomePage() {
         />
       </div>
       <ul className={s.servicesList}>
-        {services.map(i => (
+        {servicesList.map(i => (
           <li className={s.servicesListItem} key={i.id}>
-            <LinkArrow href={i.link} className={s.servicesListItemLink} title={i.title} />
+            <LinkArrow
+              href={i.link}
+              className={s.servicesListItemLink}
+              title={i.title}
+            />
             <p className={s.servicesListItemText}>{i.text}</p>
           </li>
         ))}
       </ul>
-      <h3 className={s.servicesSubTitle} > Індустриї</h3>
+      <h3 className={s.servicesSubTitle}>{t("services.SubTitleSecond")}</h3>
 
       <ul className={s.servicesIndustries}>
         {industries.map(i => (
@@ -151,9 +95,29 @@ export default async function HomePage() {
       </ul>
     </AnimatedSection >
 
-    <AnimatedSection className={s.useful} id="why me">
+    <AnimatedSection className={s.why} id="why-me">
       <h2>why me</h2>
 
+
+      <h4 className={s.whySubTitle}>Досвід:</h4>
+      <LinkArrow
+        href={"/about"}
+        className={s.whyLink}
+        title={`В розробці з 2020 року`}
+      />
+
+      <h4 className={s.whySubTitle}>Розробка:</h4>
+      <LinkArrow
+        href={"/competence"}
+        className={s.whyLink}
+        title={`Імплементація від ідеї до релізу`}
+      />
+      <h4 className={s.whySubTitle}>Tехнології:</h4>
+      <LinkArrow
+        href={"/competence"}
+        className={s.whyLink}
+        title={`Найсучасніший вибір серед кращого`}
+      />
       <WorkSkills skills={[...front.slice(0, 5), ...back.slice(0, 4)]} />
     </AnimatedSection>
 

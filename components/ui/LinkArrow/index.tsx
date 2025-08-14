@@ -5,7 +5,7 @@ import { Link } from "@/i18n/navigation";
 
 interface Props {
   href: string
-  title: string
+  title?: string
   className?: string
 };
 

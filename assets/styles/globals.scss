@@ -31,14 +31,12 @@ body[data-scroll-locked=true] {
 }
 
 section {
-  @include v.flex(center, center, column);
   position: relative;
   padding: 0;
   width: 100%;
   max-width: 100%;
-  overflow-x: hidden;
   min-height: 70vh;
-
+  overflow-x: hidden;
 }
 
 h1,

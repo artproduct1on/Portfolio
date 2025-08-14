@@ -11,6 +11,73 @@ export const socials = [
   { id: 4, title: "Instagram", ref: "https://www.instagram.com/artproduct1on/", icon: "instagram" },
 ];
 
+interface IHomeServices {
+  title: string;
+  text: string;
+}
+
+export const homeServices = (list: IHomeServices[]) => [
+  {
+    ...list[0],
+    id: 1,
+    link: "/blog/services#personal-solution"
+  },
+  {
+    ...list[1],
+    id: 2,
+    link: "/blog/services#web-development"
+  },
+  {
+    ...list[2],
+    id: 3,
+    link: "/blog/services#app-development"
+  },
+  {
+    ...list[3],
+    id: 4,
+    link: "/blog/services#systems-and-services"
+  },
+];
+export const homeIndustries = (list: string[]) => [
+  {
+    id: 1,
+    title: list[0],
+    icon: "Logistics",
+    link: "/blog/industries#logistics"
+  },
+  {
+    id: 2,
+    title: list[1],
+    icon: "eCommerce",
+    link: "/blog/industries#e-commerce"
+  },
+  {
+    id: 3,
+    title: list[2],
+    icon: "Healthcare",
+    link: "/blog/industries#healthcare"
+  },
+  {
+    id: 4,
+    title: list[3],
+    icon: "E-grocery",
+    link: "/blog/industries#e-grocery"
+  },
+  {
+    id: 5,
+    title: list[4],
+    icon: "Education",
+    link: "/blog/industries#education"
+  },
+  {
+    id: 6,
+    title: list[5],
+    icon: "Other",
+    link: "/blog/industries"
+  },
+]
+
+
 export const workList = [
   { id: 0, perc: 92.5 },
   { id: 1, perc: 69 },
@@ -18,4 +85,6 @@ export const workList = [
   { id: 3, perc: 59.5 },
   { id: 4, perc: 61.7 },
 ];
+
+
 
