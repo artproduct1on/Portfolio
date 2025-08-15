@@ -21,6 +21,12 @@ export async function generateMetadata({
   };
 };
 
+
+interface IArticle {
+  id: string;
+  img?: string;
+}
+
 export default async function ArticlePage({
   params
 }: {
@@ -41,7 +47,7 @@ export default async function ArticlePage({
 
       <h1 className={s.title}>{t("head.title")}</h1>
       {
-        data.map((i: any, index) => (
+        data.map((i: IArticle, index) => (
           <article
             className={s.article}
             id={i.id}

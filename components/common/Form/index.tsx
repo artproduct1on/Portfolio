@@ -62,7 +62,7 @@ function Form() {
           code: 500
         });
       }
-    } catch (error) {
+    } catch {
       setStatus({
         title: t('500'),
         code: 500

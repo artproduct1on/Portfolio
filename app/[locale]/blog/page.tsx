@@ -47,6 +47,7 @@ export default async function BlogPage() {
                 className={s.itemImg}
                 src={i.img}
                 alt={i.title}
+                loading="lazy"
               />
               <h4 className={s.itemTitle}>{i.title}</h4>
               <p className={s.itemDescription}>{i.description}</p>

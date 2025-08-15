@@ -1,5 +1,4 @@
 "use client";
-import { UseFormRegisterReturn } from "react-hook-form";
 import s from "./s.module.scss";
 
 interface Props {

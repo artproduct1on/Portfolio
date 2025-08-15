@@ -134,6 +134,7 @@ export default async function HomePage() {
                 className={s.listItemImg}
                 src={i.img}
                 alt={i.title}
+                loading="lazy"
               />
               <h4 className={s.listItemTitle}>{i.title}</h4>
               <p className={s.listItemDescription}>{i.description}</p>
