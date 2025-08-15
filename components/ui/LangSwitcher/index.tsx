@@ -1,8 +1,9 @@
 import React from "react";
 import s from "./s.module.scss";
 import { useLocale } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { languages } from "@/utils/constants";
+import Link from "next/link";
 
 function LangSwitcher() {
   const pathname = usePathname();
@@ -14,13 +15,13 @@ function LangSwitcher() {
     <div className={s.langs}>
       <Link
         className={s.langsLink}
-        href={"../" + langs[0] + pathname}
+        href={"/" + langs[0] + pathname}
       >
         {langs[0]}
       </Link> |
       <Link
         className={s.langsLink}
-        href={"../" + langs[1] + pathname}
+        href={"/" + langs[1] + pathname}
       >
         {langs[1]}
       </Link>

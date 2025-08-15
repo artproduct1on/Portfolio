@@ -68,7 +68,7 @@ export default async function CompetencePage() {
 
     </AnimatedSection>
 
-    <AnimatedSection className={s.skills}>
+    <AnimatedSection className={s.skills} id="skills">
       <h2>
         {t("skills.title")}
       </h2>

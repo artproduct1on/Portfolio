@@ -50,10 +50,11 @@ export default async function ArticlePage({
             <img
               className={s.articleImg}
               src={i.img}
-              alt={list[index].title}
+              alt={list[index]?.title}
+              loading="lazy"
             />
-            <h3 className={s.articleTitle}>{list[index].title || "No title"}</h3>
-            <p className={s.articleDescription}>{list[index].text || "No description"}</p>
+            <h3 className={s.articleTitle}>{list[index]?.title || "No title"}</h3>
+            <p className={s.articleDescription}>{list[index]?.text || "No description"}</p>
           </article>
         ))
       }

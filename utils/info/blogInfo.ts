@@ -29,9 +29,49 @@ export const listArticles = {
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
     },
     {
-      "id": "logisticss",
+      "id": "e-commerce",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
-    }
+    },
+    {
+      "id": "healthcare",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "e-grocery",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "education",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "renewable-energy",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "tourism-and-hospitality",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "information-technology",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "fintech",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "biotechnology",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "cybersecurity",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
+    {
+      "id": "space-industry",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+    },
   ],
   "business-digitalization": [
     {

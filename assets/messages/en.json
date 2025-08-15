@@ -215,11 +215,51 @@
       "body": [
         {
           "title": "Logistics and Supply Chain Management",
-          "text": "Logistics is the part of supply chain management that deals with the efficient forward and reverse flow of goods, services, and related information from the point of origin to the point of consumption according to the needs of customers.[2][3] Logistics management is a component that holds the supply chain together.[3] The resources managed in logistics may include tangible goods such as materials, equipment, and supplies, as well as food and other edible items. Military logistics is concerned with maintaining army supply lines with food, armaments, ammunition, and spare parts, apart from the transportation of troops themselves. Meanwhile, civil logistics deals with acquiring, moving, and storing raw materials, semi-finished goods, and finished goods. For organisations that provide garbage collection, mail deliveries, public utilities, and after-sales services, logistical problems must be addressed."
+          "text": "Logistics is a key part of supply chain management, focused on the efficient forward and reverse movement of goods, services, and related information from the point of origin to the point of consumption, in line with customer requirements. Logistics management is the glue that holds the supply chain together, overseeing resources that range from tangible goods such as materials, equipment, and supplies to food and other perishables.\n\nMilitary logistics ensures the continuous supply of food, weaponry, ammunition, spare parts, and troop transport. Civil logistics involves the acquisition, movement, and storage of raw materials, semi-finished goods, and finished products. For sectors such as waste collection, postal services, utilities, and after-sales support, logistical challenges must be carefully managed."
         },
         {
-          "title": "Logistics and Supply Chain Management",
-          "text": "Logistics is the part of supply chain management that deals with the efficient forward and reverse flow of goods, services, and related information from the point of origin to the point of consumption according to the needs of customers.[2][3] Logistics management is a component that holds the supply chain together.[3] The resources managed in logistics may include tangible goods such as materials, equipment, and supplies, as well as food and other edible items. Military logistics is concerned with maintaining army supply lines with food, armaments, ammunition, and spare parts, apart from the transportation of troops themselves. Meanwhile, civil logistics deals with acquiring, moving, and storing raw materials, semi-finished goods, and finished goods. For organisations that provide garbage collection, mail deliveries, public utilities, and after-sales services, logistical problems must be addressed."
+          "title": "E-commerce",
+          "text": "E-commerce refers to the buying and selling of goods and services over the internet. It spans various models, from business-to-consumer (B2C) marketplaces to business-to-business (B2B) platforms. Successful e-commerce operations rely on secure payment systems, user-friendly interfaces, effective digital marketing, and streamlined logistics. As mobile shopping and social commerce grow, businesses increasingly focus on personalization, data analytics, and customer trust to stay competitive."
+        },
+        {
+          "title": "Healthcare",
+          "text": "The healthcare industry encompasses services and systems aimed at maintaining and improving people's health. It includes hospitals, clinics, telemedicine, pharmaceuticals, and biotechnology. Modern healthcare relies on advanced technologies, skilled professionals, and effective supply chains for medicines and equipment. Preventive care, patient-centered approaches, and data-driven decision-making are critical to improving outcomes and ensuring accessibility."
+        },
+        {
+          "title": "E-grocery",
+          "text": "E-grocery is the online retailing of fresh and packaged food products, often supported by rapid delivery services. This sector blends e-commerce convenience with the challenges of handling perishable goods, requiring robust cold-chain logistics and inventory management. Innovations such as subscription boxes, AI-powered shopping suggestions, and local sourcing are shaping the future of the e-grocery market."
+        },
+        {
+          "title": "Education",
+          "text": "The education sector covers institutions, programs, and technologies designed to develop knowledge and skills. It ranges from early childhood education to higher learning and vocational training. Digital transformation has introduced e-learning platforms, hybrid classrooms, and AI-driven personalized learning paths. Lifelong learning and reskilling are increasingly essential in a fast-changing global economy."
+        },
+        {
+          "title": "Renewable Energy",
+          "text": "The renewable energy industry focuses on generating power from sustainable sources such as solar, wind, hydro, and geothermal. It plays a critical role in reducing greenhouse gas emissions, increasing energy independence, and driving innovation in storage and smart grid technologies."
+        },
+        {
+          "title": "Tourism and Hospitality",
+          "text": "This sector includes travel services, hotels, restaurants, and entertainment venues that cater to domestic and international visitors. It thrives on providing memorable experiences, embracing cultural diversity, and adapting to trends like eco-tourism and personalized travel planning."
+        },
+        {
+          "title": "Information Technology",
+          "text": "The IT industry develops, manages, and supports software, hardware, and networking systems. It drives innovation across all sectors through cloud computing, cybersecurity, artificial intelligence, and data analytics."
+        },
+        {
+          "title": "Fintech",
+          "text": "The fintech industry merges finance and technology to deliver innovative financial services such as mobile banking, digital wallets, online lending, and blockchain-based transactions. Its growth is driven by user demand for faster, more accessible, and secure financial solutions."
+        },
+        {
+          "title": "Biotechnology",
+          "text": "Biotechnology applies biological systems and living organisms to develop products and technologies for healthcare, agriculture, and environmental protection. This includes genetic engineering, biofuels, and advanced therapies such as CRISPR-based treatments."
+        },
+        {
+          "title": "Cybersecurity",
+          "text": "Cybersecurity focuses on protecting networks, systems, and data from digital threats. As cyberattacks become more sophisticated, this industry plays a vital role in safeguarding critical infrastructure, businesses, and personal information."
+        },
+        {
+          "title": "Space Industry",
+          "text": "The space industry involves the design, manufacture, and operation of spacecraft, satellites, and related infrastructure. It supports communication, navigation, climate monitoring, and exploration missions, with growing involvement from private companies."
         }
       ]
     },

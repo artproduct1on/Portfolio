@@ -15,7 +15,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../../assets/bg.main.gif");
+    background-image: url("../../assets/img/bg.main.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -273,8 +273,24 @@
 }
 
 .why {
+  position: relative;
   @include v.flex(center, center, column);
   padding: 0 var(--container);
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../assets/img/bg.why.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: contrast(200%) brightness(50%);
+  }
 }
 
 .useful {

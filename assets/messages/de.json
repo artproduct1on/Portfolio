@@ -60,7 +60,7 @@
       "next": "next"
     },
     "services": {
-      "h2": "Dienstleistungen",
+      "h2": "Leistungen",
       "SubTitle": "Lösungen für Ihr Unternehmen",
       "list": [
         {
@@ -182,6 +182,107 @@
         "Frontend",
         "Backend",
         "Zusätzliche Tools"
+      ]
+    }
+  },
+  "blog": {
+    "head": {
+      "description": "Datair: Artem Zaikin – Softwareentwickler, kreativer Webentwickler. Kompetenzen in Front-end, Back-end, UX/UI-Design, SEO und Testing.",
+      "keywords": "Datair, Artem Zaikin, Softwareentwickler, Webentwickler, Front-end, Back-end, UX/UI-Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
+      "title": "Blog – Datair: Artem Zaikin"
+    },
+    "title": "Finden Sie alle Informationen, die Sie benötigen",
+    "list": [
+      {
+        "title": "Branchen",
+        "description": "Erfahren Sie, welche Branchen von meinen Lösungen abgedeckt werden und wie sie von meiner Expertise profitieren können."
+      },
+      {
+        "title": "Digitalisierung von Unternehmen",
+        "description": "Die Digitalisierung von Unternehmen, kurz Digitalisierung, bezeichnet den Prozess der Integration digitaler Technologien und digitalisierter Daten, um die Arbeitsweise eines Unternehmens, den Kundenkontakt und sogar die Umsatzgenerierung zu transformieren."
+      },
+      {
+        "title": "Leistungsbeschreibung (SOW)",
+        "description": "Ein SOW-Dokument (Statement of Work) beschreibt die spezifischen Aufgaben, Ergebnisse und den Zeitplan eines Projekts und wird typischerweise im Rahmen einer Kunden-Lieferanten- oder Auftragnehmerbeziehung verwendet."
+      }
+    ]
+  },
+  "articles": {
+    "industries": {
+      "head": {
+        "title": "Industries"
+      },
+      "body": [
+        {
+          "title": "Logistik und Lieferkettenmanagement",
+          "text": "Logistik ist ein wesentlicher Bestandteil des Lieferkettenmanagements und konzentriert sich auf die effiziente Vorwärts- und Rückwärtsbewegung von Waren, Dienstleistungen und zugehörigen Informationen vom Ursprungsort bis zum Verbrauchsort entsprechend den Kundenanforderungen. Das Logistikmanagement ist der „Klebstoff“, der die Lieferkette zusammenhält, und überwacht Ressourcen von Materialien, Ausrüstung und Vorräten bis hin zu Lebensmitteln und verderblichen Waren. Die militärische Logistik stellt die kontinuierliche Versorgung mit Lebensmitteln, Waffen, Munition, Ersatzteilen und den Transport von Truppen sicher. Die zivile Logistik umfasst den Erwerb, die Bewegung und die Lagerung von Rohstoffen, Halbfertig- und Fertigwaren. In Bereichen wie Müllabfuhr, Postdiensten, Versorgungsunternehmen und Kundendienst müssen logistische Herausforderungen sorgfältig bewältigt werden."
+        },
+        {
+          "title": "E-Commerce",
+          "text": "E-Commerce bezeichnet den Kauf und Verkauf von Waren und Dienstleistungen über das Internet. Er umfasst verschiedene Modelle – von B2C-Marktplätzen (Business-to-Consumer) bis zu B2B-Plattformen (Business-to-Business). Erfolgreiche E-Commerce-Unternehmen setzen auf sichere Zahlungssysteme, benutzerfreundliche Oberflächen, effektives digitales Marketing und optimierte Logistik. Mit dem Wachstum von mobilem Einkauf und Social Commerce konzentrieren sich Unternehmen zunehmend auf Personalisierung, Datenanalyse und das Vertrauen der Kunden, um wettbewerbsfähig zu bleiben."
+        },
+        {
+          "title": "Gesundheitswesen",
+          "text": "Die Gesundheitsbranche umfasst Dienstleistungen und Systeme, die der Erhaltung und Verbesserung der Gesundheit der Menschen dienen. Dazu gehören Krankenhäuser, Kliniken, Telemedizin, Pharmazeutik und Biotechnologie. Die moderne Medizin stützt sich auf fortschrittliche Technologien, qualifiziertes Personal und effektive Lieferketten für Medikamente und Ausrüstung. Präventivmedizin, patientenorientierte Ansätze und datengestützte Entscheidungsfindung sind entscheidend für bessere Ergebnisse und den Zugang zu Gesundheitsleistungen."
+        },
+        {
+          "title": "Online-Lebensmittelhandel",
+          "text": "Der Online-Lebensmittelhandel (E-Grocery) umfasst den Verkauf von frischen und verpackten Lebensmitteln über das Internet, oft mit Unterstützung durch schnelle Lieferdienste. Dieser Sektor kombiniert die Bequemlichkeit des E-Commerce mit den Herausforderungen des Umgangs mit verderblichen Waren und erfordert eine robuste Kühlkette sowie ein effizientes Bestandsmanagement. Innovationen wie Abonnementboxen, KI-gestützte Einkaufsempfehlungen und lokale Beschaffung prägen die Zukunft des E-Grocery-Markts."
+        },
+        {
+          "title": "Bildungswesen",
+          "text": "Das Bildungswesen umfasst Institutionen, Programme und Technologien, die Wissen und Fähigkeiten vermitteln. Es reicht von der frühkindlichen Bildung über höhere Bildung bis hin zu beruflicher Weiterbildung. Die digitale Transformation hat E-Learning-Plattformen, hybride Klassenzimmer und KI-gestützte, personalisierte Lernwege eingeführt. Lebenslanges Lernen und Umschulung werden in einer sich schnell verändernden Weltwirtschaft immer wichtiger."
+        },
+        {
+          "title": "Erneuerbare Energien",
+          "text": "Die Branche der erneuerbaren Energien konzentriert sich auf die Erzeugung von Strom aus nachhaltigen Quellen wie Sonne, Wind, Wasser und Geothermie. Sie spielt eine entscheidende Rolle bei der Reduzierung von Treibhausgasemissionen, der Stärkung der Energieunabhängigkeit und der Förderung von Innovationen in den Bereichen Energiespeicherung und intelligente Netze."
+        },
+        {
+          "title": "Tourismus und Gastgewerbe",
+          "text": "Dieser Sektor umfasst Reisedienstleistungen, Hotels, Restaurants und Unterhaltungsangebote für in- und ausländische Gäste. Er lebt davon, unvergessliche Erlebnisse zu schaffen, kulturelle Vielfalt zu fördern und sich an Trends wie Ökotourismus und personalisierte Reiseplanung anzupassen."
+        },
+        {
+          "title": "Informationstechnologie",
+          "text": "Die IT-Branche entwickelt, verwaltet und unterstützt Software, Hardware und Netzwerksysteme. Sie treibt Innovationen in allen Sektoren durch Cloud Computing, Cybersicherheit, künstliche Intelligenz und Datenanalyse voran."
+        },
+        {
+          "title": "Fintech",
+          "text": "Die Fintech-Branche verbindet Finanzwesen und Technologie, um innovative Finanzdienstleistungen wie Mobile Banking, digitale Geldbörsen, Online-Kredite und Blockchain-basierte Transaktionen anzubieten. Ihr Wachstum wird durch die Nachfrage der Nutzer nach schnelleren, zugänglicheren und sicheren Finanzlösungen angetrieben."
+        },
+        {
+          "title": "Biotechnologie",
+          "text": "Die Biotechnologie nutzt biologische Systeme und lebende Organismen zur Entwicklung von Produkten und Technologien für das Gesundheitswesen, die Landwirtschaft und den Umweltschutz. Dazu gehören Gentechnik, Biokraftstoffe und fortschrittliche Therapien wie CRISPR-basierte Behandlungen."
+        },
+        {
+          "title": "Cybersicherheit",
+          "text": "Die Cybersicherheitsbranche konzentriert sich auf den Schutz von Netzwerken, Systemen und Daten vor digitalen Bedrohungen. Da Cyberangriffe immer ausgefeilter werden, spielt diese Branche eine entscheidende Rolle beim Schutz kritischer Infrastrukturen, von Unternehmen und persönlichen Informationen."
+        },
+        {
+          "title": "Raumfahrtindustrie",
+          "text": "Die Raumfahrtindustrie umfasst Entwurf, Herstellung und Betrieb von Raumfahrzeugen, Satelliten und zugehöriger Infrastruktur. Sie unterstützt Kommunikation, Navigation, Klimabeobachtung und Erkundungsmissionen – mit zunehmender Beteiligung privater Unternehmen."
+        }
+      ]
+    },
+    "business-digitalization": {
+      "head": {
+        "title": "Business Digitalization"
+      },
+      "body": [
+        {
+          "title": "Personal Solution",
+          "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+        }
+      ]
+    },
+    "statement-of-work": {
+      "head": {
+        "title": "Statement of Work (SOW)"
+      },
+      "body": [
+        {
+          "title": "How to create a Statement of Work for a website?",
+          "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+        }
       ]
     }
   }

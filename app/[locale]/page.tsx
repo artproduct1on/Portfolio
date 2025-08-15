@@ -111,7 +111,7 @@ export default async function HomePage() {
       />
       <h4 className={s.whySubTitle}>Tехнології:</h4>
       <LinkArrow
-        href={"/competence"}
+        href={"/competence#skills"}
         className={s.whyLink}
         title={`Найсучасніший вибір серед кращого`}
       />
