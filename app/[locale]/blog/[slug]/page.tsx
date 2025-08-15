@@ -1,8 +1,9 @@
+import s from "@/assets/styles/article.module.scss";
 import { getTranslations } from "next-intl/server";
-import s from "@/assets/styles/about.module.scss";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { getMessages } from "next-intl/server";
 import { Metadata } from "next";
+import { listArticles } from "@/utils/info/blogInfo";
 
 export async function generateMetadata({
   params
@@ -14,27 +15,51 @@ export async function generateMetadata({
   const messages = await getMessages({ locale });
 
   return {
-    title: messages.about.head.title,
-    description: messages.about.head.description,
-    keywords: messages.about.head.keywords,
+    title: messages.blog.head.title,
+    description: messages.blog.head.description,
+    keywords: messages.blog.head.keywords,
   };
 };
 
-export default async function BlogPage({
+export default async function ArticlePage({
   params
 }: {
-  params: Promise<{ locale: string, slug: string }>;
+  params: Promise<{ slug: string }>;
 }) {
 
-  const t = await getTranslations("about");
+  const { slug } = await params;
 
-  return <>
-    <AnimatedSection className={s.about} id="blog">
-      <h2>
-        {t("h2")}
-      </h2>
+  const data = listArticles[slug as keyof typeof listArticles];
+  const t = await getTranslations(`articles.${slug}`);
+  const list = t.raw("body");
+
+  return (
+    <AnimatedSection
+      id="articles"
+      className={s.section}
+    >
+
+      <h1 className={s.title}>{t("head.title")}</h1>
+      {
+        data.map((i: any, index) => (
+          <article
+            className={s.article}
+            id={i.id}
+            key={i.id}
+          >
+            <img
+              className={s.articleImg}
+              src={i.img}
+              alt={list[index].title}
+            />
+            <h3 className={s.articleTitle}>{list[index].title || "No title"}</h3>
+            <p className={s.articleDescription}>{list[index].text || "No description"}</p>
+          </article>
+        ))
+      }
 
 
-    </AnimatedSection>
-  </>;
+    </AnimatedSection>);
+
+
 }

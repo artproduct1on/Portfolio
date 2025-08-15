@@ -5,6 +5,8 @@ export interface SkillsType {
 	link: string;
 };
 
+
+
 export interface IArticlePreview {
 	id: string;
 	title: string;

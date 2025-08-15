@@ -40,6 +40,11 @@
       "button": "Senden"
     }
   },
+  "notFound": {
+    "h1": "Seite nicht gefunden",
+    "p": "Die Seite, die Sie suchen, existiert nicht.",
+    "link": "Zur Startseite"
+  },
   "main": {
     "head": {
       "description": "Datair: Artem Zaikin – Software Engineer, kreativer Webentwickler. Kompetenzen im Frontend, Backend, UX/UI Design, SEO und Testing.",
@@ -179,10 +184,5 @@
         "Zusätzliche Tools"
       ]
     }
-  },
-  "notFound": {
-    "h1": "Seite nicht gefunden",
-    "p": "Die Seite, die Sie suchen, existiert nicht.",
-    "link": "Zur Startseite"
   }
 }
