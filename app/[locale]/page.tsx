@@ -6,22 +6,19 @@ import AnimatedSection from "@/components/common/AnimatedSection";
 import Form from "@/components/common/Form";
 import Image from "next/image";
 import LinkArrow from "@/components/ui/LinkArrow";
-
 import { Link } from "@/i18n/navigation";
-import { front, back } from "@/utils/skillsInfo";
-import WorkSkills from "@/components/common/WorkSkills";
-
-
-
-
-
+import { listArticlesPreview } from "@/utils/info/blogInfo";
+import { IArticlePreview } from "@/types";
 
 
 export default async function HomePage() {
 
   const t = await getTranslations("main");
+  const tBlog = await getTranslations("blog");
   const servicesList = homeServices(t.raw("services.list"));
   const industries = homeIndustries(t.raw("services.industries"));
+
+  const listUseful = listArticlesPreview(tBlog.raw("list"));
 
   return <>
     <AnimatedSection className={s.home} id="home">
@@ -118,11 +115,32 @@ export default async function HomePage() {
         className={s.whyLink}
         title={`Найсучасніший вибір серед кращого`}
       />
-      <WorkSkills skills={[...front.slice(0, 5), ...back.slice(0, 4)]} />
+
     </AnimatedSection>
 
     <AnimatedSection className={s.useful} id="useful">
       <h2>useful</h2>
+      <ul className={s.list}>
+        {listUseful.slice(0, 3).map((i: IArticlePreview) => (
+          <li
+            key={i.id}
+            className={s.listItem}
+          >
+            <Link
+              href={"blog/" + i.id}
+              className={s.listItemLink}
+            >
+              <img
+                className={s.listItemImg}
+                src={i.img}
+                alt={i.title}
+              />
+              <h4 className={s.listItemTitle}>{i.title}</h4>
+              <p className={s.listItemDescription}>{i.description}</p>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </AnimatedSection>
 
     <AnimatedSection className={s.contact} id="contact">

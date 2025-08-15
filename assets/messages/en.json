@@ -180,6 +180,57 @@
       ]
     }
   },
+  "blog": {
+    "head": {
+      "description": "Datair: Artem Zaikin - Software Engineer, Creative Web Developer. Kompetenzen in Front-end, Back-end, Design UX/UI, SEO und Testing.",
+      "keywords": "Datair, Artem Zaikin, Software Engineer, Web Developer, Front-end, Back-end, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
+      "title": "Blog - Datair: Artem Zaikin"
+    },
+    "title": "Find all the information you need",
+    "list": [
+      {
+        "id": "industries",
+        "title": "Industries",
+        "img": "https://vynmsa.com/wp-content/uploads/2024/11/Tipos-de-industrias.jpg",
+        "description": "Find out what industries are covered by my solutions and how they can benefit from my expertise.",
+        "list": [
+          {
+            "id": "logistics",
+            "title": "Logistics and Supply Chain Management",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+            "text": "Logistics is the part of supply chain management that deals with the efficient forward and reverse flow of goods, services, and related information from the point of origin to the point of consumption according to the needs of customers.[2][3] Logistics management is a component that holds the supply chain together.[3] The resources managed in logistics may include tangible goods such as materials, equipment, and supplies, as well as food and other edible items. Military logistics is concerned with maintaining army supply lines with food, armaments, ammunition, and spare parts, apart from the transportation of troops themselves. Meanwhile, civil logistics deals with acquiring, moving, and storing raw materials, semi-finished goods, and finished goods. For organisations that provide garbage collection, mail deliveries, public utilities, and after-sales services, logistical problems must be addressed."
+          }
+        ]
+      },
+      {
+        "id": "business-digitalization",
+        "title": "Business Digitalization",
+        "description": "Business digitalization, or simply digitalization, refers to the process of integrating digital technologies and digitized data to transform how a business operates, interacts with customers, and even generates revenue.",
+        "list": [
+          {
+            "id": "personal-solution",
+            "title": "Personal Solution",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+            "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+          }
+        ]
+      },
+      {
+        "id": "statement-of-work",
+        "title": "Statement of Work (SOW)",
+        "img": "https://cdn-dilge.nitrocdn.com/CEoyLRJrMZkvcZHgfQFGOitFXuUyzTkm/assets/images/optimized/rev-4164500/projectmanagement.ie/wp-content/uploads/2022/03/importance-of-statement-work.jpg",
+        "description": "SOW is a document that outlines the specific tasks, deliverables, and timeline for a project, typically used in the context of a client-vendor or contractor relationship.",
+        "list": [
+          {
+            "id": "how-to-create",
+            "title": "How to create a Statement of Work for a website?",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg/250px-Warehouse_in_New_Jersey_where_trucks_deliver_granite_slabs.jpg",
+            "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+          }
+        ]
+      }
+    ]
+  },
   "notFound": {
     "h1": "Page Not Found",
     "p": "The page you are looking for does not exist.",

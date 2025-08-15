@@ -1,10 +1,25 @@
-
-import { getTranslations } from "next-intl/server";
+import { Metadata } from "next";
+import { getMessages, getTranslations } from "next-intl/server";
 import s from "@/assets/styles/about.module.scss";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import Image from "next/image";
 import Clock from "@/components/common/Clock";
 import { startCareer } from "@/utils/constants";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+
+  return {
+    title: messages.about.head.title,
+    description: messages.about.head.description,
+    keywords: messages.about.head.keywords,
+  };
+};
 
 export default async function AboutPage() {
 

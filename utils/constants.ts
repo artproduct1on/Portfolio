@@ -20,22 +20,22 @@ export const homeServices = (list: IHomeServices[]) => [
   {
     ...list[0],
     id: 1,
-    link: "/blog/services#personal-solution"
+    link: "/blog/business-digitalization#personal-solution"
   },
   {
     ...list[1],
     id: 2,
-    link: "/blog/services#web-development"
+    link: "/blog/business-digitalization#web-development"
   },
   {
     ...list[2],
     id: 3,
-    link: "/blog/services#app-development"
+    link: "/blog/business-digitalization#app-development"
   },
   {
     ...list[3],
     id: 4,
-    link: "/blog/services#systems-and-services"
+    link: "/blog/business-digitalization#systems-and-services"
   },
 ];
 export const homeIndustries = (list: string[]) => [

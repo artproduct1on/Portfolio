@@ -1,9 +1,26 @@
 import s from "@/assets/styles/competence.module.scss";
-import { getTranslations } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { workList } from "@/utils/constants";
-import { front, back, tool } from "@/utils/skillsInfo";
+import { front, back, tool } from "@/utils/info/skillsInfo";
 import WorkSkills from "@/components/common/WorkSkills";
 import AnimatedSection from "@/components/common/AnimatedSection";
+import { Metadata } from "next";
+
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = await getMessages({ locale });
+
+  return {
+    title: messages.competence.head.title,
+    description: messages.competence.head.description,
+    keywords: messages.competence.head.keywords,
+  };
+};
 
 export default async function CompetencePage() {
   const t = await getTranslations("competence");
@@ -11,7 +28,7 @@ export default async function CompetencePage() {
 
   return <>
     <AnimatedSection className={s.section}>
-      <h1>
+      <h1 className={s.title}>
         {t("h2")}
       </h1>
       <h3 className={s.subtitle}>
@@ -51,7 +68,7 @@ export default async function CompetencePage() {
 
     </AnimatedSection>
 
-    <AnimatedSection>
+    <AnimatedSection className={s.skills}>
       <h2>
         {t("skills.title")}
       </h2>
