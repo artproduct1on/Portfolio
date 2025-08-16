@@ -3,8 +3,8 @@
 
 .link {
   text-decoration: none;
-  text-wrap: nowrap;
   @include v.flex(center, space-between);
+  gap: 1rem;
   @include v.font;
   min-width: 18rem;
   width: 100%;

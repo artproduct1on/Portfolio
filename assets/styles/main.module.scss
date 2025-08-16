@@ -272,6 +272,10 @@
   padding: 0 var(--container);
   @include v.flex(center, center, column);
 
+  .usefulSubTitle {
+    margin: 3rem;
+  }
+
   .list {
     @include v.flex(flex-start, center, row, wrap);
     gap: 2rem;

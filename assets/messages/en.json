@@ -90,8 +90,38 @@
         "Other"
       ]
     },
-    "useful": {},
-    "contact": {}
+    "why": {
+      "h2": "Why Me",
+      "list": [
+        [
+          "Experience",
+          "Developing since 2020"
+        ],
+        [
+          "Development",
+          "Delivering projects from idea to implementation"
+        ],
+        [
+          "Performance",
+          "Optimizing solutions for speed and stability"
+        ],
+        [
+          "Technologies",
+          "Choosing the best tools for the job"
+        ],
+        [
+          "Flexibility",
+          "Adapting to changing project requirements"
+        ]
+      ]
+    },
+    "useful": {
+      "h2": "Useful",
+      "h3": "A little additional information"
+    },
+    "contact": {
+      "h2": "Contact"
+    }
   },
   "about": {
     "head": {

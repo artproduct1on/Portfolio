@@ -90,8 +90,38 @@
         "Andere"
       ]
     },
-    "useful": {},
-    "contact": {}
+    "why": {
+      "h2": "Warum Ich",
+      "list": [
+        [
+          "Erfahrung",
+          "In der Entwicklung seit 2020"
+        ],
+        [
+          "Entwicklung",
+          "Projekte von der Idee bis zur Umsetzung realisieren"
+        ],
+        [
+          "Leistung",
+          "Lösungen für Geschwindigkeit und Stabilität optimieren"
+        ],
+        [
+          "Technologien",
+          "Die besten Werkzeuge für die Aufgabe auswählen"
+        ],
+        [
+          "Flexibilität",
+          "Mich an wechselnde Projektanforderungen anpassen"
+        ]
+      ]
+    },
+    "useful": {
+      "h2": "Nützlich",
+      "h3": "Einige zusätzliche Informationen"
+    },
+    "contact": {
+      "h2": "Kontakt"
+    }
   },
   "about": {
     "head": {

@@ -92,32 +92,44 @@ export default async function HomePage() {
     </AnimatedSection >
 
     <AnimatedSection className={s.why} id="why-me">
-      <h2>why me</h2>
+      <h2>{t("why.h2")}</h2>
 
-      <h4 className={s.whySubTitle}>Досвід:</h4>
+      <h4 className={s.whySubTitle}>{t("why.list.0.0")}:</h4>
       <LinkArrow
         href={"/about"}
         className={s.whyLink}
-        title={"В розробці з 2020 року"}
+        title={t("why.list.0.1")}
       />
-
-      <h4 className={s.whySubTitle}>Розробка:</h4>
+      <h4 className={s.whySubTitle}>{t("why.list.1.0")}:</h4>
       <LinkArrow
         href={"/competence"}
         className={s.whyLink}
-        title={"Імплементація від ідеї до релізу"}
+        title={t("why.list.1.1")}
       />
-      <h4 className={s.whySubTitle}>Tехнології:</h4>
+      <h4 className={s.whySubTitle}>{t("why.list.2.0")}:</h4>
       <LinkArrow
         href={"/competence#skills"}
         className={s.whyLink}
-        title={"Найсучасніший вибір серед кращого"}
+        title={t("why.list.2.1")}
+      />
+      <h4 className={s.whySubTitle}>{t("why.list.3.0")}:</h4>
+      <LinkArrow
+        href={"/competence#skills"}
+        className={s.whyLink}
+        title={t("why.list.3.1")}
+      />
+      <h4 className={s.whySubTitle}>{t("why.list.4.0")}:</h4>
+      <LinkArrow
+        href={"/blog/business-digitalization#personal-solution"}
+        className={s.whyLink}
+        title={t("why.list.4.1")}
       />
 
     </AnimatedSection>
 
-    <AnimatedSection className={s.useful} id="useful">
-      <h2>useful</h2>
+    <AnimatedSection className={s.useful}>
+      <h2>{t("useful.h2")}</h2>
+      <h3 className={s.usefulSubTitle}>{t("useful.h3")}</h3>
       <ul className={s.list}>
         {listUseful.slice(0, 3).map((i: IArticlePreview) => (
           <li
@@ -143,7 +155,7 @@ export default async function HomePage() {
     </AnimatedSection>
 
     <AnimatedSection className={s.contact} id="contact">
-      <h2>contact</h2>
+      <h2>{t("contact.h2")}</h2>
       <Form />
     </AnimatedSection>
 
