@@ -24,7 +24,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: messages.articles[slug].head.title,
+    title: "Datair: " + messages.articles[slug].head.title,
     description: messages.blog.head.description,
     keywords: messages.blog.head.keywords,
   };
