@@ -99,8 +99,7 @@
       "keywords": "Datair, Artem Zaikin, Software Engineer, Web Developer, Front-end, Back-end, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
       "title": "About Me - Datair: Artem Zaikin"
     },
-    "h2": "About Me",
-    "h3": "Personal Data",
+    "title": "About Me",
     "photo": "me",
     "list": [
       [
@@ -128,7 +127,7 @@
         "I am characterized by honesty in my endeavors, a strong sense of determination, and a high level of responsibility in all aspects of my work"
       ]
     ],
-    "h3_2": "I'm a Developer"
+    "h3": "I'm a Developer"
   },
   "competence": {
     "head": {
@@ -270,7 +269,19 @@
       "body": [
         {
           "title": "Personal Solution",
-          "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+          "text": "I approach every project individually: I analyze business processes, identify weak points, and build a strategy for digital transformation. To achieve this, I combine web and mobile technologies, automate workflows, optimize services, and implement management tools. My goal is not just to deliver a single product but to create a complete ecosystem that saves resources, works efficiently, and helps a business stay competitive."
+        },
+        {
+          "title": "Web Development",
+          "text": "I build modern web solutions ranging from corporate portals and CRM systems to e-commerce platforms and complex web applications. For me, a website is not just a digital presence — it’s a tool for attracting clients and growing a business. I focus on speed, security, and usability, while also making sure the design is responsive and visually appealing."
+        },
+        {
+          "title": "Mobile Development",
+          "text": "I develop mobile applications that help businesses connect with their clients more effectively. These can be simple service apps or large platforms with advanced functionality. I work on thoughtful UX/UI design, seamless integration with other services, high performance, and scalability so that the app is not only functional but also enjoyable to use."
+        },
+        {
+          "title": "Systems and Services",
+          "text": "I design and implement systems and services that make business operations easier and more efficient. This can include process automation, cloud platform integration, microservice architecture, or APIs to connect different systems. My goal is to make technology practical and useful, so that it truly supports business growth and efficiency."
         }
       ]
     },
@@ -280,8 +291,20 @@
       },
       "body": [
         {
-          "title": "How to create a Statement of Work for a website?",
-          "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+          "title": "What is a Statement of Work (SOW)",
+          "text": "A Statement of Work is a formal document that clearly describes what will be delivered within a project, what goals are set, what tasks will be solved, and what outcomes are expected. It serves as the foundation of collaboration between a client and a contractor. A well-written SOW helps avoid misunderstandings, fixes agreements in writing, and keeps the project under control at every stage."
+        },
+        {
+          "title": "Key Elements of a Good SOW",
+          "text": "A solid SOW always includes several essential sections:\n1) Project goals — what problem needs to be solved and what results are expected.\n2) Scope of work — the specific tasks to be completed.\n3) Timeline — deadlines and milestones for the project.\n4) Acceptance criteria — how to define whether the work is done correctly.\n5) Budget — overall cost and possible expenses.\nCovering these points ensures clarity and minimizes risks of misinterpretation or gaps in cooperation."
+        },
+        {
+          "title": "Common Mistakes in Writing SOWs",
+          "text": "A frequent mistake is keeping the SOW too general and avoiding details. This often causes confusion, unexpected costs, and conflicts. Common issues include missing deadlines, unclear quality criteria, vague scope of work, or ignoring external dependencies (such as access rights or third-party services). Another mistake is failing to address risks, which can turn minor delays into serious problems. The more detailed the document, the less chance for conflicts."
+        },
+        {
+          "title": "Practical Tips for Clients",
+          "text": "To create a good SOW, clients should:\n- Clearly define their business objectives.\n- Set priorities: what is critical and what is optional.\n- Put all agreements in writing, even if they seem obvious.\n- Add examples or references to reduce the risk of misinterpretation.\n- Before final approval, review the document from both perspectives: is it clear what, when, and at what cost will be done?\nThis approach saves time, money, and nerves, while making the project move faster and more predictably."
         }
       ]
     }

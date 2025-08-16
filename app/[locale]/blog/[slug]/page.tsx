@@ -4,6 +4,7 @@ import AnimatedSection from "@/components/common/AnimatedSection";
 import { getMessages } from "next-intl/server";
 import { Metadata } from "next";
 import { listArticles } from "@/utils/info/blogInfo";
+import { redirect } from "@/i18n/navigation";
 
 export async function generateMetadata({
   params
@@ -11,16 +12,23 @@ export async function generateMetadata({
   params: Promise<{ locale: string, slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  console.log(slug);
   const messages = await getMessages({ locale });
 
+  if (!messages.articles[slug]) {
+    redirect({ href: "/not-found", locale });
+    return {
+      title: messages.blog.head.head.title,
+      description: messages.blog.head.description,
+      keywords: messages.blog.head.keywords,
+    };;
+  }
+
   return {
-    title: messages.blog.head.title,
+    title: messages.articles[slug].head.title,
     description: messages.blog.head.description,
     keywords: messages.blog.head.keywords,
   };
 };
-
 
 interface IArticle {
   id: string;
@@ -36,6 +44,9 @@ export default async function ArticlePage({
   const { slug } = await params;
 
   const data = listArticles[slug as keyof typeof listArticles];
+
+  if (!data) return <div>404</div>;
+
   const t = await getTranslations(`articles.${slug}`);
   const list = t.raw("body");
 
@@ -64,9 +75,6 @@ export default async function ArticlePage({
           </article>
         ))
       }
-
-
     </AnimatedSection>);
-
 
 }

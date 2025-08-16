@@ -6,7 +6,6 @@ import WorkSkills from "@/components/common/WorkSkills";
 import AnimatedSection from "@/components/common/AnimatedSection";
 import { Metadata } from "next";
 
-
 export async function generateMetadata({
   params
 }: {

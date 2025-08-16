@@ -220,33 +220,6 @@
 
   }
 
-  .servicesIndustriesItem {
-    &:nth-child(1) svg {
-      background: blue;
-    }
-
-    &:nth-child(2) svg {
-      background: violet;
-    }
-
-    &:nth-child(3) svg {
-      background: red;
-    }
-
-    &:nth-child(4) svg {
-      background: green;
-    }
-
-    &:nth-child(5) svg {
-      background: purple;
-    }
-
-    &:nth-child(6) svg {
-      background: orangered;
-    }
-
-  }
-
   .servicesIndustriesItemLink {
     @include v.link;
     @include v.flex(center, center, column);
@@ -257,6 +230,7 @@
     opacity: 0.7;
 
     svg {
+      background: linear-gradient(45deg, rgb(0, 0, 0), rgb(0, 12, 90), rgb(0, 0, 0));
       width: 10rem;
       height: 5rem;
       padding: 1rem;
@@ -296,7 +270,7 @@
 .useful {
   background: v.$bgSection;
   padding: 0 var(--container);
-  @include v.flex;
+  @include v.flex(center, center, column);
 
   .list {
     @include v.flex(flex-start, center, row, wrap);

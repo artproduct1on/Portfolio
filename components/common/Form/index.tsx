@@ -23,9 +23,8 @@ function Form() {
 
   const t = useTranslations("components.form");
 
-
   const [status, setStatus] = useState<IStatusForm>({
-    title: t('0'),
+    title: t("0"),
     code: 0,
   });
   const [loading, setLoading] = useState<boolean>(false);
@@ -53,18 +52,18 @@ function Form() {
         const errorData = await res.json();
         const { hours, minutes } = timeRemainingHelper(errorData.lastSent);
         setStatus({
-          title: t('429', { hours, minutes }),
+          title: t("429", { hours, minutes }),
           code: res.status
         });
       } else {
         setStatus({
-          title: t('500'),
+          title: t("500"),
           code: 500
         });
       }
     } catch {
       setStatus({
-        title: t('500'),
+        title: t("500"),
         code: 500
       });
     } finally {
@@ -86,7 +85,7 @@ function Form() {
       </p>
       <Input
         type="text"
-        placeholder={t('name')}
+        placeholder={t("name")}
         disabled={loading}
         error={errors.name?.message}
         register={
@@ -95,7 +94,7 @@ function Form() {
       />
       <Input
         type="email"
-        placeholder={t('email')}
+        placeholder={t("email")}
         disabled={loading}
         error={errors.email?.message}
         register={register("email", {
@@ -110,7 +109,7 @@ function Form() {
 
       <Input
         type="textarea"
-        placeholder={t('message')}
+        placeholder={t("message")}
         disabled={loading}
         error={errors.message?.message}
         register={register("message", { required: "Message is required" })}
@@ -120,7 +119,7 @@ function Form() {
         className={s.button}
         disabled={loading}
         type="submit"
-        title={t('button')}
+        title={t("button")}
       />
 
     </form>

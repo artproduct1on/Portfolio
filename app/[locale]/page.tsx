@@ -10,7 +10,6 @@ import { Link } from "@/i18n/navigation";
 import { listArticlesPreview } from "@/utils/info/blogInfo";
 import { IArticlePreview } from "@/types";
 
-
 export default async function HomePage() {
 
   const t = await getTranslations("main");
@@ -95,25 +94,24 @@ export default async function HomePage() {
     <AnimatedSection className={s.why} id="why-me">
       <h2>why me</h2>
 
-
       <h4 className={s.whySubTitle}>Досвід:</h4>
       <LinkArrow
         href={"/about"}
         className={s.whyLink}
-        title={`В розробці з 2020 року`}
+        title={"В розробці з 2020 року"}
       />
 
       <h4 className={s.whySubTitle}>Розробка:</h4>
       <LinkArrow
         href={"/competence"}
         className={s.whyLink}
-        title={`Імплементація від ідеї до релізу`}
+        title={"Імплементація від ідеї до релізу"}
       />
       <h4 className={s.whySubTitle}>Tехнології:</h4>
       <LinkArrow
         href={"/competence#skills"}
         className={s.whyLink}
-        title={`Найсучасніший вибір серед кращого`}
+        title={"Найсучасніший вибір серед кращого"}
       />
 
     </AnimatedSection>

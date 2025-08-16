@@ -8,7 +8,6 @@ function Clock({ start }: { start: string }) {
 
   const { months, days, years } = timeCalculationHelper(start);
 
-
   return (
     <ul className={s.clock}>
       <li className={s.clockItem}>

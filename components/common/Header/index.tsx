@@ -15,10 +15,10 @@ function Header() {
   useScrollLock(isActive);
 
   const t = useTranslations("components.header");
-  const list = t.raw("nav")
+  const list = t.raw("nav");
 
   const toggleMenu = (): void => setIsActive((prev: boolean) => !prev);
-  const closeMenu = (): void => { if (isActive) setIsActive(false) };
+  const closeMenu = (): void => { if (isActive) setIsActive(false); };
 
   return (
     <header className={s.header}>
@@ -38,7 +38,6 @@ function Header() {
         </div>
         <p className={s.logoText}>datair</p>
       </Link>
-
 
       <Hamburger
         className={s.hamburger}
@@ -75,8 +74,6 @@ function Header() {
         </ul>
         <LangSwitcher />
       </nav>
-
-
 
     </header>
 

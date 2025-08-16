@@ -2,7 +2,13 @@ import React from "react";
 import "@/assets/styles/globals.scss";
 import { getMessages } from "next-intl/server";
 import { Metadata } from "next";
+import { Raleway } from "next/font/google";
 
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap"
+});
 
 export async function generateMetadata({
   params
@@ -30,12 +36,7 @@ export default async function RootLayout({
   const { locale } = await params;
 
   return (
-    <html lang={locale} data-scroll-behavior="smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-      </head>
+    <html lang={locale} data-scroll-behavior="smooth" className={raleway.className}>
       <body>
         {children}
       </body>

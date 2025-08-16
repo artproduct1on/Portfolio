@@ -43,7 +43,7 @@ function Input({
         {...register}
       />
     </div>
-  )
+  );
 
   return (
     <div className={s.wrapper}>

@@ -27,39 +27,34 @@ export default async function AboutPage() {
 
   const list = t.raw("list");
 
-
   return <>
-    <AnimatedSection className={s.about} id="about">
-      <h2>
-        {t("h2")}
-      </h2>
+    <AnimatedSection className={s.section} id="about">
+      <h1 className={s.title}>
+        {t("title")}
+      </h1>
 
-      <h3>
-        {t("h3")}
-      </h3>
-
-      <div className={s.aboutBlock}>
-        <div className={s.aboutPhoto}>
+      <div className={s.block}>
+        <div className={s.photo}>
           <Image
-            className={s.aboutPhotoImg}
+            className={s.photoImg}
             src="/me.png"
             alt={t("photo")}
             loading="lazy"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          <p className={s.aboutPhotoText}>
+          <p className={s.photoText}>
             {t("photo")}
           </p>
         </div>
 
-        <ul className={s.aboutList}>
+        <ul className={s.list}>
           {list.map(([title, desc]: [string, string], i: number) => (
-            <li className={s.aboutListLi} key={i}>
-              <span className={s.aboutListSpan}>
+            <li className={s.listLi} key={i}>
+              <span className={s.listSpan}>
                 {title}
               </span>
-              <p className={s.aboutListText}>
+              <p className={s.listText}>
                 {desc}
               </p>
             </li>
@@ -67,7 +62,7 @@ export default async function AboutPage() {
         </ul>
       </div>
       <h3>
-        {t("h3_2")}
+        {t("h3")}
       </h3>
       <Clock start={startCareer} />
     </AnimatedSection>

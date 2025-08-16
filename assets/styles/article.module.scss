@@ -18,7 +18,8 @@
 }
 
 .article {
-  padding: 6rem var(--container) 0;
+  padding: 10rem var(--container) 5rem;
+  min-height: 50vh;
   width: 100%;
   list-style-type: none;
 
@@ -40,8 +41,8 @@
       left: var(--container);
       width: calc(50% - var(--container));
       height: 4rem;
-      border-top: .1rem solid v.$c2;
-      border-right: .1rem solid v.$c2;
+      border-top: .1rem solid v.$c1;
+      border-right: .1rem solid v.$c1;
     }
 
     &::after {
@@ -52,15 +53,13 @@
       right: var(--container);
       width: calc(50% - var(--container));
       height: 4rem;
-      border-bottom: .1rem solid v.$c2;
-      border-left: .1rem solid v.$c2;
+      border-bottom: .1rem solid v.$c1;
+      border-left: .1rem solid v.$c1;
 
     }
   }
 
   &:nth-child(2n + 1) {
-    border-left: .1rem solid v.$c2;
-
     .articleImg {
       float: right;
       margin-left: 1rem;
@@ -91,6 +90,7 @@
   line-height: 2.5rem;
   text-align: justify;
   margin: 2rem 0;
+  white-space: pre-line;
 }
 
 @media screen and (min-width: 480px) {

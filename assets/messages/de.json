@@ -99,8 +99,7 @@
       "keywords": "Datair, Artem Zaikin, Software Engineer, Webentwickler, Frontend, Backend, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
       "title": "Über mich - Datair: Artem Zaikin"
     },
-    "h2": "Über mich",
-    "h3": "Persönliche Daten",
+    "title": "Über mich",
     "photo": "ich",
     "list": [
       [
@@ -128,7 +127,7 @@
         "Ich zeichne mich durch Ehrlichkeit in meinem Handeln, Entschlossenheit und ein hohes Maß an Verantwortungsbewusstsein in allen Arbeitsbereichen aus"
       ]
     ],
-    "h3_2": "Ich bin ein Entwickler"
+    "h3": "Ich bin ein Entwickler"
   },
   "competence": {
     "head": {
@@ -265,23 +264,47 @@
     },
     "business-digitalization": {
       "head": {
-        "title": "Business Digitalization"
+        "title": "Unternehmensdigitalisierung"
       },
       "body": [
         {
-          "title": "Personal Solution",
-          "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+          "title": "Individuelle Lösung",
+          "text": "Ich gehe jedes Projekt individuell an: Ich analysiere Geschäftsprozesse, erkenne Schwachstellen und entwickle eine Strategie für die digitale Transformation. Dafür kombiniere ich Web- und Mobile-Technologien, automatisiere Abläufe, optimiere Services und implementiere Management-Tools. Mein Ziel ist es nicht, nur ein einzelnes Produkt zu liefern, sondern ein vollständiges Ökosystem zu schaffen, das Ressourcen spart, effizient funktioniert und Unternehmen wettbewerbsfähig hält."
+        },
+        {
+          "title": "Webentwicklung",
+          "text": "Ich entwickle moderne Weblösungen – von Unternehmensportalen und CRM-Systemen bis hin zu E-Commerce-Plattformen und komplexen Webanwendungen. Für mich ist eine Website nicht nur eine digitale Visitenkarte, sondern ein Werkzeug, um Kunden zu gewinnen und ein Geschäft auszubauen. Ich lege Wert auf Geschwindigkeit, Sicherheit und Benutzerfreundlichkeit und achte darauf, dass das Design responsiv und ansprechend ist."
+        },
+        {
+          "title": "Mobile Entwicklung",
+          "text": "Ich entwickle mobile Anwendungen, die Unternehmen helfen, ihre Kunden besser zu erreichen. Das können einfache Service-Apps oder große Plattformen mit umfangreichen Funktionen sein. Ich arbeite an durchdachtem UX/UI-Design, nahtloser Integration mit anderen Diensten, hoher Performance und Skalierbarkeit, damit die App nicht nur funktioniert, sondern auch Spaß macht, sie zu benutzen."
+        },
+        {
+          "title": "Systeme und Services",
+          "text": "Ich entwerfe und implementiere Systeme und Services, die Unternehmensprozesse vereinfachen und effizienter machen. Dazu gehören Prozessautomatisierung, Integration mit Cloud-Plattformen, Aufbau einer Microservice-Architektur oder die Entwicklung von APIs, um verschiedene Systeme zu verbinden. Mein Ziel ist es, Technologie verständlich und nützlich zu machen, damit sie das Geschäft wirklich unterstützt und voranbringt."
         }
       ]
     },
     "statement-of-work": {
       "head": {
-        "title": "Statement of Work (SOW)"
+        "title": "Leistungsbeschreibung (SOW)"
       },
       "body": [
         {
-          "title": "How to create a Statement of Work for a website?",
-          "text": "Business digitalization, also known as digital transformation, is the process of integrating digital technologies into all areas of a business to fundamentally change how it operates and delivers value. This can involve automating tasks, improving communication and collaboration, enhancing customer experience, and creating new business models. For a personal solution, this translates to leveraging digital tools to streamline your own work, manage your tasks, and improve your productivity"
+          "title": "Was ist ein Statement of Work (SOW)",
+          "text": "Ein Statement of Work ist ein offizielles Dokument, das genau beschreibt, was im Rahmen eines Projekts geliefert wird, welche Ziele verfolgt werden, welche Aufgaben gelöst werden und welche Ergebnisse erwartet werden. Es bildet die Grundlage für die Zusammenarbeit zwischen Auftraggeber und Auftragnehmer. Ein gut ausgearbeitetes SOW hilft, Missverständnisse zu vermeiden, Vereinbarungen klar festzuhalten und den Projektfortschritt in jeder Phase zu überwachen."
+        },
+        {
+          "title": "Wichtige Elemente eines guten SOW",
+          "text": "Ein gutes SOW enthält immer einige wesentliche Bestandteile:\n1) Projektziele — welches Problem gelöst werden soll und welches Ergebnis erwartet wird.\n2) Leistungsumfang — die konkreten Aufgaben, die erledigt werden müssen.\n3) Zeitplan — Deadlines und Meilensteine des Projekts.\n4) Abnahmekriterien — wie festgelegt wird, ob die Arbeit korrekt erledigt ist.\n5) Budget — Gesamtkosten und mögliche Ausgaben.\nWenn all diese Punkte enthalten sind, werden Unklarheiten vermieden und die Zusammenarbeit wird transparenter."
+        },
+        {
+          "title": "Typische Fehler bei der Erstellung eines SOW",
+          "text": "Ein häufiger Fehler besteht darin, das SOW zu allgemein zu halten und wichtige Details wegzulassen. Dies führt oft zu Verwirrung, zusätzlichen Kosten und Konflikten. Zu den typischen Problemen gehören fehlende Deadlines, unklare Qualitätskriterien, ein ungenauer Leistungsumfang oder das Ignorieren externer Abhängigkeiten (z. B. Zugänge oder Drittanbieter-Services). Ein weiterer Fehler ist, Risiken nicht zu berücksichtigen — dadurch können selbst kleine Verzögerungen zu ernsten Problemen werden. Je detaillierter das Dokument, desto geringer die Konfliktwahrscheinlichkeit."
+        },
+        {
+          "title": "Praktische Tipps für Auftraggeber",
+          "text": "Um ein gutes SOW zu erstellen, sollten Auftraggeber:\n- Zuerst ihre Geschäftsziele klar definieren.\n- Prioritäten setzen: was ist kritisch, was zweitrangig.\n- Alle Vereinbarungen schriftlich festhalten, auch wenn sie selbstverständlich erscheinen.\n- Beispiele oder Referenzen hinzufügen, um Missverständnisse zu vermeiden.\n- Vor der endgültigen Freigabe prüfen, ob aus beiden Perspektiven klar ist: was, wann und zu welchen Kosten geliefert wird.\nDieser Ansatz spart Zeit, Geld und Nerven und sorgt dafür, dass das Projekt schneller und planbarer abläuft."
         }
       ]
     }

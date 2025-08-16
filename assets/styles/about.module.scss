@@ -1,121 +1,125 @@
 @use "../../assets/styles/var" as v;
 
-.about {
-  background: v.$bgSection;
-  padding: 2rem var(--container);
-
+.section {
   @include v.flex(center, flex-start, column);
   gap: 1rem;
-
-  .aboutBlock {
-    @include v.flex(center, center, row, wrap);
-    z-index: 10;
-    gap: 2rem;
-  }
-
-  .aboutPhoto {
-    position: relative;
-    width: 95%;
-    min-height: 20rem;
-    height: 45rem;
-    border-radius: 0 25% 0 25%;
-    overflow: hidden;
-    box-shadow: 1rem 1rem 3rem #000000;
-    animation: photo 3s infinite backwards;
-    transition: v.$tObserver;
-  }
-
-  @keyframes photo {
-    0% {
-      translate: 0;
-    }
-
-    50% {
-      translate: 0 -1%;
-    }
-
-    100% {
-      translate: 0;
-    }
-  }
-
-  .aboutPhotoImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .aboutPhotoText {
-    position: absolute;
-    margin: 0;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    font-size: 10rem;
-    font-weight: 100;
-    @include v.font;
-    color: v.$c2;
-    opacity: .1;
-  }
-
-  .aboutList {
-    @include v.flex(center, center, column);
-    position: relative;
-    padding: 0;
-    gap: 1rem;
-    width: 98%;
-  }
-
-  .aboutListLi {
-    @include v.font;
-    @include v.flex(flex-start, space-between, row, wrap);
-    width: calc(100% - 2rem);
-    font-weight: 200;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.01);
-    transition: v.$tObserver translate;
-    translate: 100vw -100%;
-
-    &:nth-child(2n) {
-      translate: 200vw 100%;
-    }
-  }
-
-  .aboutListSpan {
-    max-width: 40%;
-    font-size: 1.4rem;
-    font-weight: 300;
-    color: v.$cSpan;
-    text-align: left;
-    white-space: nowrap;
-    cursor: default;
-    user-select: none;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .aboutListText {
-    margin: 0;
-    max-width: 47.5%;
-    text-align: right;
-    color: v.$color;
-    font-weight: 100;
-    font-size: 1.6rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .aboutExperience {
-    @include v.flex(center, center, column);
-    gap: 2rem;
-  }
-
+  background: v.$bgSection;
+  padding: 2rem var(--container);
 }
 
-.about[data-active="true"] {
-  .aboutListLi {
+.title {
+  margin: 7rem 0 4rem;
+  font-size: 7rem;
+  color: v.$color;
+}
+
+.block {
+  @include v.flex(center, center, row, wrap);
+  z-index: 10;
+  gap: 2rem;
+}
+
+.photo {
+  position: relative;
+  width: 95%;
+  min-height: 20rem;
+  height: 45rem;
+  border-radius: 0 25% 0 25%;
+  overflow: hidden;
+  box-shadow: 1rem 1rem 3rem #000000;
+  animation: photo 3s infinite backwards;
+  transition: v.$tObserver;
+}
+
+@keyframes photo {
+  0% {
+    translate: 0;
+  }
+
+  50% {
+    translate: 0 -1%;
+  }
+
+  100% {
+    translate: 0;
+  }
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoText {
+  position: absolute;
+  margin: 0;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  font-size: 10rem;
+  font-weight: 100;
+  @include v.font;
+  color: v.$c2;
+  opacity: .1;
+}
+
+.list {
+  @include v.flex(center, center, column);
+  position: relative;
+  padding: 0;
+  gap: 1rem;
+  width: 98%;
+}
+
+.listLi {
+  @include v.font;
+  @include v.flex(flex-start, space-between, row, wrap);
+  width: calc(100% - 2rem);
+  font-weight: 200;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.01);
+  transition: v.$tObserver translate;
+  translate: 100vw -100%;
+
+  &:nth-child(2n) {
+    translate: 200vw 100%;
+  }
+}
+
+.listSpan {
+  max-width: 40%;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: v.$cSpan;
+  text-align: left;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.listText {
+  margin: 0;
+  max-width: 47.5%;
+  text-align: right;
+  color: v.$color;
+  font-weight: 100;
+  font-size: 1.6rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.experience {
+  @include v.flex(center, center, column);
+  gap: 2rem;
+}
+
+.section[data-active="true"] {
+  .listLi {
     translate: 0;
   }
 }
@@ -123,26 +127,19 @@
 
 
 @media (min-width: 480px) {
-  .about .aboutPhoto {
+  .photo {
     max-width: 35rem;
   }
 }
 
 @media (min-width: 768px) {
-  .about {
-    .aboutPhoto {
-      max-width: 30rem;
-    }
 
-    .aboutList {
-      width: 50%;
-    }
+  .photo {
+    max-width: 30rem;
   }
-}
 
-
-@media (min-width: 1367px) {
-  .home::before {
-    background-size: contain;
+  .list {
+    width: 50%;
   }
+
 }

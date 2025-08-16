@@ -9,14 +9,13 @@ interface Props {
 
 function Backdrop({ action, isActive, className }: Props) {
 
-
   if (isActive) return (
     <div
       className={`${s.backdrop} ${className}`}
       onClick={action}
       data-active={isActive}
     />
-  )
+  );
 
   return null;
 }
