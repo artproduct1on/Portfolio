@@ -17,14 +17,14 @@ export async function generateMetadata({
   if (!messages.articles[slug]) {
     redirect({ href: "/not-found", locale });
     return {
-      title: messages.blog.head.head.title,
+      title: messages.blog.head.title,
       description: messages.blog.head.description,
       keywords: messages.blog.head.keywords,
-    };;
+    };
   }
 
   return {
-    title: "Datair: " + messages.articles[slug].head.title,
+    title: messages.blog.head.title + ": " + messages.articles[slug].head.title,
     description: messages.blog.head.description,
     keywords: messages.blog.head.keywords,
   };

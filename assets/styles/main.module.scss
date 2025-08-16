@@ -286,7 +286,6 @@
   .listItem {
     @include v.flex(flex-start);
     width: 100%;
-    max-width: 25rem;
     min-height: 25rem;
     height: 100%;
     overflow: hidden;
@@ -332,6 +331,10 @@
   .services {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .useful .listItem {
+    max-width: 25rem;
   }
 }
 

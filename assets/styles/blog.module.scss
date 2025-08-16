@@ -23,7 +23,7 @@
     padding: 2rem var(--container);
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     gap: 2rem 1rem;
   }
 
@@ -31,7 +31,7 @@
     justify-self: center;
     position: relative;
     @include v.flex(center, center, column);
-    width: 20rem;
+    width: 100%;
     border-radius: .5rem;
     gap: 1rem;
     transition: scale v.$transition ease-in-out;

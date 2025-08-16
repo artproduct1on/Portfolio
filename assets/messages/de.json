@@ -125,9 +125,9 @@
   },
   "about": {
     "head": {
-      "description": "Datair: Artem Zaikin – Software Engineer, kreativer Webentwickler. Kompetenzen im Frontend, Backend, UX/UI Design, SEO und Testing.",
-      "keywords": "Datair, Artem Zaikin, Software Engineer, Webentwickler, Frontend, Backend, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
-      "title": "Über mich - Datair: Artem Zaikin"
+      "description": "Über Datair: Artem Zaikin – leidenschaftlicher Softwareingenieur und kreativer Webentwickler, der innovative digitale Lösungen entwickelt. Experte für Front-end, Back-end, UX/UI-Design, SEO und Testing. Ansässig in Wismar, Deutschland.",
+      "keywords": "Datair, Über uns, Artem Zaikin, Softwareingenieur, Webentwickler, kreativer Entwickler, Front-end, Back-end, UX/UI-Design, SEO, Testing, digitale Lösungen, Wismar, Deutschland, Mecklenburg-Vorpommern",
+      "title": "Datair - Über mich"
     },
     "title": "Über mich",
     "photo": "ich",
@@ -161,9 +161,9 @@
   },
   "competence": {
     "head": {
-      "description": "Datair: Artem Zaikin – Software Engineer, kreativer Webentwickler. Kompetenzen im Frontend, Backend, UX/UI Design, SEO und Testing.",
-      "keywords": "Datair, Artem Zaikin, Software Engineer, Webentwickler, Frontend, Backend, UX/UI Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
-      "title": "Kompetenzen - Datair: Artem Zaikin"
+      "description": "Datair Kompetenzen: Artem Zaikin – erfahrener Softwareingenieur und kreativer Webentwickler mit nachgewiesener Expertise in Front-end, Back-end, UX/UI-Design, SEO, Testing und der Entwicklung innovativer digitaler Lösungen. Ansässig in Wismar, Deutschland.",
+      "keywords": "Datair, Kompetenzen, Fähigkeiten, Expertise, Artem Zaikin, Softwareingenieur, Webentwickler, Front-end, Back-end, UX/UI-Design, SEO, Testing, digitale Lösungen, berufliche Fähigkeiten, Wismar, Deutschland, Mecklenburg-Vorpommern",
+      "title": "Datair - Kompetenzen"
     },
     "h2": "Arbeit",
     "h3": "Meine Kompetenzen",
@@ -216,9 +216,9 @@
   },
   "blog": {
     "head": {
-      "description": "Datair: Artem Zaikin – Softwareentwickler, kreativer Webentwickler. Kompetenzen in Front-end, Back-end, UX/UI-Design, SEO und Testing.",
-      "keywords": "Datair, Artem Zaikin, Softwareentwickler, Webentwickler, Front-end, Back-end, UX/UI-Design, SEO, Testing, Wismar, Deutschland, Mecklenburg-Vorpommern",
-      "title": "Blog – Datair: Artem Zaikin"
+      "description": "Datair Blog: Einblicke, Tipps und Geschichten von Artem Zaikin – Softwareingenieur und kreativer Webentwickler. Themen umfassen Front-end, Back-end, UX/UI-Design, SEO, Testing und innovative digitale Lösungen aus Wismar, Deutschland.",
+      "keywords": "Datair, Blog, Artem Zaikin, Softwareingenieur, Webentwickler, Front-end, Back-end, UX/UI-Design, SEO, Testing, digitale Lösungen, Webentwicklung Tipps, Wismar, Deutschland, Mecklenburg-Vorpommern",
+      "title": "Datair - Blog"
     },
     "title": "Finden Sie alle Informationen, die Sie benötigen",
     "list": [
