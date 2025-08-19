@@ -2,36 +2,47 @@
 
 
 .clock {
-  @include v.flex(center, space-around, row, wrap);
+  @include v.flex(center, center, row, wrap);
+  gap: 1rem;
   padding: 0;
   list-style-type: none;
-  gap: 2rem;
   width: 100%;
 }
 
 .clockItem {
   @include v.font;
-  @include v.flex(center, space-between);
   width: 100%;
-  padding: 1rem;
-  background: rgba(46, 46, 46, 0.2);
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
   gap: 1rem;
   box-shadow: .3rem .3rem 1rem rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   font-size: 3rem;
-  color: rgba(85, 85, 85, 0.445);
+  color: v.$cSpan;
+  @include v.flex(center, space-between);
 }
 
 .clockItemSpan {
-  width: 100%;
+  width: 50%;
   text-align: center;
   font-weight: 100;
   font-size: 5rem;
-  color: v.$cSpan;
+  color: v.$color;
 }
 
 @media (min-width: 768px) {
   .clock {
     flex-wrap: nowrap;
+  }
+
+  .clockItem {
+
+    &:nth-child(1) {
+      border-radius: 5rem 0 0 5rem;
+    }
+
+    &:nth-child(3) {
+      border-radius: 0 5rem 5rem 0;
+    }
   }
 }

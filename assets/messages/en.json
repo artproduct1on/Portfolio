@@ -129,35 +129,51 @@
       "keywords": "Datair, About, Artem Zaikin, Software Engineer, Web Developer, Creative Developer, Front-end, Back-end, UX/UI Design, SEO, Testing, Digital Solutions, Wismar, Germany, Mecklenburg-Vorpommern",
       "title": "Datair - About Me"
     },
-    "title": "About Me",
-    "photo": "me",
-    "list": [
-      [
-        "Name:",
-        "Artem"
-      ],
-      [
-        "Last name:",
-        "Zaikin"
-      ],
-      [
-        "Date of birth:",
-        "August 17, 1999"
-      ],
-      [
-        "Nationality:",
-        "Ukrainian"
-      ],
-      [
-        "Location:",
-        "Germany, Mecklenburg-Vorpommern"
-      ],
-      [
-        "Distinctive traits:",
-        "I am characterized by honesty in my endeavors, a strong sense of determination, and a high level of responsibility in all aspects of my work"
+    "hero": {
+      "title": "About Me",
+      "photo": "me",
+      "list": [
+        [
+          "Name:",
+          "Artem"
+        ],
+        [
+          "Last name:",
+          "Zaikin"
+        ],
+        [
+          "Date of birth:",
+          "August 17, 1999"
+        ],
+        [
+          "Nationality:",
+          "Ukrainian"
+        ],
+        [
+          "Location:",
+          "Germany, Mecklenburg-Vorpommern"
+        ],
+        [
+          "Distinctive traits:",
+          "I am characterized by honesty in my endeavors, a strong sense of determination, and a high level of responsibility in all aspects of my work"
+        ]
       ]
-    ],
-    "h3": "I'm a Developer"
+    },
+    "career": {
+      "h2": "Experience",
+      "h3": "I'm a Developer",
+      "info": "I have created and delivered a wide range of websites and web applications for clients across different industries, including business registration consulting services and retail intermediary platforms. \n My work covered the full development cycle, from idea to deployment, with a strong focus on user experience, scalability, and clean code.",
+      "info_subtitle": "Key responsibilities and contributions included:",
+      "info_list": [
+        "Designing and developing websites, applications and progressive web applications.",
+        "Building and integrating new features based on customer requirements.",
+        "Reviewing and refactoring code to ensure performance, maintainability, and best practices.",
+        "Debugging and resolving issues to improve system stability and user experience.",
+        "Collaborating with clients to gather requirements and provide technical solutions.",
+        "Optimizing applications for speed and responsiveness.",
+        "Maintaining and updating existing projects to align with business needs."
+      ]
+    }
   },
   "competence": {
     "head": {

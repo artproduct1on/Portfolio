@@ -129,35 +129,56 @@
       "keywords": "Datair, Über uns, Artem Zaikin, Softwareingenieur, Webentwickler, kreativer Entwickler, Front-end, Back-end, UX/UI-Design, SEO, Testing, digitale Lösungen, Wismar, Deutschland, Mecklenburg-Vorpommern",
       "title": "Datair - Über mich"
     },
-    "title": "Über mich",
-    "photo": "ich",
-    "list": [
-      [
-        "Vorname:",
-        "Artem"
-      ],
-      [
-        "Nachname:",
-        "Zaikin"
-      ],
-      [
-        "Geburtsdatum:",
-        "17. August 1999"
-      ],
-      [
-        "Staatsangehörigkeit:",
-        "Ukrainisch"
-      ],
-      [
-        "Standort:",
-        "Deutschland, Mecklenburg-Vorpommern"
-      ],
-      [
-        "Besondere Merkmale:",
-        "Ich zeichne mich durch Ehrlichkeit in meinem Handeln, Entschlossenheit und ein hohes Maß an Verantwortungsbewusstsein in allen Arbeitsbereichen aus"
+    "hero": {
+      "title": "Über mich",
+      "photo": "ich",
+      "list": [
+        [
+          "Vorname:",
+          "Artem"
+        ],
+        [
+          "Nachname:",
+          "Zaikin"
+        ],
+        [
+          "Geburtsdatum:",
+          "17. August 1999"
+        ],
+        [
+          "Staatsangehörigkeit:",
+          "Ukrainisch"
+        ],
+        [
+          "Standort:",
+          "Deutschland, Mecklenburg-Vorpommern"
+        ],
+        [
+          "Besondere Merkmale:",
+          "Ich zeichne mich durch Ehrlichkeit in meinem Handeln, Entschlossenheit und ein hohes Maß an Verantwortungsbewusstsein in allen Arbeitsbereichen aus"
+        ]
       ]
-    ],
-    "h3": "Ich bin ein Entwickler"
+    },
+    "career": {
+      "h2": "Erfahrung",
+      "h3": "Ich bin Entwickler",
+      "clock": [
+        "Jahre:",
+        "Tage:",
+        "Stunden:"
+      ],
+      "info": "Ich habe eine Vielzahl von Websites und Webanwendungen für Kunden aus unterschiedlichen Branchen entwickelt und umgesetzt, darunter Beratungsdienste für Unternehmensregistrierungen und Handelsvermittlungsplattformen. \n Meine Arbeit umfasste den gesamten Entwicklungszyklus – von der Idee bis zum Go-Live – mit einem starken Fokus auf Benutzerfreundlichkeit, Skalierbarkeit und sauberen Code.",
+      "info_subtitle": "Wesentliche Aufgaben und Beiträge:",
+      "info_list": [
+        "Entwicklung von Websites, Apps und Progressive Web Apps.",
+        "Erstellung und Integration neuer Funktionen basierend auf Kundenanforderungen.",
+        "Code-Reviews und Refactoring zur Gewährleistung von Leistung, Wartbarkeit und Best Practices.",
+        "Fehlerbehebung und Debugging zur Verbesserung der Systemstabilität und Benutzererfahrung.",
+        "Zusammenarbeit mit Kunden zur Anforderungsanalyse und Bereitstellung technischer Lösungen.",
+        "Optimierung von Anwendungen für Geschwindigkeit und Reaktionsfähigkeit.",
+        "Wartung und Aktualisierung bestehender Projekte entsprechend den Geschäftsanforderungen."
+      ]
+    }
   },
   "competence": {
     "head": {

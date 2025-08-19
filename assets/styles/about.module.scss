@@ -1,145 +1,185 @@
 @use "../../assets/styles/var" as v;
 
-.section {
+.hero {
   @include v.flex(center, flex-start, column);
   gap: 1rem;
-  background: v.$bgSection;
   padding: 2rem var(--container);
-}
-
-.title {
-  margin: 7rem 0 4rem;
-  font-size: 7rem;
-  color: v.$color;
-}
-
-.block {
-  @include v.flex(center, center, row, wrap);
-  z-index: 10;
-  gap: 2rem;
-}
-
-.photo {
-  position: relative;
-  width: 95%;
-  min-height: 20rem;
-  height: 45rem;
-  border-radius: 0 25% 0 25%;
   overflow: hidden;
-  box-shadow: 1rem 1rem 3rem #000000;
-  animation: photo 3s infinite backwards;
-  transition: v.$tObserver;
-}
 
-@keyframes photo {
-  0% {
-    translate: 0;
+  background-image:
+    linear-gradient(-45deg, #0000 65%, v.$c1),
+    linear-gradient(45deg, #0000 65%, v.$c1);
+  backdrop-filter: blur(10rem) saturate(2);
+
+  .title {
+    margin: 7rem 0 4rem;
+    font-size: 7rem;
+    color: rgba(240, 248, 255, 0.3);
+    text-transform: uppercase
   }
 
-  50% {
-    translate: 0 -1%;
+  .block {
+    @include v.flex(center, center, row, wrap);
+    z-index: 10;
+    gap: 2rem;
   }
 
-  100% {
-    translate: 0;
+  .photo {
+    position: relative;
+    width: 95%;
+    min-height: 20rem;
+    height: 45rem;
+    border-radius: 0 25% 0 25%;
+    overflow: hidden;
+    box-shadow: 1rem 1rem 3rem #000000;
+    animation: photo 3s infinite backwards;
+    transition: v.$tObserver;
+  }
+
+  @keyframes photo {
+    0% {
+      translate: 0;
+    }
+
+    50% {
+      translate: 0 -1%;
+    }
+
+    100% {
+      translate: 0;
+    }
+  }
+
+  .photoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .photoText {
+    position: absolute;
+    margin: 0;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-size: 10rem;
+    font-weight: 100;
+    @include v.font;
+    color: v.$c2;
+    opacity: .1;
+  }
+
+  .list {
+    @include v.flex(center, center, column);
+    position: relative;
+    padding: 0;
+    gap: 1rem;
+    width: 98%;
+  }
+
+  .listLi {
+    @include v.font;
+    @include v.flex(flex-start, space-between, row, wrap);
+    width: calc(100% - 2rem);
+    font-weight: 200;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.01);
+    transition: v.$tObserver translate;
+    translate: 100vw -100%;
+
+    &:nth-child(2n) {
+      translate: 200vw 100%;
+    }
+  }
+
+  .listSpan {
+    max-width: 40%;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: v.$cSpan;
+    text-align: left;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .listText {
+    margin: 0;
+    max-width: 47.5%;
+    text-align: right;
+    color: v.$color;
+    font-weight: 100;
+    font-size: 1.6rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
-.photoImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.photoText {
-  position: absolute;
-  margin: 0;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  font-size: 10rem;
-  font-weight: 100;
-  @include v.font;
-  color: v.$c2;
-  opacity: .1;
-}
-
-.list {
-  @include v.flex(center, center, column);
-  position: relative;
-  padding: 0;
-  gap: 1rem;
-  width: 98%;
-}
-
-.listLi {
-  @include v.font;
-  @include v.flex(flex-start, space-between, row, wrap);
-  width: calc(100% - 2rem);
-  font-weight: 200;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.01);
-  transition: v.$tObserver translate;
-  translate: 100vw -100%;
-
-  &:nth-child(2n) {
-    translate: 200vw 100%;
-  }
-}
-
-.listSpan {
-  max-width: 40%;
-  font-size: 1.4rem;
-  font-weight: 300;
-  color: v.$cSpan;
-  text-align: left;
-  white-space: nowrap;
-  cursor: default;
-  user-select: none;
-  white-space: normal;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.listText {
-  margin: 0;
-  max-width: 47.5%;
-  text-align: right;
-  color: v.$color;
-  font-weight: 100;
-  font-size: 1.6rem;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.experience {
-  @include v.flex(center, center, column);
-  gap: 2rem;
-}
-
-.section[data-active="true"] {
+.hero[data-active="true"] {
   .listLi {
     translate: 0;
   }
 }
 
+.career {
+  @include v.flex(center, center, column);
+  gap: 1rem;
+  padding: 2rem var(--container);
+  background: v.$bgSection;
+
+  .careerText {
+    margin: 3.5rem 0;
+    @include v.font;
+    max-width: 50rem;
+    font-size: 2rem;
+    color: v.$cSpan;
+    text-align: justify;
+  }
+
+  .careerList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 1rem;
+    list-style-type: none;
+  }
+
+  .careerItem {
+    @include v.font;
+    @include v.flex(flex-start, flex-start, column);
+    justify-self: center;
+    gap: 3rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: v.$color;
+    background-color: #00254715;
+  }
+
+  .careerItemSpan {
+    opacity: 0.5;
+  }
+}
 
 
 @media (min-width: 480px) {
-  .photo {
-    max-width: 35rem;
+  .hero {
+    .photo {
+      max-width: 35rem;
+    }
   }
 }
 
 @media (min-width: 768px) {
+  .hero {
+    .photo {
+      max-width: 30rem;
+    }
 
-  .photo {
-    max-width: 30rem;
+    .list {
+      width: 50%;
+    }
   }
-
-  .list {
-    width: 50%;
-  }
-
 }
