@@ -130,6 +130,7 @@
   gap: 1rem;
   padding: 2rem var(--container);
   background: v.$bgSection;
+  overflow: hidden;
 
   .careerText {
     margin: 3.5rem 0;
@@ -141,10 +142,140 @@
   }
 
   .careerList {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     gap: 1rem;
     list-style-type: none;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 5vw;
+      height: 4vh;
+      border-radius: 50%;
+      background: v.$c2;
+      box-shadow: 0 0 10vh v.$c2;
+      animation: careerBefor 30s infinite;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      width: 5vw;
+      height: 4vh;
+      border-radius: 50%;
+      background: v.$c4;
+      animation: careerAfter 45s infinite;
+      box-shadow: 0 0 10vh v.$c4;
+    }
+
+    @keyframes careerBefor {
+      0% {
+        rotate: 0turn;
+        top: 0;
+        left: 0;
+
+        width: 5vw;
+        height: 4vh;
+      }
+
+      10% {
+        top: 4%;
+        left: 10%;
+        width: 7vw;
+        height: 2vh;
+      }
+
+      35% {
+        top: 44%;
+        left: 50%;
+        width: 5vh;
+        height: 5vh;
+      }
+
+      60% {
+        top: 74%;
+        left: 0%;
+
+        width: 12vw;
+        height: 7vh;
+      }
+
+      90% {
+        top: 34%;
+        left: 60%;
+        width: 1vw;
+        height: 1vh;
+      }
+
+      100% {
+        rotate: 10turn;
+        top: 0;
+        left: 0;
+        width: 5vw;
+        height: 4vh;
+      }
+    }
+
+    @keyframes careerAfter {
+      0% {
+        rotate: 0turn;
+        top: 50%;
+        left: 50%;
+
+        width: 5vw;
+        height: 4vh;
+      }
+
+      15% {
+        top: 84%;
+        left: 80%;
+
+        width: 15vw;
+        height: 14vh;
+      }
+
+      45% {
+        top: 4%;
+        left: 20%;
+
+        width: 8vw;
+        height: 11vh;
+      }
+
+      65% {
+        top: 74%;
+        left: 90%;
+
+        width: 5vw;
+        height: 2vh;
+      }
+
+      70% {
+        top: 34%;
+        left: 60%;
+
+        width: 10vw;
+        height: 14vh;
+      }
+
+      100% {
+        rotate: 10turn;
+        top: 50%;
+        left: 50%;
+
+        width: 5vw;
+        height: 4vh;
+      }
+    }
   }
 
   .careerItem {
@@ -156,6 +287,8 @@
     font-size: 1.6rem;
     color: v.$color;
     background-color: #00254715;
+
+    backdrop-filter: blur(1rem);
   }
 
   .careerItemSpan {
